@@ -10,13 +10,11 @@ class ProductList extends React.Component {
           return (
             <Product
               key={idx}
-              id={item.name}
+              name={item.name}
               price={item.price}
               imageUrl={item.imageUrl}
               imageHovered={item.imageHovered}
-              color1={item.color1}
-              color2={item.color2}
-              color3={item.color3}
+              colors={item.colors}
             />
           );
         })}
