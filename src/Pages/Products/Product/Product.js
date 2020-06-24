@@ -15,11 +15,19 @@ class Product extends React.Component {
   };
 
   mouseOutHandler = () => {
-    this.setState({ imageSrc: "imageUrl" });
+    this.setState({ imageSrc: "imageUrl", hovered: false });
+  };
+
+  colorMouseOver = (idx) => {
+    console.log(this.props.imageOtherColors[idx][idx]);
+    this.setState({ imageSrc: "imageOtherColors" });
+  };
+
+  colorMouseOut = () => {
+    this.setState({ imgSrc: "imageHovered" });
   };
 
   render() {
-    console.log("hihihi", this.props.colors);
     return (
       <div className="man-set">
         <a
@@ -32,7 +40,7 @@ class Product extends React.Component {
             <img
               alt="product-img"
               className="img-original"
-              src={this.props[this.state.imageSrc]}
+              src={this.props[]}
             />
           </div>
           <div className="text-wrapper">
@@ -40,11 +48,21 @@ class Product extends React.Component {
               <span class="product-name">{this.props.name}</span>
               <span class="product-price">{this.props.price}</span>
             </div>
-            <div className="color-and-add">
+            <div
+              className={
+                this.state.hovered ? "color-and-add" : "color-and-add-opacity"
+              }
+            >
               <div className="color-options">
-                {this.props.colors.map((obj) => {
+                {this.props.colors.map((obj, idx) => {
                   return (
-                    <img alt="" className="color-option" src={obj.colorImage} />
+                    <img
+                      onMouseOver={() => this.colorMouseOver(idx)}
+                      onMouseOut={this.colorMouseOut}
+                      alt=""
+                      className="color-option"
+                      src={obj.colorImage}
+                    />
                   );
                 })}
               </div>
@@ -54,7 +72,7 @@ class Product extends React.Component {
         </a>
       </div>
     );
-  }
+  }.
 }
 
 export default Product;

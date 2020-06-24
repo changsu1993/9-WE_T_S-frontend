@@ -15,6 +15,7 @@ class ProductList extends React.Component {
               imageUrl={item.imageUrl}
               imageHovered={item.imageHovered}
               colors={item.colors}
+              imageOtherColors={item.imageOtherColors}
             />
           );
         })}
