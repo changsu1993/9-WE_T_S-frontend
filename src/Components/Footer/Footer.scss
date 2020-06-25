@@ -1,0 +1,37 @@
+.Footer {
+  height: 233px;
+  padding: 60px 125px 49px 290px;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    width: 98px;
+    height: 63.35px;
+    img {
+      width: 100%;
+    }
+  }
+
+  ul {
+    width: 1320px;
+    height: 124px;
+    padding-left: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    li {
+      flex: 1;
+    }
+  }
+
+  a {
+    color: black;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    padding-bottom: 4px;
+    margin-bottom: 11px;
+    line-height: 1.4;
+  }
+}
