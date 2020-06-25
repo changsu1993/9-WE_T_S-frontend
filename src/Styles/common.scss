@@ -1,31 +1,32 @@
-$black : #000000;
-$white : #FFFFFF;
-$grey : #999999;
-$lightgrey:#C2C2C2;
-
-
+$black: #000000;
+$white: #ffffff;
+$grey: #999999;
+$lightgrey: #c2c2c2;
 
 @font-face {
-    font-family: "MierA-Bold";
-    src: url("./fonts/MierA-Bold.f19f177091b98abc6769.woff2") format("woff2")
+  font-family: "MierA-Bold";
+  src: url("./fonts/MierA-Bold.f19f177091b98abc6769.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "MierA-Book";
-    src: url("./fonts/MierA-Book.dd73d46d54c8fe74c5e1.woff2") format("woff2")
+  font-family: "MierA-Book";
+  src: url("./fonts/MierA-Book.dd73d46d54c8fe74c5e1.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "MierA-Demi";
-    src: url("./fonts/MierA-Demi.6e49afa51af91969c42e.woff2") format("woff2")
+  font-family: "MierA-Demi";
+  src: url("./fonts/MierA-Demi.6e49afa51af91969c42e.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "MierA-Italic";
-    src: url("./fonts/MierA-Italic.492a1179de0881544b33.woff2") format("woff2")
+  font-family: "MierA-Italic";
+  src: url("./fonts/MierA-Italic.492a1179de0881544b33.woff2") format("woff2");
 }
 
-@font-face {
-    font-family: "MierA-Regular";
-    src: url("./fonts/MierA-Regular.f5fd6ae838c14f5f3117.woff2") format("woff2")
+  font-family: "MierA-Regular";
+  src: url("./fonts/MierA-Regular.f5fd6ae838c14f5f3117.woff2") format("woff2");
+}
+
+body {
+  font-family: "MierA-Regular";
 }
