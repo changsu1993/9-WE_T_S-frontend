@@ -6,6 +6,7 @@ import Man from "./Pages/Products/Man";
 import Woman from "./Pages/Products/Woman";
 import Accessories from "./Pages/Products/Accessories";
 import Shoes from "./Pages/Products/Shoes";
+import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 
 class Routes extends React.Component {
   render() {
@@ -18,6 +19,11 @@ class Routes extends React.Component {
           <Route exact path="/shopping/woman" component={Woman} />
           <Route exact path="/shopping/accessories" component={Accessories} />
           <Route exact path="/shopping/shoes" component={Shoes} />
+          <Route
+            exact
+            path="/shopping/product-detail"
+            component={ProductDetail}
+          />
         </Switch>
       </Router>
     );

@@ -1,67 +1,83 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Product.scss";
 
 class Product extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      imageSrc: "imageUrl",
+      imageSrc: this.props.imageUrl,
       hovered: false,
+      colorHovered: false,
     };
   }
-
   mouseOverHandler = () => {
-    this.setState({ imageSrc: "imageHovered", hovered: true });
+    const { colorHovered } = this.state;
+    if (colorHovered) return;
+    this.setState({ imageSrc: this.props.imageHovered, hovered: true });
   };
 
   mouseOutHandler = () => {
-    this.setState({ imageSrc: "imageUrl", hovered: false });
+    const { colorHovered } = this.state;
+    if (colorHovered) return;
+    this.setState({ imageSrc: this.props.imageUrl, hovered: false });
   };
 
-  colorMouseOver = (idx) => {
-    console.log(this.props.imageOtherColors[idx][idx]);
-    this.setState({ imageSrc: "imageOtherColors" });
+  colorMouseOver = (img) => {
+    console.log("haha", img);
+    this.setState({ imageSrc: img, colorHovered: true });
   };
 
   colorMouseOut = () => {
-    this.setState({ imgSrc: "imageHovered" });
+    console.log("hahaddddddd");
+    this.setState({ imgSrc: this.props.imageUrl, colorHovered: false });
   };
 
   render() {
+    const {
+      mouseOutHandler,
+      mouseOverHandler,
+      colorMouseOut,
+      colorMouseOver,
+    } = this;
+    const { imageSrc, hovered, colorHovered } = this.state;
+    const { name, price, colors } = this.props;
+
     return (
-      <div className="man-set">
-        <a
-          className="man-product-photo"
-          href="http://localhost:3000/shopping/man"
-          onMouseOut={this.mouseOutHandler}
-          onMouseOver={this.mouseOverHandler}
-        >
+      <div
+        className="Product"
+        onMouseOut={mouseOutHandler}
+        onMouseOver={mouseOverHandler}
+      >
+        <Link to="/shopping/man">
           <div className="imgs">
             <img
               alt="product-img"
               className="img-original"
-              src={this.props[]}
+              src={imageSrc}
             />
           </div>
           <div className="text-wrapper">
             <div className="name-and-price">
-              <span class="product-name">{this.props.name}</span>
-              <span class="product-price">{this.props.price}</span>
+              <span className="product-name">{name}</span>
+              <span className="product-price">{price}</span>
             </div>
             <div
               className={
-                this.state.hovered ? "color-and-add" : "color-and-add-opacity"
+                colorHovered || hovered
+                  ? "color-and-add show"
+                  : "color-and-add hide"
               }
             >
               <div className="color-options">
-                {this.props.colors.map((obj, idx) => {
+                {colors.map((color) => {
                   return (
                     <img
-                      onMouseOver={() => this.colorMouseOver(idx)}
-                      onMouseOut={this.colorMouseOut}
+                      onMouseEnter={() => colorMouseOver(color.imageUrl)}
+                      onMouseLeave={colorMouseOut}
                       alt=""
                       className="color-option"
-                      src={obj.colorImage}
+                      src={color.colorImage}
                     />
                   );
                 })}
@@ -69,10 +85,10 @@ class Product extends React.Component {
               <button className="quick-add-hovered">Quick Add</button>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     );
-  }.
+  }
 }
 
 export default Product;

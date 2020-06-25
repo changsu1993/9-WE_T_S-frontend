@@ -5,13 +5,12 @@
 }
 
 @mixin flex-center {
-    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-main {
+.man {
     margin-top: 120px;
     padding: 0px 30px;
     width: 100%;

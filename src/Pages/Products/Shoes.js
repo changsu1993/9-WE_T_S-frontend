@@ -4,7 +4,7 @@ import "./Products.scss";
 class Shoes extends React.Component {
   render() {
     return (
-      <main>
+      <main className="shoes">
         <div className="man-category">
           Man
           <div className="num-of-items">592 items</div>
@@ -13,7 +13,6 @@ class Shoes extends React.Component {
           <div></div>
           <div></div>
         </section>
-        // eslint-disable-next-line prettier/prettier
         <section className="filter-bar"></section>
         <div></div>
       </main>

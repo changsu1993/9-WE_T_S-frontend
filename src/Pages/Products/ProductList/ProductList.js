@@ -5,7 +5,7 @@ import "./ProductList.scss";
 class ProductList extends React.Component {
   render() {
     return (
-      <div className="man-collections">
+      <div className="product-list">
         {this.props.data.map((item, idx) => {
           return (
             <Product
@@ -15,7 +15,6 @@ class ProductList extends React.Component {
               imageUrl={item.imageUrl}
               imageHovered={item.imageHovered}
               colors={item.colors}
-              imageOtherColors={item.imageOtherColors}
             />
           );
         })}

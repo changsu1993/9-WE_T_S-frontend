@@ -4,7 +4,7 @@ import "./Products.scss";
 class Accessories extends React.Component {
   render() {
     return (
-      <main>
+      <main className="accessories">
         <div className="man-category">
           Man
           <div className="num-of-items">592 items</div>

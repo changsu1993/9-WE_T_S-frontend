@@ -1,4 +1,4 @@
-.man-set {
+.Product {
     flex: 1 25%;
     padding: 10px;
     display: flex;
@@ -9,8 +9,6 @@
             max-width: 392px;
             height: auto;
             width: 100%;
-
-
         }
     }
 
@@ -29,15 +27,17 @@
             line-height: 16.8px;
         }
 
-        .color-and-add-opacity {
+        .hide {
             opacity: 0;
-            // display: flex;
-            // justify-content: space-between;
-            // margin-top: 10px;
         }
 
-        .color-and-add {
+        .show {
             opacity: 1;
+        }
+
+
+
+        .color-and-add {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;

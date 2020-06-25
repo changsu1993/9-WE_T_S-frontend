@@ -18,7 +18,7 @@ class Man extends React.Component {
 
   render() {
     return (
-      <main>
+      <main className="man">
         <div className="man-category"> Man </div>
         <div className="num-of-items">{this.state.data.length} items</div>
 

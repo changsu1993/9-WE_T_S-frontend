@@ -13,14 +13,15 @@
             "imageUrl": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073830_500.jpg?c=2",
             "imageHovered": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073828_500.jpg?c=2",
             "colors": [{
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg"
-            }, {
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
-            }],
-            "imageOtherColors": [{
-                    "0": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073830_500.jpg?c=2"
-                }, {
-                    "1": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27073838_500.jpg?c=2"
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073830_500.jpg?c=2"
+                },
+
+                {
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27073838_500.jpg?c=2"
                 }
 
             ]
@@ -40,17 +41,12 @@
             "imageHovered": "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27071362_500.jpg?c=2",
 
             "colors": [{
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371275_cs.jpg"
+                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371275_cs.jpg",
+                "imageUrl": "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27073489_500.jpg?c=2"
             }, {
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg"
-            }],
-            "imageOtherColors": [{
-                    "0": "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073483_500.jpg?c=2"
-                }, {
-                    "1": "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27073489_500.jpg?c=2"
-                }
-
-            ]
+                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
+                "imageUrl": "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073483_500.jpg?c=2"
+            }]
         },
 
         {
@@ -67,19 +63,15 @@
             "imageUrl": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073785_500.jpg?c=2",
             "imageHovered": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073786_500.jpg?c=2",
             "colors": [{
-                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371966_cs.jpg"
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371966_cs.jpg",
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073785_500.jpg?c=2"
                 },
                 {
-                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371967_cs_aba7aea7-c49a-482d-9825-1a88a36ce894.jpg"
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371967_cs_aba7aea7-c49a-482d-9825-1a88a36ce894.jpg",
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27073792_500.jpg?c=2"
                 }
-            ],
-            "imageOtherColors": [{
-                    "0": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073785_500.jpg?c=2"
-                }, {
-                    "1": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27073792_500.jpg?c=2"
-                }
-
             ]
+
         },
         {
             "id": 204,
@@ -95,21 +87,15 @@
             "imageUrl": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240934_27128450_500.jpg?c=2",
             "imageHovered": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240934_27126472_500.jpg?c=2",
             "colors": [{
-                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371275_cs.jpg"
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371275_cs.jpg",
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240934_27128450_500.jpg?c=2"
                 },
                 {
-                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371966_cs.jpg"
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371966_cs.jpg",
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240935_27128464_500.jpg?c=2"
                 }
-            ],
-            "imageOtherColors": [{
-                    "0": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073785_500.jpg?c=2"
-                }, {
-                    "1": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240935_27128464_500.jpg?c=2"
-                }
-
             ]
-        },
-        {
+        }, {
             "id": 201,
             "name": "Cigarette Fit Trousers",
             "price": "$99.99",
@@ -123,15 +109,20 @@
             "imageUrl": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073830_500.jpg?c=2",
             "imageHovered": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073828_500.jpg?c=2",
             "colors": [{
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg"
-            }, {
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
-            }, {
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
-            }]
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
 
-        },
-        {
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073830_500.jpg?c=2"
+                },
+
+                {
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27073838_500.jpg?c=2"
+                }
+
+            ]
+
+        }, {
             "id": 202,
             "name": "Unstructured Coat",
             "price": "$69.99",
@@ -146,11 +137,14 @@
             "imageHovered": "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27071362_500.jpg?c=2",
 
             "colors": [{
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371275_cs.jpg"
+                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371275_cs.jpg",
+                "imageUrl": "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27073489_500.jpg?c=2"
             }, {
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg"
+                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
+                "imageUrl": "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073483_500.jpg?c=2"
             }]
         },
+
         {
             "id": 203,
             "name": "Oversize Mac Coat",
@@ -165,12 +159,15 @@
             "imageUrl": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073785_500.jpg?c=2",
             "imageHovered": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073786_500.jpg?c=2",
             "colors": [{
-                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371966_cs.jpg"
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371966_cs.jpg",
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073785_500.jpg?c=2"
                 },
                 {
-                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371967_cs_aba7aea7-c49a-482d-9825-1a88a36ce894.jpg"
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371967_cs_aba7aea7-c49a-482d-9825-1a88a36ce894.jpg",
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27073792_500.jpg?c=2"
                 }
             ]
+
         },
         {
             "id": 204,
@@ -186,8 +183,15 @@
             "imageUrl": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240934_27128450_500.jpg?c=2",
             "imageHovered": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240934_27126472_500.jpg?c=2",
             "colors": [{
-                "colorImage": "https://www.amiparis.com/BWContent/AMI/14371275_cs.jpg"
-            }]
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371275_cs.jpg",
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240934_27128450_500.jpg?c=2"
+                },
+                {
+                    "colorImage": "https://www.amiparis.com/BWContent/AMI/14371966_cs.jpg",
+                    "imageUrl": "https://cdn-images.farfetch-contents.com/ami-sunday-9-low-sneakers_14240935_27128464_500.jpg?c=2"
+                }
+            ]
         }
+
     ]
 }
