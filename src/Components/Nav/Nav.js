@@ -80,7 +80,7 @@ class Nav extends React.Component {
                 this.state.activeTab === 1 ? "show" : "hide"
               }`}
             >
-              <ul className="red-text product-nav">
+              <ul className="sale-text product-nav">
                 <li>T-Shirts & Polos</li>
                 <li>Shirts</li>
                 <li>Trousers</li>

@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 70px;
-
-  // position: fixed;
+  position: fixed;
+  z-index: 1;
 
   .left-menu {
     display: flex;
@@ -14,7 +14,6 @@
     height: 100%;
     align-items: center;
     justify-content: flex-start;
-    z-index: 1;
 
     .category-btn:first-child {
       margin-left: -20px;
@@ -57,11 +56,14 @@
         width: 0;
         transition: 0.2s;
       }
-      .underline::before,
-      .underline:hover::before {
+      .underline::before {
         width: 100%;
         padding: 0;
       }
+      .underline:hover::before {
+        border-bottom: 1px solid #999999;
+      }
+
       span:hover,
       a:hover {
         color: #999999;
@@ -75,16 +77,16 @@
         width: 100%;
         height: 301px;
         background: white;
-        transition: 0.5s;
+        transition: 0.7s;
 
         &.show {
-          display: block;
-          // opacity: 1;
+          visibility: visible;
+          opacity: 1;
         }
 
         &.hide {
-          display: none;
-          // opacity: 0;
+          visibility: hidden;
+          opacity: 0;
         }
 
         .product-nav {
@@ -94,9 +96,11 @@
           grid-auto-flow: column;
           grid-template-rows: repeat(9, auto);
           grid-template-columns: repeat(3, 17rem);
+          align-content: start;
         }
 
         li,
+        .sale-text,
         .red-text {
           margin-bottom: 10px;
           font-size: 11px;
@@ -105,10 +109,17 @@
           padding: 0;
           margin: 0 0 10px 0;
         }
+
+        .sale-text {
+          color: #ff0000;
+        }
+
         .red-text {
           font-family: "MierA-Book";
           color: #ff0000;
           margin: 0;
+          position: absolute;
+          bottom: 37px;
         }
 
         .img {
@@ -211,6 +222,7 @@
       a:hover::before {
         width: 100%;
         padding: 0;
+        border-bottom: 1px solid #999999;
       }
 
       a:hover {
