@@ -1,8 +1,15 @@
 import React from "react";
+import Slider from "react-slick";
 import "./Contents.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class Contents extends React.Component {
   render() {
+    const settings = {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+    };
     return (
       <div className="Contents">
         <video loop autoPlay muted width="100%" height="100%">
@@ -46,7 +53,8 @@ class Contents extends React.Component {
         <section>
           <div className="black-link">
             <div className="text">
-              <p>9 years of AMI shows by Loic Prigent</p>
+              <p>9 years of AMI shows</p>
+              <p> by Loic Prigent</p>
             </div>
             <a href="#!">Watch now</a>
           </div>
@@ -68,7 +76,36 @@ class Contents extends React.Component {
             src="https://www.amiparis.com/BWStaticContent/14000/068ed2b2-47ae-431e-bc2d-abd5b082c486_desktop.jpg"
             alt=""
           />
-          <div></div>
+          <div className="gray-link slider-container">
+            <div className="text">
+              <p className="slide-text">New Pre-Collection</p>
+            </div>
+            <div className="slider-box">
+              <Slider className="slider" {...settings}>
+                <div className="slider-img">
+                  <img
+                    src="https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-denim-jacket_14942478_27093441_500.jpg"
+                    alt=""
+                  />
+                  <p>Ami De Coeur Denim Jacket</p>
+                </div>
+                <div className="slider-img">
+                  <img
+                    src="https://cdn-images.farfetch-contents.com/ami-chino-trousers_14942366_27093119_500.jpg"
+                    alt=""
+                  />
+                  <p>Chino Trousers</p>
+                </div>
+                <div className="slider-img">
+                  <img
+                    src="https://cdn-images.farfetch-contents.com/ami-multicolor-striped-sweater_14942390_27093250_500.jpg"
+                    alt=""
+                  />
+                  <p>Multicolor Striped Sweater</p>
+                </div>
+              </Slider>
+            </div>
+          </div>
         </section>
         <section>
           <div className="black-link">
