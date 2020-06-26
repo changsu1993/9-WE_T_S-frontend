@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+.signup-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%; //952.5px
+  height: 653px;
+  .signup {
+    display: flex;
+    flex-direction: column;
+    width: 581.016px;
+    height: 653px;
+
+    .new-customer {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-family: "MierA-Regular";
+      letter-spacing: 1.67px;
+      .ami-image {
+        margin-right: 25px;
+      }
+    }
+
+    .new-form {
+      display: flex;
+      flex-direction: column;
+      .name {
+        margin-bottom: 20px;
+        #firstname,
+        #lastname {
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid;
+          font-size: 14px;
+          margin-bottom: 30px;
+          width: 270.516px;
+          height: 54px;
+          padding-top: 20px;
+          font-family: "MierA-Regular";
+        }
+        #lastname {
+          margin-left: 40px;
+        }
+      }
+      .email-address {
+        margin-bottom: 20px;
+      }
+      .email-password {
+        margin-bottom: 20px;
+      }
+      .confirm-password {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  a {
+    color: black;
+    border-bottom: 1px solid black;
+  }
+
+  #emailid,
+  #emailpw,
+  #emailcon {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid;
+    font-size: 14px;
+    margin-bottom: 30px;
+    width: 504.016px;
+    height: 54px;
+    padding-top: 20px;
+    font-family: "MierA-Regular";
+  }
+
+  .login-register-wrapper {
+    .send-checkbox {
+      //forgot에 11px주고 폰트스타일을 줄 땐 forgot-size 아이디에 줌으로써 remember me와 차이를 둔다.
+      font-size: 11px;
+      font-family: "MierA-Regular";
+      letter-spacing: 0.92px;
+      .send-box {
+        margin-bottom: 50px;
+        .send-check {
+          margin-right: 10px;
+        }
+      }
+      .last-wrapper {
+        .register-button {
+          height: 49px;
+          width: 141px;
+          font-size: 14px;
+          background-color: black;
+          color: white;
+          border: none;
+          letter-spacing: 0.12px;
+          font-family: "MierA-Regular";
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  input::placeholder {
+    color: black;
+  }
+}

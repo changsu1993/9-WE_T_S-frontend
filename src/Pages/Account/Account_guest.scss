@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.guest-container {
+  display: flex;
+  width: 100%; // 952.5px
+  height: 205px;
+}
+
+.guest-checkout {
+  font-size: 20px;
+  letter-spacing: 1.67px;
+  font-family: "MierA-Regular";
+  margin-bottom: 38px;
+}
+
+.guest-ami {
+  margin-right: 25px;
+}
+
+#guest-id {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid;
+  padding-top: 20px;
+  font-size: 14px;
+  width: 465.922px;
+  height: 54px;
+  font-family: "MierA-Regular";
+  margin-bottom: 5px;
+}
+
+.connect-button {
+  height: 49px;
+  width: 141px;
+  letter-spacing: 0.12px;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: "MierA-Regular";
+  margin-top: 55px;
+}
