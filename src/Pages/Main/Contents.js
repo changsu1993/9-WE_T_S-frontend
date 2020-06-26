@@ -12,7 +12,7 @@ class Contents extends React.Component {
     };
     return (
       <div className="Contents">
-        <video loop autoPlay muted width="100%" height="100%">
+        <video loop autoPlay muted width="100%" height="967.484px">
           <source
             src="https://player.vimeo.com/external/412737001.hd.mp4?s=3f71c64ea91fd46ed927a06d2eb80e143873cd6a&profile_id=175"
             type="video/mp4"
