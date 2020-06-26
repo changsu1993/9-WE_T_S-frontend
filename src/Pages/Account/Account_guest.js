@@ -3,10 +3,6 @@ import "./Account_guest.scss";
 import amilogo from "../../Images/amilogo.png";
 
 class Account_guest extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
   render() {
     return (
       <div className="guest-container">

@@ -6,24 +6,24 @@ class Account_login extends React.Component {
   constructor() {
     super();
     this.state = {
-      loginid: "",
-      loginpw: "",
-      errorid: false,
-      errorpassword: false,
+      loginId: "",
+      loginPw: "",
+      errorId: false,
+      errorPassword: false,
     };
   }
 
   handlelgid = (event) => {
     this.setState({
-      loginid: event.target.value,
-      errorid: false,
+      loginId: event.target.value,
+      errorId: false,
     });
   };
 
   handlelgpw = (event) => {
     this.setState({
-      loginpw: event.target.value,
-      errorpassword: false,
+      loginPw: event.target.value,
+      errorPassword: false,
     });
   };
 
@@ -33,26 +33,26 @@ class Account_login extends React.Component {
     // console.log(this.state.lgnid, this.state.lgnpw);
 
     if (
-      this.state.loginid.length >= 5 &&
-      this.state.loginpw.length >= 5 &&
-      this.state.loginid.includes("@" && ".")
+      this.state.loginId.length >= 5 &&
+      this.state.loginPw.length >= 5 &&
+      this.state.loginId.includes("@" && ".")
     ) {
       fetch("http://10.58.2.83:8000/account/sign-in", {
         method: "POST",
         body: JSON.stringify({
-          email: this.state.loginid,
-          password: this.state.loginpw,
+          email: this.state.loginId,
+          password: this.state.loginPw,
         }),
       })
         .then((res) => res.json())
         .then((res) => console.log(res));
     } else if (
-      this.state.loginid.length < 5 &&
+      this.state.loginId.length < 5 &&
       // this.handlelgid.includes("@" && ".") &&
-      this.state.loginpw.length < 5
+      this.state.loginPw.length < 5
     ) {
-      this.setState({ errorid: true });
-      this.setState({ errorpassword: true });
+      this.setState({ errorId: true });
+      this.setState({ errorPassword: true });
     }
   };
   render() {
@@ -73,14 +73,14 @@ class Account_login extends React.Component {
             <input
               onChange={this.handlelgid}
               type="text"
-              id="loginid"
+              id="loginId"
               placeholder="Email Address *"
               required
             />
           </form>
           <div
             className="error-id"
-            style={{ display: this.state.errorid ? "block" : "none" }}
+            style={{ display: this.state.errorId ? "block" : "none" }}
           >
             Please enter email address
           </div>
@@ -88,14 +88,14 @@ class Account_login extends React.Component {
             <input
               onChange={this.handlelgpw}
               type="password"
-              id="loginpw"
+              id="loginPw"
               placeholder="Password *"
               required
             />
           </form>
           <div
             className="error-password"
-            style={{ display: this.state.errorpassword ? "block" : "none" }}
+            style={{ display: this.state.errorPassword ? "block" : "none" }}
           >
             Please enter email password
           </div>
