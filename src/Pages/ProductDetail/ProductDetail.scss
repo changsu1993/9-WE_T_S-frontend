@@ -1,58 +1,196 @@
 .product-detail {
+  font-family: "MierA-Regular";
+  padding: 0 30px;
 
-    margin-top: 80px;
-    font-family: "MierA-Regular";
-
-
-    .product-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 90px;
-        background-color: powderblue;
-
-        .product-directory {
-            font-size: 16px;
-            letter-spacing: 1.17px;
-            line-height: 22.4px;
-            margin: auto 20px;
-            background-color: transparent;
-            text-decoration: none;
-            padding: 5.5px 0px 5px 0px;
-            border-color: initial;
-            border-image: initial;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            position: relative;
-            transition: 0.3s
-        }
-
-        .product-directory::before {
-            content: "";
-            border-bottom: 0.5px solid black;
-            padding: 0 0.1px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            width: 0;
-            transition: 0.3s;
-
-        }
-
-        .product-directory:hover::before {
-            width: 100%;
-            padding: 0;
-        }
-
-        .product-directory:active {
-            background: black;
-            color: white;
-            transition: none;
-        }
-
+  .product-header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    .button-underline {
+      font-size: 16px;
+      letter-spacing: 1.17px;
+      line-height: 22.4px;
+      margin: auto 20px;
+      background-color: transparent;
+      text-decoration: none;
+      padding: 5.5px 0px 5px 0px;
+      border-color: initial;
+      border-image: initial;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      position: relative;
+      transition: 0.3s;
     }
+
+    .button-underline::before {
+      content: "";
+      border-bottom: 0.5px solid black;
+      padding: 0 0.1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 0;
+      transition: 0.3s;
+    }
+
+    .button-underline:hover::before {
+      width: 100%;
+      padding: 0;
+    }
+
+    .button-underline:active {
+      background: black;
+      color: white;
+      transition: none;
+    }
+  }
+
+  .product-main-photo-and-info {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .size {
+      height: 837.688px;
+      display: flex;
+      padding: 30px;
+      width: 50%;
+      img {
+        width: 100%;
+        // object-fit: cover;
+      }
+    }
+
+    .product-info-wrapper {
+      width: 50%;
+      padding: 90px 120px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .product-info {
+        text-align: left;
+        h1 {
+          font-size: 30px;
+          font-weight: normal;
+          letter-spacing: 2.5px;
+        }
+        .price-detail {
+          margin-bottom: 40px;
+          letter-spacing: 1px;
+          span {
+            margin-right: 20px;
+          }
+        }
+        p {
+          font-size: 11px;
+          letter-spacing: 0.83px;
+          color: #999999;
+          margin-bottom: 20px;
+        }
+
+        .select-a-size {
+          margin-bottom: 12px;
+        }
+
+        .colors-options {
+          margin-bottom: 59px;
+        }
+
+        .add-to-cart {
+          background-color: black;
+          text-align: center;
+          color: white;
+          padding: 15px 65px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+      .product-detail-buttons {
+        text-align: center;
+        .button-underline-small {
+          font-size: 14px;
+          letter-spacing: 1.17px;
+          line-height: 19.6px;
+          margin: auto 20px;
+          background-color: transparent;
+          text-decoration: none;
+          padding: 5.5px 0px 5px 0px;
+          border-color: initial;
+          border-image: initial;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          position: relative;
+          transition: 0.3s;
+        }
+
+        .button-underline-small::before {
+          content: "";
+          border-bottom: 0.5px solid black;
+          padding: 0 0.1px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 0;
+          transition: 0.3s;
+        }
+
+        .button-underline-small:hover::before {
+          width: 100%;
+          padding: 0;
+        }
+
+        .button-underline-small:active {
+          background: black;
+          color: white;
+          transition: none;
+        }
+      }
+    }
+  }
+
+  .customer-care-guide {
+    display: flex;
+    .care-box {
+      padding: 30px;
+      flex: 1;
+      height: 394.67px;
+      width: 845.33px;
+    }
+    .care {
+      background-color: #f2f2f2;
+      padding: 60px 150px;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      h2 {
+        font-size: 20px;
+        letter-spacing: 1.67px;
+        font-weight: normal;
+      }
+      p {
+        font-size: 14px;
+        letter-spacing: 1.3px;
+        line-height: 19.6px;
+        padding: 15px 0 0 0;
+      }
+      .care-guide {
+        font-size: 11px;
+        letter-spacing: 0.92px;
+        line-height: 15px;
+      }
+    }
+  }
 }

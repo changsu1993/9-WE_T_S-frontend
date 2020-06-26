@@ -24,12 +24,10 @@ class Product extends React.Component {
   };
 
   colorMouseOver = (img) => {
-    console.log("haha", img);
     this.setState({ imageSrc: img, colorHovered: true });
   };
 
   colorMouseOut = () => {
-    console.log("hahaddddddd");
     this.setState({ imgSrc: this.props.imageUrl, colorHovered: false });
   };
 
@@ -51,11 +49,7 @@ class Product extends React.Component {
       >
         <Link to="/shopping/man">
           <div className="imgs">
-            <img
-              alt="product-img"
-              className="img-original"
-              src={imageSrc}
-            />
+            <img alt="product-img" className="img-original" src={imageSrc} />
           </div>
           <div className="text-wrapper">
             <div className="name-and-price">
