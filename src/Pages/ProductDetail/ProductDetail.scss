@@ -1,6 +1,6 @@
 .product-detail {
   font-family: "MierA-Regular";
-  padding: 0 30px;
+  padding: 54px 30px 0 30px;
 
   .product-header {
     position: fixed;
@@ -100,10 +100,93 @@
 
         .select-a-size {
           margin-bottom: 12px;
+          display: flex;
+          flex-direction: row;
+          font-size: 12px;
+          line-height: 12px;
+          letter-spacing: 1px;
+          .size-dropdown-bar {
+            margin-left: 60px;
+            .drop-down {
+              font-size: 12px;
+              z-index: 999;
+
+              .click-to-select {
+                display: flex;
+                background-color: powderblue;
+                width: 96px;
+                height: 17px;
+                span {
+                  align-self: flex-start;
+                  padding-left: 2px;
+                }
+                img {
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+              .size-list {
+                display: inline-block;
+                list-style: disc;
+                padding: 20px;
+                background-color: blanchedalmond;
+
+                li {
+                  margin-bottom: 22px;
+                  font-family: MierA-Demi;
+                  font-size: 11px;
+                  letter-spacing: 1px;
+                  line-height: 15.4px;
+                  background-color: transparent;
+                  text-decoration: none;
+                  padding: 5.5px 0px 5px 0px;
+                  cursor: pointer;
+                  border: none;
+                  outline: none;
+                  position: relative;
+                  transition: 0.3s;
+                }
+
+                li::before {
+                  content: "";
+                  border-bottom: 0.5px solid black;
+                  padding: 0 0.1px;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  margin: 0 auto;
+                  width: 0;
+                  transition: 0.3s;
+                }
+
+                li:hover::before {
+                  width: 100%;
+                }
+              }
+              .none {
+                display: none;
+              }
+            }
+          }
         }
 
         .colors-options {
           margin-bottom: 59px;
+          display: flex;
+          flex-direction: row;
+
+          .colors {
+            display: flex;
+            flex-direction: row;
+            margin-left: 40px;
+
+            .circled-color {
+              width: 30px;
+              border-radius: 50%;
+              margin: 0 10px;
+            }
+          }
         }
 
         .add-to-cart {

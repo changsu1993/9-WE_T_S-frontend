@@ -6,7 +6,7 @@
     "subSubCategory": "Tops",
     "name": "T-shirt With Ami De Coeur Logo",
     "price": 128000,
-    "size": ["S", "L", "XL"],
+    "size": [{ "option": "S" }, { "option": "M" }, { "option": "XL" }],
     "colors": [
       {
         "name": "Black",
@@ -14,15 +14,15 @@
       },
       {
         "name": "White",
-        "img": "https://www.amiparis.com/BWContent/AMI/14374156_cs.jpg"
+        "img": "https://www.amiparis.com/BWContent/AMI/14374109_cs.jpg"
       },
       {
-        "name": "Black",
-        "img": "https://www.amiparis.com/BWContent/AMI/14374155_cs.jpg"
+        "name": "Red",
+        "img": "https://www.amiparis.com/BWContent/AMI/14374110_cs.jpg"
       },
       {
-        "name": "Black",
-        "img": "https://www.amiparis.com/BWContent/AMI/14374155_cs.jpg"
+        "name": "Stripe",
+        "img": "https://www.amiparis.com/BWContent/AMI/14374133_cs.jpg"
       }
     ],
 

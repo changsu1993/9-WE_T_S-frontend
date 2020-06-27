@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductDetail.scss";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
+import Arrowdown from "../../Images/arrow-down.png";
 
 class ProductDetail extends React.Component {
   constructor() {
@@ -9,17 +10,19 @@ class ProductDetail extends React.Component {
 
     this.state = {
       detailData: {},
+      showList: false,
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3000/data/detailData.json")
+    fetch("http://localhost:3001/data/detailData.json")
       .then((res) => res.json())
-      .then((res) =>
-        this.setState({ detailData: res.detailData }, () => {
-          console.log(this.state.detailData, "here");
-        })
-      );
+      .then((res) => this.setState({ detailData: res.detailData }));
   }
+
+  listOpenHandler = () => {
+    const { showList } = this.state;
+    this.setState({ showList: !showList });
+  };
 
   render() {
     //   const photoFilter = this.state.detailData.productImage.filter((obj) => {
@@ -67,11 +70,43 @@ class ProductDetail extends React.Component {
                 <p>clothing standard</p>
                 <div className="select-a-size">
                   <span>Size</span>
-                  <div className="dropdown-bar"></div>
+                  <div
+                    onClick={this.listOpenHandler}
+                    className="size-dropdown-bar"
+                  >
+                    <div className="drop-down">
+                      <div className="click-to-select">
+                        <span>Select a size</span>
+                        <img alt="arrow-icon" src={Arrowdown} />
+                      </div>
+
+                      <ul
+                        className={
+                          this.state.showList ? "size-list" : "size-list none"
+                        }
+                      >
+                        {this.state.detailData.size &&
+                          this.state.detailData.size.map((opt) => {
+                            return <li name={opt.option}>{opt.option}</li>;
+                          })}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
                 <div className="colors-options">
                   <span>Colors</span>
-                  <span></span>
+                  <div className="colors">
+                    {this.state.detailData.colors &&
+                      this.state.detailData.colors.map((obj) => {
+                        return (
+                          <img
+                            alt="color-options"
+                            className="circled-color"
+                            src={obj.img}
+                          />
+                        );
+                      })}
+                  </div>
                 </div>
                 <button className="add-to-cart">Add to cart</button>
               </div>
