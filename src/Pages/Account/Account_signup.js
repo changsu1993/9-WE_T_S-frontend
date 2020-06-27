@@ -6,42 +6,47 @@ class Account_signup extends React.Component {
   constructor() {
     super();
     this.state = {
-      firstname: "",
-      lastname: "",
-      emailid: "",
-      emailpw: "",
-      emailcon: "",
+      firstName: "",
+      lastName: "",
+      emailId: "",
+      emailPw: "",
+      emailCon: "",
     };
   }
 
-  handleFirst = (event) => {
-    this.setState({
-      firstname: event.target.value,
-    });
-  };
+  // handleFirst = (event) => {
+  //   this.setState({
+  //     firstName: event.target.value,
+  //   });
+  // };
 
-  handleLast = (event) => {
-    this.setState({
-      lastname: event.target.value,
-    });
-  };
+  // handleLast = (event) => {
+  //   this.setState({
+  //     lastName: event.target.value,
+  //   });
+  // };
 
-  handleId = (event) => {
-    this.setState({
-      emailid: event.target.value,
-    });
-  };
+  // handleId = (event) => {
+  //   this.setState({
+  //     emailId: event.target.value,
+  //   });
+  // };
 
-  handlePw = (event) => {
-    this.setState({
-      emailpw: event.target.value,
-    });
-  };
+  // handlePw = (event) => {
+  //   this.setState({
+  //     emailPw: event.target.value,
+  //   });
+  // };
 
-  handleCon = (event) => {
-    this.setState({
-      emailcon: event.target.value,
-    });
+  // handleCon = (event) => {
+  //   this.setState({
+  //     emailCon: event.target.value,
+  //   });
+  // };
+  // 기능구현과 접목해서 생각해보려고 지우지 않고 남겨둠
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleClick = (e) => {
@@ -49,14 +54,14 @@ class Account_signup extends React.Component {
 
     console.log("this.state : ", this.state);
     // 비밀번호와 비밀번호 확인값이 다르면 애초에  fetch를 실행하지 말라는 조건문.
-    if (this.state.emailpw === this.state.emailcon) {
+    if (this.state.emailPw === this.state.emailCon) {
       fetch("http://10.58.2.83:8000/account/sign-up", {
         method: "POST",
         body: JSON.stringify({
-          first_name: this.state.firstname,
-          last_name: this.state.lastname,
-          email: this.state.emailid,
-          password: this.state.emailpw,
+          first_name: this.state.firstName,
+          last_name: this.state.lastName,
+          email: this.state.emailId,
+          password: this.state.emailPw,
         }),
       }).then((res) => console.log("res >>>", res));
     }
@@ -79,40 +84,45 @@ class Account_signup extends React.Component {
           <div className="new-form">
             <form className="name">
               <input
-                onChange={this.handleFirst}
+                onChange={this.handleChange}
                 type="text"
-                id="firstname"
+                id="firstName"
                 placeholder="First Name *"
+                name="firstName"
               />
               <input
-                onChange={this.handleLast}
+                onChange={this.handleChange}
                 type="text"
-                id="lastname"
+                id="lastName"
                 placeholder="Last Name *"
+                name="lastName"
               />
             </form>
             <form className="email-address">
               <input
-                onChange={this.handleId}
+                onChange={this.handleChange}
                 type="text"
-                id="emailid"
+                id="emailId"
                 placeholder="Email Address *"
+                name="emailId"
               />
             </form>
             <form className="email-password">
               <input
-                onChange={this.handlePw}
+                onChange={this.handleChange}
                 type="password"
-                id="emailpw"
+                id="emailPw"
                 placeholder="Password *"
+                name="emailPw"
               />
             </form>
             <form className="confirm-password">
               <input
-                onChange={this.handleCon}
+                onChange={this.handleChange}
                 type="password"
-                id="emailcon"
+                id="emailCon"
                 placeholder="Confirm Password *"
+                name="emailCon"
               />
             </form>
           </div>

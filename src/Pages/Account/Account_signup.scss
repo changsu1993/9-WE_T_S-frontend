@@ -28,8 +28,8 @@
       flex-direction: column;
       .name {
         margin-bottom: 20px;
-        #firstname,
-        #lastname {
+        #firstName,
+        #lastName {
           border-top: none;
           border-left: none;
           border-right: none;
@@ -41,7 +41,7 @@
           padding-top: 20px;
           font-family: "MierA-Regular";
         }
-        #lastname {
+        #lastName {
           margin-left: 40px;
         }
       }
@@ -62,9 +62,9 @@
     border-bottom: 1px solid black;
   }
 
-  #emailid,
-  #emailpw,
-  #emailcon {
+  #emailId,
+  #emailPw,
+  #emailCon {
     border-top: none;
     border-left: none;
     border-right: none;

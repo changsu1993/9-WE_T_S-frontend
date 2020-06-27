@@ -13,24 +13,31 @@ class Account_login extends React.Component {
     };
   }
 
-  handlelgid = (event) => {
-    this.setState({
-      loginId: event.target.value,
-      errorId: false,
-    });
-  };
+  // handlelgid = (event) => {
+  //   this.setState({
+  //     loginId: event.target.value,
+  //     errorId: false,
+  //   });
+  // };
 
-  handlelgpw = (event) => {
-    this.setState({
-      loginPw: event.target.value,
-      errorPassword: false,
-    });
+  // handlelgpw = (event) => {
+  //   this.setState({
+  //     loginPw: event.target.value,
+  //     errorPassword: false,
+  //   });
+  // };
+  //기능구현 이해 못한 부분 때문에 주석처리
+
+  changeHandler = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ errorPassword: false }); // 로그인 기능 구현하던 중 잠시 중단
+    this.setState({ errorId: false }); // 로그인 기능 구현하던 중 잠시 중단
   };
 
   handleClick = (e) => {
     e.preventDefault();
 
-    // console.log(this.state.lgnid, this.state.lgnpw);
+    console.log("this.state : ", this.state);
 
     if (
       this.state.loginId.length >= 5 &&
@@ -47,7 +54,7 @@ class Account_login extends React.Component {
         .then((res) => res.json())
         .then((res) => console.log(res));
     } else if (
-      this.state.loginId.length < 5 &&
+      this.state.loginId.length < 5 ||
       // this.handlelgid.includes("@" && ".") &&
       this.state.loginPw.length < 5
     ) {
@@ -71,7 +78,8 @@ class Account_login extends React.Component {
           </div>
           <form className="login-id">
             <input
-              onChange={this.handlelgid}
+              onChange={this.changeHandler}
+              name="loginId"
               type="text"
               id="loginId"
               placeholder="Email Address *"
@@ -86,9 +94,10 @@ class Account_login extends React.Component {
           </div>
           <form className="login-password">
             <input
-              onChange={this.handlelgpw}
+              onChange={this.changeHandler}
               type="password"
               id="loginPw"
+              name="loginPw"
               placeholder="Password *"
               required
             />
