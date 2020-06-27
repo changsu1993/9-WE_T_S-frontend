@@ -11,6 +11,8 @@ class ProductDetail extends React.Component {
     this.state = {
       detailData: {},
       showList: false,
+      option: "",
+      click: false,
     };
   }
   componentDidMount() {
@@ -19,18 +21,16 @@ class ProductDetail extends React.Component {
       .then((res) => this.setState({ detailData: res.detailData }));
   }
 
-  listOpenHandler = () => {
-    const { showList } = this.state;
-    this.setState({ showList: !showList });
+  sizeSelectHandler = (size) => {
+    this.setState({ option: size });
+  };
+
+  arrowClickHandler = () => {
+    const { click } = this.state;
+    this.setState({ click: !click });
   };
 
   render() {
-    //   const photoFilter = this.state.detailData.productImage.filter((obj) => {
-    //     return obj.index!== 0;
-    //   });
-    //   console.log(photoFilter);
-
-    //idx  가 영이 아닌 것 으로 필터를 돌려서, 변수에 저장후 아래  jsx에서 그 변수로  map을 돌리기
     return (
       <>
         <Nav />
@@ -62,7 +62,7 @@ class ProductDetail extends React.Component {
                 <div className="price-detail">
                   <span>
                     $
-                    {this.state.detailData.id &&
+                    {this.state.detailData.price &&
                       this.state.detailData.price.toLocaleString()}
                   </span>
                   <span className="import-incl">(Import Duties Included)</span>
@@ -71,39 +71,60 @@ class ProductDetail extends React.Component {
                 <div className="select-a-size">
                   <span>Size</span>
                   <div
-                    onClick={this.listOpenHandler}
+                    onClick={this.arrowClickHandler}
                     className="size-dropdown-bar"
                   >
                     <div className="drop-down">
                       <div className="click-to-select">
-                        <span>Select a size</span>
-                        <img alt="arrow-icon" src={Arrowdown} />
+                        <span>
+                          {this.state.option !== ""
+                            ? this.state.option
+                            : "Select a size"}
+                        </span>
+                        <img
+                          class={this.state.click ? "clicked" : "x-clicked"}
+                          alt="arrow-icon"
+                          src={Arrowdown}
+                        />
                       </div>
 
                       <ul
-                        className={
-                          this.state.showList ? "size-list" : "size-list none"
-                        }
+                        className={`size-list ${
+                          this.state.click ? "show" : ""
+                        }`}
                       >
                         {this.state.detailData.size &&
                           this.state.detailData.size.map((opt) => {
-                            return <li name={opt.option}>{opt.option}</li>;
+                            return (
+                              <li
+                                onClick={() => {
+                                  this.sizeSelectHandler(opt.option);
+                                }}
+                                name={opt.option}
+                              >
+                                {opt.option}
+                              </li>
+                            );
                           })}
                       </ul>
                     </div>
                   </div>
                 </div>
+                <div className="color-in-comment-box"></div>
                 <div className="colors-options">
                   <span>Colors</span>
                   <div className="colors">
                     {this.state.detailData.colors &&
                       this.state.detailData.colors.map((obj) => {
                         return (
-                          <img
-                            alt="color-options"
-                            className="circled-color"
-                            src={obj.img}
-                          />
+                          <div className="colors-wrapper">
+                            <img
+                              alt="color-options"
+                              className="circled-color"
+                              src={obj.img}
+                            />
+                            <span>{obj.name}</span>
+                          </div>
                         );
                       })}
                   </div>
