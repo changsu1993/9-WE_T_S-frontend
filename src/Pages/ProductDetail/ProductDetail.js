@@ -16,7 +16,7 @@ class ProductDetail extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3001/data/detailData.json")
+    fetch("http://localhost:3000/data/detailData.json")
       .then((res) => res.json())
       .then((res) => this.setState({ detailData: res.detailData }));
   }
@@ -118,12 +118,12 @@ class ProductDetail extends React.Component {
                       this.state.detailData.colors.map((obj) => {
                         return (
                           <div className="colors-wrapper">
+                            <span>{obj.name}</span>
                             <img
                               alt="color-options"
                               className="circled-color"
                               src={obj.img}
                             />
-                            <span>{obj.name}</span>
                           </div>
                         );
                       })}
