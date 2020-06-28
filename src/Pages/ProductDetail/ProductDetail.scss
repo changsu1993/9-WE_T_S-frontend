@@ -221,16 +221,16 @@
                 border: 5px solid black;
                 color: white;
                 font-size: 12px;
-                height: 30px;
+                height: 28px;
                 letter-spacing: 1px;
-                line-height: 20px;
+                line-height: 15px;
                 position: absolute;
                 top: -43px;
                 text-align: center;
                 text-transform: uppercase;
-                left: -12.7px;
+                left: -17px;
                 display: none;
-                padding: 0 12px;
+                padding: 0 10px;
               }
               span:after {
                 content: "";
@@ -242,20 +242,20 @@
                 border-right: 5px solid black;
                 background: black;
                 left: 50%;
-                margin-left: -3.5px;
+                margin-left: -5px;
                 transform: rotate(45deg);
               }
             }
 
             .circled-color {
-              width: 30px;
+              width: 18px;
               border-radius: 50%;
               margin: 0 10px;
               transition: all 0.2s ease-in;
               cursor: pointer;
             }
             .circled-color:hover {
-              transform: scale(1.2);
+              transform: scale(1.5);
             }
           }
         }

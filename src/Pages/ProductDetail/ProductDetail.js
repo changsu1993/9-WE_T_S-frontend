@@ -3,6 +3,7 @@ import "./ProductDetail.scss";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
+import { Link } from "react-router-dom";
 
 class ProductDetail extends React.Component {
   constructor() {
@@ -31,6 +32,10 @@ class ProductDetail extends React.Component {
   };
 
   render() {
+    // const imgsArray =  this.state.detailData.productImages && this.state.detailData.productImages.filter((num) => {
+    //   return (indexOf(num) > 0)
+    // })}
+
     return (
       <>
         <Nav />
@@ -53,7 +58,10 @@ class ProductDetail extends React.Component {
               <img
                 className="product-photo"
                 alt="product"
-                src="https://cdn-images.farfetch-contents.com/ami-short-sleeves-shirt_14374136_27071707_1920.jpg?c=2"
+                src={
+                  this.state.detailData.productImages &&
+                  this.state.detailData.productImages[0].img
+                }
               />
             </section>
             <section className="product-info-wrapper size">
@@ -119,11 +127,13 @@ class ProductDetail extends React.Component {
                         return (
                           <div className="colors-wrapper">
                             <span>{obj.name}</span>
-                            <img
-                              alt="color-options"
-                              className="circled-color"
-                              src={obj.img}
-                            />
+                            <Link to={`/shopping/item1${obj.name}`}>
+                              <img
+                                alt="color-options"
+                                className="circled-color"
+                                src={obj.img}
+                              />
+                            </Link>
                           </div>
                         );
                       })}
