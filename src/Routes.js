@@ -8,6 +8,7 @@ import Woman from "./Pages/Products/Woman";
 import Accessories from "./Pages/Products/Accessories";
 import Shoes from "./Pages/Products/Shoes";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+import Cart from "./Pages/Products/Cart/Cart";
 import Search from "./Components/Search/Search";
 
 class Routes extends React.Component {
@@ -28,6 +29,7 @@ class Routes extends React.Component {
             path="/shopping/product-detail"
             component={ProductDetail}
           />
+          <Route exact path="/cart" component={Cart} />
         </Switch>
       </Router>
     );
