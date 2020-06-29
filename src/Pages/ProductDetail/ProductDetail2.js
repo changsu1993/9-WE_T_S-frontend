@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MyModalImages from "./MyModalImages";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
@@ -39,7 +40,12 @@ class ProductDetail2 extends React.Component {
 
     return (
       <>
-        <MyModalImages />
+        {/* <MyModalImages
+          data={
+            this.state.detailData.productImages &&
+            this.state.detailData.productImages
+          }
+        /> */}
         <Nav />
         <main className="ProductDetail">
           <header className="product-header">

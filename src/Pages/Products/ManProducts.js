@@ -76,4 +76,4 @@ class ManProducts extends React.Component {
   }
 }
 
-export default Man;
+export default ManProducts;
