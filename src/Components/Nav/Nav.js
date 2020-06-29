@@ -5,6 +5,7 @@ import Newsletter from "../Newsletter/Newsletter";
 import NewsletterPortal from "../Newsletter/NewsletterPortal";
 import Search from "../Search/Search";
 import SearchPortal from "../Search/SearchPortal";
+import { Link } from "react-router-dom";
 
 class Nav extends React.Component {
   constructor() {
@@ -131,12 +132,13 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a
-              href="#!"
+            <Link
+              to="/shopping/man"
               className={this.state.activeTab === 2 ? "underline" : ""}
             >
+              {" "}
               Man
-            </a>
+            </Link>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 2 ? "show" : "hide"
