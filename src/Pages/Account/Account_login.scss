@@ -1,0 +1,105 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  width: 100%; // 952.5px
+  height: 550px;
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    width: 542.922px;
+    height: 415px;
+    justify-content: space-between;
+    .already-customer {
+      font-size: 20px;
+      letter-spacing: 1.67px;
+      font-family: "MierA-Regular";
+      margin-bottom: 10px;
+      .already-ami {
+        margin-right: 25px;
+      }
+    }
+    .login-id {
+      .loginId-text {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid;
+        padding-top: 20px;
+        font-size: 14px;
+        width: 465.922px;
+        height: 54px;
+        font-family: "MierA-Regular";
+      }
+    }
+    input::placeholder {
+      color: black;
+    }
+    .error-id {
+      display: block;
+      margin-left: 300px;
+      color: red;
+      font-size: 14px;
+      font-family: "MierA-Regular";
+    }
+    .login-password {
+      .loginPw-text {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid;
+        padding-top: 20px;
+        font-size: 14px;
+        width: 465.922px;
+        height: 54px;
+        font-family: "MierA-Regular";
+        margin-bottom: 5px;
+      }
+    }
+    .error-password {
+      display: none;
+      margin-left: 290px;
+      margin-bottom: 40px;
+      color: red;
+      font-size: 14px;
+      font-family: "MierA-Regular";
+    }
+    .last-wrapper {
+      .forgot {
+        font-size: 11px;
+        font-family: "MierA-Regular";
+        margin-bottom: 54px;
+        a {
+          color: black;
+          border-bottom: 1px solid black;
+          letter-spacing: 1px;
+          font-style: italic;
+          padding-bottom: 4px;
+        }
+        label {
+          display: inline-flex;
+          align-items: center;
+          .save-checkbox {
+            border: 1px solid gray;
+            margin-left: 240px;
+            margin-right: 10px;
+          }
+          .checkbox-ment {
+            letter-spacing: 0.92px;
+          }
+        }
+      }
+    }
+    .login-button {
+      height: 49px;
+      width: 271.453px;
+      letter-spacing: 0.12px;
+      font-size: 14px;
+      background-color: black;
+      color: white;
+      border: none;
+      font-family: "MierA-Regular";
+      margin-top: 35px;
+    }
+  }
+}
