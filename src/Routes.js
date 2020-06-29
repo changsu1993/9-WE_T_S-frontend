@@ -7,6 +7,7 @@ import Woman from "./Pages/Products/Woman";
 import Accessories from "./Pages/Products/Accessories";
 import Shoes from "./Pages/Products/Shoes";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+import ProductDetail2 from "./Pages/ProductDetail/ProductDetail2";
 
 class Routes extends React.Component {
   render() {
@@ -19,9 +20,9 @@ class Routes extends React.Component {
           <Route exact path="/shopping/woman" component={Woman} />
           <Route exact path="/shopping/accessories" component={Accessories} />
           <Route exact path="/shopping/shoes" component={Shoes} />
-          <Route exact path="/shopping/item1" component={ProductDetail} />
-          {/* <Route exact path="/shopping/item1Black" component={itemBlack} />
-          <Route exact path="/shopping/item1White" component={itemWhite} />
+          <Route exact path="/shopping/item1Red" component={ProductDetail} />
+          <Route exact path="/shopping/item1Black" component={ProductDetail2} />
+          {/* <Route exact path="/shopping/item1White" component={itemWhite} />
           <Route exact path="/shopping/item1Red" component={itemRed} />
           <Route exact path="/shopping/item1Stripe" component={itemStripe} /> */}
         </Switch>

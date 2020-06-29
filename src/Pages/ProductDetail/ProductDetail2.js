@@ -5,7 +5,7 @@ import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
 import { Link } from "react-router-dom";
 
-class ProductDetail extends React.Component {
+class ProductDetail2 extends React.Component {
   constructor() {
     super();
 
@@ -14,11 +14,10 @@ class ProductDetail extends React.Component {
       showList: false,
       option: "",
       click: false,
-      
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3000/data/detailData.json")
+    fetch("http://localhost:3000/data/detailData2.json")
       .then((res) => res.json())
       .then((res) => this.setState({ detailData: res.detailData }));
   }
@@ -74,7 +73,7 @@ class ProductDetail extends React.Component {
                 <h1>{this.state.detailData.name}</h1>
                 <div className="price-detail">
                   <span>
-                    ₩
+                    $
                     {this.state.detailData.price &&
                       this.state.detailData.price.toLocaleString()}
                   </span>
@@ -191,4 +190,4 @@ class ProductDetail extends React.Component {
   }
 }
 
-export default ProductDetail;
+export default ProductDetail2;
