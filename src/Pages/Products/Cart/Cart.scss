@@ -7,8 +7,10 @@
     letter-spacing: 1.33px;
     text-align: center;
   }
+
   .container {
     display: flex;
+    padding-bottom: 30px;
 
     .left-container {
       padding: 0 55px;
@@ -16,8 +18,8 @@
 
       .product {
         padding: 40px 0px;
-        border-bottom: 1px solid rgb(221, 221, 221);
         display: flex;
+        border-bottom: 1px solid rgb(221, 221, 221);
 
         .product-img {
           width: 120px;
@@ -36,12 +38,13 @@
           flex-direction: column;
 
           .product-name {
+            height: 18px;
+            margin-bottom: 20px;
             font-size: 13px;
             letter-spacing: 1.08px;
             line-height: 18.2px;
-            height: 18px;
-            margin-bottom: 20px;
           }
+
           .select-box {
             font-size: 11px;
             letter-spacing: 0.92px;
@@ -83,6 +86,7 @@
                   width: 30px;
                   text-align: center;
                 }
+
                 input[type="number"]::-webkit-outer-spin-button,
                 input[type="number"]::-webkit-inner-spin-button {
                   -webkit-appearance: none;
@@ -98,13 +102,14 @@
                 margin-bottom: 6px;
 
                 select {
+                  padding: 5px 20px 5px 0;
                   border: none;
                   background: none;
-                  padding: 5px 20px 5px 0;
                   cursor: pointer;
                 }
               }
             }
+
             .colour {
               span:last-child {
                 padding: 5px 20px;
@@ -112,22 +117,23 @@
             }
           }
         }
+
         .remove-price {
           margin: 5px 0 5px auto;
-          font-size: 13px;
-          text-align: right;
           display: flex;
           flex-direction: column;
+          font-size: 13px;
+          text-align: right;
 
           .remove {
-            justify-self: flex-start;
             margin-bottom: auto;
+            padding: 0;
+            justify-self: flex-start;
             border: none;
             background: none;
+            font-family: "MierA-Demi";
             font-weight: 600;
             letter-spacing: 1.08px;
-            font-family: "MierA-Demi";
-            padding: 0;
             cursor: pointer;
           }
 
@@ -159,31 +165,32 @@
 
         .total-box {
           padding: 25px 40px 40px 40px;
-          border-top: 1px solid rgb(221, 221, 221);
           background-color: rgb(242, 242, 242);
+          border-top: 1px solid rgb(221, 221, 221);
         }
 
         .price-title {
-          display: flex;
           padding: 15px 0;
+          display: flex;
 
           div:last-child {
             justify-content: flex-end;
             margin-left: auto;
+            font-family: "MierA-Demi";
             font-weight: 400;
             letter-spacing: 1.08px;
-            font-family: "MierA-Demi";
           }
 
           .total-price {
             display: flex;
 
             span:first-child {
+              padding-right: 10px;
               font-family: "MierA-Demi";
               font-weight: 400;
               letter-spacing: 1.08px;
-              padding-right: 10px;
             }
+
             span:last-child {
               font-size: 11px;
               letter-spacing: 0.92px;
@@ -191,6 +198,7 @@
             }
           }
         }
+
         button {
           border: none;
           background: black;
@@ -201,20 +209,24 @@
           color: #ffffff;
           cursor: pointer;
         }
+
         .notice {
           margin: 40px 0;
+
           p {
             font-size: 11px;
             letter-spacing: 0.92px;
             line-height: 22.99px;
+
+            &:first-child {
+              margin-bottom: 14px;
+            }
+
             a {
               color: black;
               padding-bottom: 4px;
               border-bottom: 1px solid black;
             }
-          }
-          p:first-child {
-            margin-bottom: 14px;
           }
         }
       }
