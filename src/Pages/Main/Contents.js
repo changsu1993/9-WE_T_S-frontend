@@ -12,7 +12,14 @@ class Contents extends React.Component {
     };
     return (
       <div className="Contents">
-        <video loop autoPlay muted width="100%" height="967.484px">
+        <video
+          className="collection-video"
+          width="100%"
+          height="100%"
+          loop
+          autoPlay
+          muted
+        >
           <source
             src="https://player.vimeo.com/external/412737001.hd.mp4?s=3f71c64ea91fd46ed927a06d2eb80e143873cd6a&profile_id=175"
             type="video/mp4"
@@ -36,17 +43,18 @@ class Contents extends React.Component {
           </div>
         </div>
         <section>
-          <img
-            className="odd-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/36416111-2c6f-463a-890d-f3425bc55e8f_homepage-desktop-gay-pride.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="odd-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/36416111-2c6f-463a-890d-f3425bc55e8f_homepage-desktop-gay-pride.jpg"
+              alt=""
+            />
+          </div>
           <div className="gray-link">
             <div className="text">
               <p>AMI x GLAAD</p>
               <p>The Rainbow Collection</p>
             </div>
-
             <a href="#!">Discover now</a>
           </div>
         </section>
@@ -58,28 +66,31 @@ class Contents extends React.Component {
             </div>
             <a href="#!">Watch now</a>
           </div>
-          <video
-            width="788.2px"
-            autoPlay
-            // poster="https://www.amiparis.com/BWStaticContent/14000/68c560e9-08a8-49dc-9451-bec3460f449f_card-block-desktop.jpg"
-            controls
-          >
-            <source
-              src="https://www.amiparis.com/BWStaticContent/14000/c9005082-e162-457e-8f70-71da907a1c25_card-block-desktop.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <div className="video">
+            <video
+              width="100%"
+              height="100%"
+              autoPlay
+              // poster="https://www.amiparis.com/BWStaticContent/14000/68c560e9-08a8-49dc-9451-bec3460f449f_card-block-desktop.jpg"
+              controls
+            >
+              <source
+                src="https://www.amiparis.com/BWStaticContent/14000/c9005082-e162-457e-8f70-71da907a1c25_card-block-desktop.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
         </section>
         <section>
-          <img
-            className="odd-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/068ed2b2-47ae-431e-bc2d-abd5b082c486_desktop.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="odd-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/068ed2b2-47ae-431e-bc2d-abd5b082c486_desktop.jpg"
+              alt=""
+            />
+          </div>
           <div className="gray-link slider-container">
-            <div className="text">
-              <p className="slide-text">New Pre-Collection</p>
-            </div>
+            <div className="text slide-text">New Pre-Collection</div>
             <div className="slider-box">
               <Slider className="slider" {...settings}>
                 <div className="slider-img">
@@ -115,19 +126,22 @@ class Contents extends React.Component {
             </div>
             <a href="#!">Discover our stores</a>
           </div>
-
-          <img
-            className="even-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/14000/76cc54ba-3bcc-49cf-82f0-48dade2a0e18_alger-desktop.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="even-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/14000/76cc54ba-3bcc-49cf-82f0-48dade2a0e18_alger-desktop.jpg"
+              alt=""
+            />
+          </div>
         </section>
         <section>
-          <img
-            className="odd-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/14000/76495c33-ece4-4c78-8793-f1cbd7340be1_card-block-desktop.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="odd-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/14000/76495c33-ece4-4c78-8793-f1cbd7340be1_card-block-desktop.jpg"
+              alt=""
+            />
+          </div>
           <div className="gray-link">
             <div className="text">
               <p>The House</p>
@@ -135,7 +149,6 @@ class Contents extends React.Component {
             <a href="#!">Discover our history</a>
           </div>
         </section>
-
         <section>
           <div className="gray-link">
             <div className="text">
@@ -143,11 +156,13 @@ class Contents extends React.Component {
               <p>Spring Summer collection</p>
             </div>
           </div>
-          <img
-            className="even-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/14000/7b0af43c-36e1-4a19-a879-8938ed10a59c_press-homepage-desktop.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="even-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/14000/7b0af43c-36e1-4a19-a879-8938ed10a59c_press-homepage-desktop.jpg"
+              alt=""
+            />
+          </div>
         </section>
         <div className="instagram">
           <div className="ami-account">@amiparis</div>
