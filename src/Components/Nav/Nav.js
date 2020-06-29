@@ -1,12 +1,18 @@
 import React from "react";
 import "./Nav.scss";
 import ami_logo from "../../Images/amilogo.png";
+import Newsletter from "../Newsletter/Newsletter";
+import NewsletterPortal from "../Newsletter/NewsletterPortal";
+import Search from "../Search/Search";
+import SearchPortal from "../Search/SearchPortal";
 
 class Nav extends React.Component {
   constructor() {
     super();
     this.state = {
       activeTab: null,
+      Newsletter: false,
+      Search: false,
     };
   }
 
@@ -19,6 +25,30 @@ class Nav extends React.Component {
   mouseOut = () => {
     this.setState({
       activeTab: undefined,
+    });
+  };
+
+  handleOpenModal = () => {
+    this.setState({
+      Newsletter: true,
+    });
+  };
+
+  handleOpenSearch = () => {
+    this.setState({
+      Search: true,
+    });
+  };
+
+  handleCloseModal = () => {
+    this.setState({
+      Newsletter: false,
+    });
+  };
+
+  handleCloseSearch = () => {
+    this.setState({
+      Search: false,
     });
   };
 
@@ -273,10 +303,10 @@ class Nav extends React.Component {
 
         <ul className="right-menu">
           <li>
-            <button>Newsletter</button>
+            <button onClick={this.handleOpenModal}>Newsletter</button>
           </li>
           <li>
-            <button>Search</button>
+            <button onClick={this.handleOpenSearch}>Search</button>
           </li>
           <li>
             <a href="#!">Account</a>
@@ -288,6 +318,16 @@ class Nav extends React.Component {
             <button>KR ₩</button>
           </li>
         </ul>
+        {this.state.Newsletter && (
+          <NewsletterPortal>
+            <Newsletter onClose={this.handleCloseModal} />
+          </NewsletterPortal>
+        )}
+        {this.state.Search && (
+          <SearchPortal>
+            <Search onClose={this.handleCloseSearch} />
+          </SearchPortal>
+        )}
       </div>
     );
   }

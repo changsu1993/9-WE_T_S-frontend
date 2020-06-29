@@ -1,0 +1,235 @@
+.Cart {
+  padding-top: 30px;
+
+  .title {
+    margin: 90px 0 40px 0;
+    font-size: 16px;
+    letter-spacing: 1.33px;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    padding-bottom: 30px;
+
+    .left-container {
+      padding: 0 55px;
+      width: 55%;
+
+      .product {
+        padding: 40px 0px;
+        display: flex;
+        border-bottom: 1px solid rgb(221, 221, 221);
+
+        .product-img {
+          width: 120px;
+          height: auto;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .product-box {
+          margin: 5px 0 5px 60px;
+          width: 450px;
+          display: flex;
+          flex-direction: column;
+
+          .product-name {
+            height: 18px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            letter-spacing: 1.08px;
+            line-height: 18.2px;
+          }
+
+          .select-box {
+            font-size: 11px;
+            letter-spacing: 0.92px;
+            flex: 0 0 50%;
+            margin-top: auto;
+            justify-self: flex-end;
+            display: flex;
+            flex-direction: column;
+
+            > * {
+              display: flex;
+              justify-content: flex-start;
+              margin-right: auto;
+
+              span {
+                padding: 5px 0;
+              }
+
+              .control {
+                padding: 0px 20px;
+                display: flex;
+                align-items: center;
+
+                button {
+                  font-family: "MierA-Regular";
+                  padding: 1px 6px;
+                  border: none;
+                  background: none;
+                  width: 20px;
+                  height: 13px;
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                input {
+                  font-family: "MierA-Regular";
+                  border: none;
+                  width: 30px;
+                  text-align: center;
+                }
+
+                input[type="number"]::-webkit-outer-spin-button,
+                input[type="number"]::-webkit-inner-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+                }
+              }
+            }
+
+            .size {
+              margin: 5px 0 -6px 0;
+
+              .control {
+                margin-bottom: 6px;
+
+                select {
+                  padding: 5px 20px 5px 0;
+                  border: none;
+                  background: none;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .colour {
+              span:last-child {
+                padding: 5px 20px;
+              }
+            }
+          }
+        }
+
+        .remove-price {
+          margin: 5px 0 5px auto;
+          display: flex;
+          flex-direction: column;
+          font-size: 13px;
+          text-align: right;
+
+          .remove {
+            margin-bottom: auto;
+            padding: 0;
+            justify-self: flex-start;
+            border: none;
+            background: none;
+            font-family: "MierA-Demi";
+            font-weight: 600;
+            letter-spacing: 1.08px;
+            cursor: pointer;
+          }
+
+          .price {
+            letter-spacing: 1.08px;
+          }
+        }
+      }
+    }
+
+    .right-container {
+      width: 45%;
+      padding: 0 70px 0 81px;
+
+      .order-title {
+        padding: 37px;
+        font-size: 16px;
+        letter-spacing: 1.33px;
+      }
+
+      .order-box {
+        border: 1px solid rgb(221, 221, 221);
+        font-size: 13px;
+
+        .price-box {
+          padding: 25px 40px 15px;
+          letter-spacing: 1.08px;
+        }
+
+        .total-box {
+          padding: 25px 40px 40px 40px;
+          background-color: rgb(242, 242, 242);
+          border-top: 1px solid rgb(221, 221, 221);
+        }
+
+        .price-title {
+          padding: 15px 0;
+          display: flex;
+
+          div:last-child {
+            justify-content: flex-end;
+            margin-left: auto;
+            font-family: "MierA-Demi";
+            font-weight: 400;
+            letter-spacing: 1.08px;
+          }
+
+          .total-price {
+            display: flex;
+
+            span:first-child {
+              padding-right: 10px;
+              font-family: "MierA-Demi";
+              font-weight: 400;
+              letter-spacing: 1.08px;
+            }
+
+            span:last-child {
+              font-size: 11px;
+              letter-spacing: 0.92px;
+              line-height: 22.99px;
+            }
+          }
+        }
+
+        button {
+          border: none;
+          background: black;
+          padding: 1px 6px;
+          margin: 21px 0 30px 0;
+          width: 100%;
+          height: 45px;
+          color: #ffffff;
+          cursor: pointer;
+        }
+
+        .notice {
+          margin: 40px 0;
+
+          p {
+            font-size: 11px;
+            letter-spacing: 0.92px;
+            line-height: 22.99px;
+
+            &:first-child {
+              margin-bottom: 14px;
+            }
+
+            a {
+              color: black;
+              padding-bottom: 4px;
+              border-bottom: 1px solid black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
