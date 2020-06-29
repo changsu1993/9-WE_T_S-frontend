@@ -1,19 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ImageModal from "../../Components/ImageModal/ImageModal";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
 import "./ProductDetail.scss";
 
 class ProductDetail extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       detailData: {},
       showList: false,
       option: "",
       click: false,
       showImage: false,
+      isModalOpen: false,
     };
   }
   componentDidMount() {
@@ -31,6 +33,14 @@ class ProductDetail extends React.Component {
     this.setState({ click: !click });
   };
 
+  openModal = () => {
+    this.setState({ isModalOpen: true });
+  };
+
+  closeModal = () => {
+    this.setState({ isModalOpen: false });
+  };
+
   render() {
     const imgsArray =
       this.state.detailData.productImages &&
@@ -40,6 +50,15 @@ class ProductDetail extends React.Component {
 
     return (
       <>
+        <ImageModal
+          isOpen={this.state.isModalOpen}
+          close={this.closeModal}
+          data={
+            this.state.detailData.id &&
+            this.state.detailData.productImages
+          }
+        />
+        
         <Nav />
         <main className="ProductDetail">
           <header>
@@ -149,7 +168,7 @@ class ProductDetail extends React.Component {
                 return (
                   <section className="size">
                     <img
-                      onClick={this.showModal}
+                      onClick={this.openModal}
                       alt="product-img"
                       className="product-photo"
                       src={imgobj.img}
