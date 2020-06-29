@@ -1,10 +1,10 @@
 import React from "react";
-import "./Products.scss";
-import ProductList from "./ProductList/ProductList";
 import Nav from "../../Components/Nav/Nav";
+import ProductList from "./ProductList/ProductList";
 import Footer from "../../Components/Footer/Footer";
+import "./Products.scss";
 
-class Man extends React.Component {
+class ManProducts extends React.Component {
   constructor() {
     super();
 
@@ -22,7 +22,7 @@ class Man extends React.Component {
     return (
       <>
         <Nav />
-        <main className="man">
+        <main className="ManProducts">
           <div className="man-category"> Man </div>
           <div className="num-of-items">{this.state.data.length} items</div>
 

@@ -1,10 +1,10 @@
 {
-    "prettier/prettier" : [
-        "error", {
-            "singleQuote": true,
-            "parser": "flow",
-            "endOfLine": "lf"
-            
-        }
-    ]
+  "prettier/prettier": [
+    "error",
+    {
+      "singleQuote": true,
+      "parser": "flow",
+      "endOfLine": "lf"
+    }
+  ]
 }

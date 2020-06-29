@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Account from "./Pages/Account/Account";
 import Main from "./Pages/Main/Main";
-import Man from "./Pages/Products/Man";
+import Man from "./Pages/Products/ManProducts";
 import Woman from "./Pages/Products/Woman";
 import Accessories from "./Pages/Products/Accessories";
 import Shoes from "./Pages/Products/Shoes";

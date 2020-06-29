@@ -1,20 +1,19 @@
 import React from "react";
-import "./ProductDetail.scss";
+import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
-import { Link } from "react-router-dom";
+import "./ProductDetail.scss";
 
 class ProductDetail extends React.Component {
   constructor() {
     super();
-
     this.state = {
       detailData: {},
       showList: false,
       option: "",
       click: false,
-      
+      showImage: false,
     };
   }
   componentDidMount() {
@@ -39,24 +38,16 @@ class ProductDetail extends React.Component {
         return idx !== 0;
       });
 
-    console.log(imgsArray);
-
     return (
       <>
         <Nav />
-        <main className="product-detail">
-          <header className="product-header">
-            <button className="button-underline">
-              {this.state.detailData.category}
-            </button>
+        <main className="ProductDetail">
+          <header>
+            <button>{this.state.detailData.category}</button>
             <span>></span>
-            <button className="button-underline">
-              {this.state.detailData.subCategory}
-            </button>
+            <button>{this.state.detailData.subCategory}</button>
             <span>></span>
-            <button className="button-underline">
-              {this.state.detailData.subSubCategory}
-            </button>
+            <button>{this.state.detailData.subSubCategory}</button>
           </header>
           <div className="product-main-photo-and-info">
             <section className="size">
@@ -147,9 +138,9 @@ class ProductDetail extends React.Component {
                 <button className="add-to-cart">Add to cart</button>
               </div>
               <div className="product-detail-buttons">
-                <button className="button-underline-small">Description</button>
-                <button className="button-underline-small">Size Guide</button>
-                <button className="button-underline-small">Shipping</button>
+                <button>Description</button>
+                <button>Size Guide</button>
+                <button>Shipping</button>
               </div>
             </section>
 
@@ -158,6 +149,7 @@ class ProductDetail extends React.Component {
                 return (
                   <section className="size">
                     <img
+                      onClick={this.showModal}
                       alt="product-img"
                       className="product-photo"
                       src={imgobj.img}

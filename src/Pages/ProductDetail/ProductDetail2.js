@@ -1,14 +1,13 @@
 import React from "react";
-import "./ProductDetail.scss";
+import { Link } from "react-router-dom";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
-import { Link } from "react-router-dom";
+import "./ProductDetail.scss";
 
 class ProductDetail2 extends React.Component {
   constructor() {
     super();
-
     this.state = {
       detailData: {},
       showList: false,
@@ -38,12 +37,11 @@ class ProductDetail2 extends React.Component {
         return idx !== 0;
       });
 
-    console.log(imgsArray);
-
     return (
       <>
+        <MyModalImages />
         <Nav />
-        <main className="product-detail">
+        <main className="ProductDetail">
           <header className="product-header">
             <button className="button-underline">
               {this.state.detailData.category}
