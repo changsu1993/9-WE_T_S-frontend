@@ -13,19 +13,18 @@ class Contents extends React.Component {
     return (
       <div className="Contents">
         <video
+          className="collection-video"
+          width="100%"
+          height="100%"
           loop
           autoPlay
           muted
-          width="100%"
-          height="100%"
-          className="collection-video"
         >
           <source
             src="https://player.vimeo.com/external/412737001.hd.mp4?s=3f71c64ea91fd46ed927a06d2eb80e143873cd6a&profile_id=175"
             type="video/mp4"
           />
         </video>
-
         <div className="first-img">
           <div>Spring - Summer 20</div>
           <div className="spring-summer">
@@ -43,7 +42,6 @@ class Contents extends React.Component {
             </a>
           </div>
         </div>
-
         <section>
           <div className="img">
             <img
@@ -52,7 +50,6 @@ class Contents extends React.Component {
               alt=""
             />
           </div>
-
           <div className="gray-link">
             <div className="text">
               <p>AMI x GLAAD</p>
@@ -61,7 +58,6 @@ class Contents extends React.Component {
             <a href="#!">Discover now</a>
           </div>
         </section>
-
         <section>
           <div className="black-link">
             <div className="text">
@@ -85,7 +81,6 @@ class Contents extends React.Component {
             </video>
           </div>
         </section>
-
         <section>
           <div className="img">
             <img
@@ -94,7 +89,6 @@ class Contents extends React.Component {
               alt=""
             />
           </div>
-
           <div className="gray-link slider-container">
             <div className="text slide-text">New Pre-Collection</div>
             <div className="slider-box">
@@ -124,7 +118,6 @@ class Contents extends React.Component {
             </div>
           </div>
         </section>
-
         <section>
           <div className="black-link">
             <div className="text">
@@ -141,7 +134,6 @@ class Contents extends React.Component {
             />
           </div>
         </section>
-
         <section>
           <div className="img">
             <img
@@ -157,7 +149,6 @@ class Contents extends React.Component {
             <a href="#!">Discover our history</a>
           </div>
         </section>
-
         <section>
           <div className="gray-link">
             <div className="text">
@@ -173,7 +164,6 @@ class Contents extends React.Component {
             />
           </div>
         </section>
-
         <div className="instagram">
           <div className="ami-account">@amiparis</div>
           <div className="img">
