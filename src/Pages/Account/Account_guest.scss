@@ -1,8 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
-.guest-container {
+.Guest {
   display: flex;
   width: 100%; // 952.5px
   height: 205px;
@@ -15,7 +11,7 @@
       margin-right: 25px;
     }
   }
-  #guest-id {
+  .guest-text {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -26,6 +22,9 @@
     height: 54px;
     font-family: "MierA-Regular";
     margin-bottom: 5px;
+  }
+  input::placeholder {
+    color: black;
   }
   .connect-button {
     height: 49px;

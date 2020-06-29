@@ -1,12 +1,13 @@
 import React from "react";
-import "./Account.scss";
 import AccountLogin from "./Account_login";
 import AccountSignup from "./Account_signup";
 import AccountGuest from "./Account_guest";
+import "./Account.scss";
+
 class Account extends React.Component {
   render() {
     return (
-      <div className="account">
+      <div className="Account">
         <div>
           <AccountLogin />
           <AccountGuest />
@@ -16,4 +17,5 @@ class Account extends React.Component {
     );
   }
 }
+
 export default Account;

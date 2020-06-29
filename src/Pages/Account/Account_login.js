@@ -34,7 +34,7 @@ class Account_login extends React.Component {
     this.setState({ errorId: false }); // 로그인 기능 구현하던 중 잠시 중단
   };
 
-  handleClick = (e) => {
+  loginClickHandler = (e) => {
     e.preventDefault();
 
     console.log("this.state : ", this.state);
@@ -64,8 +64,8 @@ class Account_login extends React.Component {
   };
   render() {
     return (
-      <div className="login-container">
-        <div className="login">
+      <div className="Login">
+        <div className="login-container">
           <div className="already-customer">
             <img
               src={amilogo}
@@ -81,6 +81,7 @@ class Account_login extends React.Component {
               onChange={this.changeHandler}
               name="loginId"
               type="text"
+              className="loginId-text"
               id="loginId"
               placeholder="Email Address *"
               required
@@ -98,6 +99,7 @@ class Account_login extends React.Component {
               type="password"
               id="loginPw"
               name="loginPw"
+              className="loginPw-text"
               placeholder="Password *"
               required
             />
@@ -110,9 +112,7 @@ class Account_login extends React.Component {
           </div>
           <div className="last-wrapper">
             <div className="forgot">
-              <a href="https://www.amiparis.com/kr/account/forgotpassword">
-                Forgot your Password?
-              </a>
+              <a href="">Forgot your Password?</a>
               <label>
                 <input
                   type="checkbox"
@@ -124,7 +124,7 @@ class Account_login extends React.Component {
             </div>
           </div>
           <div className="login-register-wrapper">
-            <button className="login-button" onClick={this.handleClick}>
+            <button className="login-button" onClick={this.loginClickHandler}>
               Login
             </button>
           </div>

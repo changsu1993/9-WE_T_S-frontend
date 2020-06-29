@@ -14,7 +14,7 @@ class Account_guest extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleClick = (e) => {
+  guestClickHandler = (e) => {
     e.preventDefault();
 
     console.log("this.state : ", this.state);
@@ -29,8 +29,8 @@ class Account_guest extends React.Component {
 
   render() {
     return (
-      <div className="guest-container">
-        <div className="guest">
+      <div className="Guest">
+        <div className="guest-container">
           <div className="guest-checkout">
             <img
               src={amilogo}
@@ -45,13 +45,14 @@ class Account_guest extends React.Component {
             <input
               type="text"
               id="guest-id"
+              className="guest-text"
               name="emailAdress"
               placeholder="Email Address *"
               onChange={this.handleEmail}
               required
             />
           </form>
-          <button className="connect-button" onClick={this.handleClick}>
+          <button className="connect-button" onClick={this.guestClickHandler}>
             Connect
           </button>
         </div>

@@ -1,13 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-.signup-container {
+.Signup {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   width: 100%; //952.5px
   height: 653px;
-  .signup {
+  .signup-container {
     display: flex;
     flex-direction: column;
     width: 581.016px;
@@ -28,8 +25,8 @@
       flex-direction: column;
       .name {
         margin-bottom: 20px;
-        #firstName,
-        #lastName {
+        .first-name,
+        .last-name {
           border-top: none;
           border-left: none;
           border-right: none;
@@ -41,7 +38,7 @@
           padding-top: 20px;
           font-family: "MierA-Regular";
         }
-        #lastName {
+        .last-name {
           margin-left: 40px;
         }
       }
@@ -62,9 +59,9 @@
     border-bottom: 1px solid black;
   }
 
-  #emailId,
-  #emailPw,
-  #emailCon {
+  .email-id,
+  .email-pw,
+  .email-con {
     border-top: none;
     border-left: none;
     border-right: none;
@@ -75,6 +72,9 @@
     height: 54px;
     padding-top: 20px;
     font-family: "MierA-Regular";
+  }
+  input::placeholder {
+    color: black;
   }
 
   .login-register-wrapper {
@@ -103,8 +103,5 @@
         }
       }
     }
-  }
-  input::placeholder {
-    color: black;
   }
 }

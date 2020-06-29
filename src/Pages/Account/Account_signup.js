@@ -45,11 +45,11 @@ class Account_signup extends React.Component {
   // };
   // 기능구현과 접목해서 생각해보려고 지우지 않고 남겨둠
 
-  handleChange = (e) => {
+  infoChangeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleClick = (e) => {
+  signUpClickHandler = (e) => {
     e.preventDefault();
 
     console.log("this.state : ", this.state);
@@ -69,8 +69,8 @@ class Account_signup extends React.Component {
 
   render() {
     return (
-      <div className="signup-container">
-        <div className="signup">
+      <div className="Signup">
+        <div className="signup-container">
           <div className="new-customer">
             <img
               src={amilogo}
@@ -84,43 +84,48 @@ class Account_signup extends React.Component {
           <div className="new-form">
             <form className="name">
               <input
-                onChange={this.handleChange}
+                onChange={this.infoChangeHandler}
                 type="text"
                 id="firstName"
+                className="first-name"
                 placeholder="First Name *"
                 name="firstName"
               />
               <input
-                onChange={this.handleChange}
+                onChange={this.infoChangeHandler}
                 type="text"
                 id="lastName"
+                className="last-name"
                 placeholder="Last Name *"
                 name="lastName"
               />
             </form>
             <form className="email-address">
               <input
-                onChange={this.handleChange}
+                onChange={this.infoChangeHandler}
                 type="text"
                 id="emailId"
+                className="email-id"
                 placeholder="Email Address *"
                 name="emailId"
               />
             </form>
             <form className="email-password">
               <input
-                onChange={this.handleChange}
+                onChange={this.infoChangeHandler}
                 type="password"
                 id="emailPw"
+                className="email-pw"
                 placeholder="Password *"
                 name="emailPw"
               />
             </form>
             <form className="confirm-password">
               <input
-                onChange={this.handleChange}
+                onChange={this.infoChangeHandler}
                 type="password"
                 id="emailCon"
+                className="email-con"
                 placeholder="Confirm Password *"
                 name="emailCon"
               />
@@ -137,20 +142,17 @@ class Account_signup extends React.Component {
               </form>
               <div className="last-wrapper">
                 <span>By clicking Register you agree to our </span>
-                <a
-                  href="https://www.amiparis.com/kr/legal#terms-and-conditions"
-                  id="team-link"
-                >
+                <a href="" id="team-link">
                   Terms and Conditions
                 </a>
                 <span> and </span>
-                <a
-                  href="https://www.amiparis.com/kr/legal#privacy-policy"
-                  id="privacy-link"
-                >
+                <a href="" id="privacy-link">
                   Privacy and Cookies Policy.
                 </a>
-                <button className="register-button" onClick={this.handleClick}>
+                <button
+                  className="register-button"
+                  onClick={this.signUpClickHandler}
+                >
                   Register
                 </button>
               </div>
