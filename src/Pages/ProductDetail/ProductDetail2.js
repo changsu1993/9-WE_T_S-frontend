@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MyModalImages from "./MyModalImages";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
 import "./ProductDetail.scss";
 
-class ProductDetail extends React.Component {
+class ProductDetail2 extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -13,11 +14,10 @@ class ProductDetail extends React.Component {
       showList: false,
       option: "",
       click: false,
-      showImage: false,
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3000/data/detailData.json")
+    fetch("http://localhost:3000/data/detailData2.json")
       .then((res) => res.json())
       .then((res) => this.setState({ detailData: res.detailData }));
   }
@@ -40,14 +40,26 @@ class ProductDetail extends React.Component {
 
     return (
       <>
+        {/* <MyModalImages
+          data={
+            this.state.detailData.productImages &&
+            this.state.detailData.productImages
+          }
+        /> */}
         <Nav />
         <main className="ProductDetail">
-          <header>
-            <button>{this.state.detailData.category}</button>
+          <header className="product-header">
+            <button className="button-underline">
+              {this.state.detailData.category}
+            </button>
             <span>></span>
-            <button>{this.state.detailData.subCategory}</button>
+            <button className="button-underline">
+              {this.state.detailData.subCategory}
+            </button>
             <span>></span>
-            <button>{this.state.detailData.subSubCategory}</button>
+            <button className="button-underline">
+              {this.state.detailData.subSubCategory}
+            </button>
           </header>
           <div className="product-main-photo-and-info">
             <section className="size">
@@ -65,7 +77,7 @@ class ProductDetail extends React.Component {
                 <h1>{this.state.detailData.name}</h1>
                 <div className="price-detail">
                   <span>
-                    ₩
+                    $
                     {this.state.detailData.price &&
                       this.state.detailData.price.toLocaleString()}
                   </span>
@@ -138,9 +150,9 @@ class ProductDetail extends React.Component {
                 <button className="add-to-cart">Add to cart</button>
               </div>
               <div className="product-detail-buttons">
-                <button>Description</button>
-                <button>Size Guide</button>
-                <button>Shipping</button>
+                <button className="button-underline-small">Description</button>
+                <button className="button-underline-small">Size Guide</button>
+                <button className="button-underline-small">Shipping</button>
               </div>
             </section>
 
@@ -149,7 +161,6 @@ class ProductDetail extends React.Component {
                 return (
                   <section className="size">
                     <img
-                      onClick={this.showModal}
                       alt="product-img"
                       className="product-photo"
                       src={imgobj.img}
@@ -183,4 +194,4 @@ class ProductDetail extends React.Component {
   }
 }
 
-export default ProductDetail;
+export default ProductDetail2;
