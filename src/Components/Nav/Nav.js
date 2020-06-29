@@ -136,7 +136,6 @@ class Nav extends React.Component {
               to="/shopping/man"
               className={this.state.activeTab === 2 ? "underline" : ""}
             >
-              {" "}
               Man
             </Link>
             <div
@@ -311,7 +310,7 @@ class Nav extends React.Component {
             <button onClick={this.handleOpenSearch}>Search</button>
           </li>
           <li>
-            <a href="#!">Account</a>
+            <Link to ="/account">Account</Link>
           </li>
           <li>
             <button>Cart (0)</button>
