@@ -4,6 +4,7 @@ import ImageModal from "../../Components/ImageModal/ImageModal";
 import LoadingPage from "../../Components/LoadingPage/LoadingPage";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
+import ProductBottomBar from "../../Components/ProductBottomBar/ProductBottomBar";
 import Arrowdown from "../../Images/arrow-down.png";
 import "./ProductDetail.scss";
 
@@ -209,6 +210,12 @@ class ProductDetail extends React.Component {
               </div>
             </main>
             <Footer />
+            {this.state.detailData.id && (
+              <ProductBottomBar
+                price={this.state.detailData.price.toLocaleString()}
+                size={this.state.detailData.size}
+              />
+            )}
           </>
         )}
       </>
