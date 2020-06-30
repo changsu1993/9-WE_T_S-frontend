@@ -64,9 +64,22 @@
       display: flex;
       padding: 30px;
       width: 50%;
+      position: relative;
 
-      img {
+      .product-photo {
         width: 100%;
+      }
+      .heart-button {
+        position: absolute;
+        right: 0;
+        margin: 0;
+        width: 2%;
+        height: 2.5%;
+        display: inline-block;
+        top: 70px;
+        right: 95px;
+        // opacity: 0.3;
+        cursor: pointer;
       }
     }
 

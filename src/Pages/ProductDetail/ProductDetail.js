@@ -6,6 +6,8 @@ import Nav from "../../Components/Nav/Nav";
 import ProductBottomBar from "../../Components/ProductBottomBar/ProductBottomBar";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
+import Heart from "../../Images/heart1.png";
+import Heart2 from "../../Images/red-heart.png";
 import "./ProductDetail.scss";
 
 class ProductDetail extends React.Component {
@@ -14,6 +16,7 @@ class ProductDetail extends React.Component {
 
     this.state = {
       detailData: {},
+      heartClick: false,
       showList: false,
       option: "",
       click: false,
@@ -56,6 +59,11 @@ class ProductDetail extends React.Component {
     this.setState({ click: !click });
   };
 
+  heartClickHandler = () => {
+    const { heartClick } = this.state;
+    this.setState({ heartClick: !heartClick });
+  };
+
   openModal = () => {
     this.setState({ isModalOpen: true });
     window.scrollTo(0, 0);
@@ -71,6 +79,7 @@ class ProductDetail extends React.Component {
       arrowClickHandler,
       openModal,
       closeModal,
+      heartClickHandler,
     } = this;
 
     const {
@@ -80,6 +89,7 @@ class ProductDetail extends React.Component {
       isModalOpen,
       isLoading,
       isVisible,
+      heartClick,
     } = this.state;
 
     const imgsArray =
@@ -118,6 +128,11 @@ class ProductDetail extends React.Component {
                       detailData.productImages &&
                       detailData.productImages[0].img
                     }
+                  />
+                  <img
+                    className="heart-button"
+                    src={heartClick ? Heart2 : Heart}
+                    onClick={heartClickHandler}
                   />
                 </section>
                 <section className="product-info-wrapper size">
