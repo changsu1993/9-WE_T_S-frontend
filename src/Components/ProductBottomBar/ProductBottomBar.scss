@@ -12,10 +12,10 @@
   opacity: 1;
 
   .bottom-bar-wrapper {
+    display: flex;
     padding: 15px 40px 16.5px 61px;
     width: 100vw;
     align-items: center;
-    display: flex;
     justify-content: space-between;
 
     .price {
@@ -30,10 +30,10 @@
       align-items: center;
 
       .select-a-size {
-        margin-right: 40px;
-        margin-bottom: 12px;
         display: flex;
         flex-direction: row;
+        margin-right: 40px;
+        margin-bottom: 12px;
         font-size: 12px;
         line-height: 12px;
         letter-spacing: 1px;
@@ -47,8 +47,8 @@
             font-size: 12px;
 
             .click-to-select {
-              margin-top: 15px;
               display: flex;
+              margin-top: 15px;
               width: 100px;
               height: 17px;
               cursor: pointer;
@@ -60,7 +60,6 @@
               }
 
               .clicked {
-                // padding-top: 5px;
                 width: 10px;
                 height: 6px;
                 margin-top: 5px;
@@ -81,8 +80,6 @@
             .size-list {
               top: -150px;
               display: inline-block;
-              // display: flex;
-              // justify-content: flex-end;
               list-style: disc;
               padding: 20px;
               position: absolute;
