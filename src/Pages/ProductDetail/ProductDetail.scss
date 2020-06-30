@@ -12,6 +12,7 @@
     background-color: white;
 
     button {
+      position: relative;
       font-size: 16px;
       letter-spacing: 1.17px;
       line-height: 22.4px;
@@ -24,7 +25,6 @@
       cursor: pointer;
       border: none;
       outline: none;
-      position: relative;
       transition: 0.3s;
     }
 
@@ -54,25 +54,39 @@
   }
 
   .product-main-photo-and-info {
-    padding-top: 100px;
     display: flex;
+    padding-top: 100px;
     flex-wrap: wrap;
     flex-direction: row;
 
     .size {
-      height: 837.688px;
       display: flex;
+      height: 837.688px;
       padding: 30px;
       width: 50%;
-      img {
+      position: relative;
+
+      .product-photo {
         width: 100%;
+      }
+
+      .heart-button {
+        position: absolute;
+        right: 0;
+        margin: 0;
+        width: 2%;
+        height: 2.5%;
+        display: inline-block;
+        top: 70px;
+        right: 95px;
+        cursor: pointer;
       }
     }
 
     .product-info-wrapper {
+      display: flex;
       width: 50%;
       padding: 90px 120px;
-      display: flex;
       flex-direction: column;
       justify-content: space-between;
 
@@ -102,8 +116,8 @@
         }
 
         .select-a-size {
-          margin-bottom: 12px;
           display: flex;
+          margin-bottom: 12px;
           flex-direction: row;
           font-size: 12px;
           line-height: 12px;
@@ -126,6 +140,7 @@
                   align-self: flex-start;
                   padding-left: 2px;
                 }
+
                 .clicked {
                   width: 16px;
                   height: 16px;
@@ -160,8 +175,9 @@
                 }
 
                 li {
+                  position: relative;
                   margin-bottom: 22px;
-                  font-family: MierA-Demi;
+                  font-family: "MierA-Demi";
                   font-size: 11px;
                   letter-spacing: 1px;
                   line-height: 15.4px;
@@ -171,7 +187,6 @@
                   cursor: pointer;
                   border: none;
                   outline: none;
-                  position: relative;
                   transition: 0.3s;
                   color: #999999;
                 }
@@ -210,9 +225,9 @@
         }
 
         .colors-options {
-          margin-bottom: 59px;
           display: flex;
           flex-direction: row;
+          margin-bottom: 59px;
 
           .colors {
             display: flex;
@@ -227,6 +242,7 @@
               position: relative;
 
               span {
+                position: absolute;
                 background: black;
                 border-radius: 7px;
                 border: 5px solid black;
@@ -235,7 +251,6 @@
                 height: 28px;
                 letter-spacing: 1px;
                 line-height: 15px;
-                position: absolute;
                 top: -43px;
                 text-align: center;
                 text-transform: uppercase;
@@ -304,10 +319,10 @@
         }
 
         button::before {
+          position: absolute;
           content: "";
           border-bottom: 0.5px solid black;
           padding: 0 0.1px;
-          position: absolute;
           bottom: 0;
           left: 0;
           right: 0;
