@@ -3,7 +3,7 @@ import "./ImageModal.scss";
 
 const ImageModal = (props) => {
   return (
-    <React.Fragment>
+    <>
       {props.isOpen ? (
         <div className="Modal-wrapper">
           <div className="MyModalImages">
@@ -17,7 +17,7 @@ const ImageModal = (props) => {
           </div>
         </div>
       ) : null}
-    </React.Fragment>
+    </>
   );
 };
 
