@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import ImageModal from "../../Components/ImageModal/ImageModal";
 import LoadingPage from "../../Components/LoadingPage/LoadingPage";
 import Nav from "../../Components/Nav/Nav";
-import Footer from "../../Components/Footer/Footer";
 import ProductBottomBar from "../../Components/ProductBottomBar/ProductBottomBar";
+import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
 import "./ProductDetail.scss";
 
 class ProductDetail extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       detailData: {},
       showList: false,
@@ -19,18 +20,31 @@ class ProductDetail extends React.Component {
       showImage: false,
       isModalOpen: false,
       isLoading: false,
+      prevScrollpos: window.pageYOffset,
+      isVisible: false,
     };
   }
 
   componentDidMount = () => {
     this.setState({ isLoading: true });
     setTimeout(() => {
-      fetch("http://localhost:3000/data/detailData.json")
+      fetch("http://localhost:3001/data/detailData.json")
         .then((res) => res.json())
         .then((res) =>
           this.setState({ detailData: res.detailData, isLoading: false })
         );
     }, 1000);
+    window.addEventListener("scroll", this.handleScroll);
+  };
+
+  componentWillUnmount = () => {
+    window.removeEventListener("scroll", this.handleScroll);
+  };
+
+  handleScroll = () => {
+    this.setState({
+      isVisible: window.pageYOffset > 500 ? true : false,
+    });
   };
 
   sizeSelectHandler = (size) => {
@@ -52,52 +66,66 @@ class ProductDetail extends React.Component {
   };
 
   render() {
+    const {
+      sizeSelectHandler,
+      arrowClickHandler,
+      openModal,
+      closeModal,
+    } = this;
+
+    const {
+      detailData,
+      option,
+      click,
+      isModalOpen,
+      isLoading,
+      isVisible,
+    } = this.state;
+
     const imgsArray =
-      this.state.detailData.productImages &&
-      this.state.detailData.productImages.filter((obj, idx) => {
+      detailData.productImages &&
+      detailData.productImages.filter((obj, idx) => {
         return idx !== 0;
       });
 
     return (
       <>
         <ImageModal
-          isOpen={this.state.isModalOpen}
-          close={this.closeModal}
-          data={this.state.detailData.id && this.state.detailData.productImages}
+          isOpen={isModalOpen}
+          close={closeModal}
+          data={detailData.id && detailData.productImages}
         />
 
         <Nav />
-        {this.state.isLoading ? (
+        {isLoading ? (
           <LoadingPage />
         ) : (
           <>
             <main className="ProductDetail">
               <header>
-                <button>{this.state.detailData.category}</button>
-                <span>></span>
-                <button>{this.state.detailData.subCategory}</button>
-                <span>></span>
-                <button>{this.state.detailData.subSubCategory}</button>
+                <button>{detailData.category}</button>
+                <span>{`>`}</span>
+                <button>{detailData.subCategory}</button>
+                <span>{`>`}</span>
+                <button>{detailData.subSubCategory}</button>
               </header>
               <div className="product-main-photo-and-info">
                 <section className="size">
                   <img
                     className="product-photo"
-                    alt="product"
+                    alt="product-img"
                     src={
-                      this.state.detailData.productImages &&
-                      this.state.detailData.productImages[0].img
+                      detailData.productImages &&
+                      detailData.productImages[0].img
                     }
                   />
                 </section>
                 <section className="product-info-wrapper size">
                   <div className="product-info">
-                    <h1>{this.state.detailData.name}</h1>
+                    <h1>{detailData.name}</h1>
                     <div className="price-detail">
                       <span>
-                        ₩
-                        {this.state.detailData.price &&
-                          this.state.detailData.price.toLocaleString()}
+                        ₩{detailData.price && detailData.price.toLocaleString()}
                       </span>
                       <span className="import-incl">
                         (Import Duties Included)
@@ -107,34 +135,28 @@ class ProductDetail extends React.Component {
                     <div className="select-a-size">
                       <span>Size</span>
                       <div
-                        onClick={this.arrowClickHandler}
+                        onClick={arrowClickHandler}
                         className="size-dropdown-bar"
                       >
                         <div className="drop-down">
                           <div className="click-to-select">
                             <span>
-                              {this.state.option !== ""
-                                ? this.state.option
-                                : "Select a size"}
+                              {option !== "" ? option : "Select a size"}
                             </span>
                             <img
-                              class={this.state.click ? "clicked" : "x-clicked"}
+                              class={click ? "clicked" : "x-clicked"}
                               alt="arrow-icon"
                               src={Arrowdown}
                             />
                           </div>
 
-                          <ul
-                            className={`size-list ${
-                              this.state.click ? "show" : ""
-                            }`}
-                          >
-                            {this.state.detailData.size &&
-                              this.state.detailData.size.map((opt) => {
+                          <ul className={`size-list ${click ? "show" : ""}`}>
+                            {detailData.size &&
+                              detailData.size.map((opt) => {
                                 return (
                                   <li
                                     onClick={() => {
-                                      this.sizeSelectHandler(opt.option);
+                                      sizeSelectHandler(opt.option);
                                     }}
                                     name={opt.option}
                                   >
@@ -150,8 +172,8 @@ class ProductDetail extends React.Component {
                     <div className="colors-options">
                       <span>Colors</span>
                       <div className="colors">
-                        {this.state.detailData.colors &&
-                          this.state.detailData.colors.map((obj) => {
+                        {detailData.colors &&
+                          detailData.colors.map((obj) => {
                             return (
                               <div className="colors-wrapper">
                                 <span>{obj.name}</span>
@@ -176,12 +198,12 @@ class ProductDetail extends React.Component {
                   </div>
                 </section>
 
-                {this.state.detailData.id &&
+                {detailData.id &&
                   imgsArray.map((imgobj) => {
                     return (
                       <section className="size">
                         <img
-                          onClick={this.openModal}
+                          onClick={openModal}
                           alt="product-img"
                           className="product-photo"
                           src={imgobj.img}
@@ -201,8 +223,8 @@ class ProductDetail extends React.Component {
                 <div className="care-box">
                   <div className="care">
                     <h2>Care Guide</h2>
-                    {this.state.detailData.id &&
-                      this.state.detailData.careGuide.map((cg) => {
+                    {detailData.id &&
+                      detailData.careGuide.map((cg) => {
                         return <p className="care-guide">{cg.careGuide}</p>;
                       })}
                   </div>
@@ -210,10 +232,11 @@ class ProductDetail extends React.Component {
               </div>
             </main>
             <Footer />
-            {this.state.detailData.id && (
+            {detailData.id && (
               <ProductBottomBar
-                price={this.state.detailData.price.toLocaleString()}
-                size={this.state.detailData.size}
+                isActive={isVisible}
+                price={detailData.price.toLocaleString()}
+                size={detailData.size}
               />
             )}
           </>

@@ -24,7 +24,11 @@ class ProductBottomBar extends React.Component {
   render() {
     console.log(this.props.size);
     return (
-      <div className="ProductBottomBar">
+      <div
+        className={
+          this.props.isActive ? "ProductBottomBar" : "ProductBottomBar hide"
+        }
+      >
         <div className="bottom-bar-wrapper">
           <div className="price">₩ {this.props.price}</div>
           <div className="size-and-button">
