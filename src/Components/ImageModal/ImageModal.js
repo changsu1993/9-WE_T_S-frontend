@@ -5,20 +5,17 @@ const ImageModal = (props) => {
   return (
     <React.Fragment>
       {props.isOpen ? (
-        <React.Fragment>
-          <div className="Modal-wrapper">
-            <div className="MyModalImages">
-              <div className="button-wrap">
-                <button onClick={props.close}> close </button>
-              </div>
-              {props.data.map((imgObject) => {
-                return (
-                  <img alt="product-img-in-full-size" src={imgObject.img} />
-                );
-              })}
+        <div className="Modal-wrapper">
+          <div className="MyModalImages">
+            <div className="button-wrap">
+              <button onClick={props.close}> close </button>
             </div>
+
+            {props.data.map((imgObject) => {
+              return <img alt="product-img-in-full-size" src={imgObject.img} />;
+            })}
           </div>
-        </React.Fragment>
+        </div>
       ) : null}
     </React.Fragment>
   );

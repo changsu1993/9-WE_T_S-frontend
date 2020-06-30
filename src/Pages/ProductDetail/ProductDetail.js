@@ -35,6 +35,7 @@ class ProductDetail extends React.Component {
 
   openModal = () => {
     this.setState({ isModalOpen: true });
+    window.scrollTo(0, 0);
   };
 
   closeModal = () => {
@@ -53,12 +54,8 @@ class ProductDetail extends React.Component {
         <ImageModal
           isOpen={this.state.isModalOpen}
           close={this.closeModal}
-          data={
-            this.state.detailData.id &&
-            this.state.detailData.productImages
-          }
+          data={this.state.detailData.id && this.state.detailData.productImages}
         />
-        
         <Nav />
         <main className="ProductDetail">
           <header>
@@ -196,6 +193,7 @@ class ProductDetail extends React.Component {
             </div>
           </div>
         </main>
+
         <Footer />
       </>
     );

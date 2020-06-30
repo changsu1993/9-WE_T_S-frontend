@@ -1,17 +1,17 @@
 .Modal-wrapper {
-  display: fixed;
-  position: relative;
+  position: absolute;
   z-index: 500;
 
   .MyModalImages {
-    display: flex;
-    flex-direction: column;
-    .img {
+    // display: flex;
+    // flex-direction: column;
+    img {
       width: 100%;
+      vertical-align: bottom;
     }
 
     .button-wrap {
-      position: absolute;
+      position: fixed;
       right: 0;
       margin: 0;
       z-index: 999;
