@@ -1,26 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ImageModal from "../../Components/ImageModal/ImageModal";
+import LoadingPage from "../../Components/LoadingPage/LoadingPage";
 import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
 import "./ProductDetail.scss";
 
 class ProductDetail extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       detailData: {},
       showList: false,
       option: "",
       click: false,
       showImage: false,
+      isModalOpen: false,
+      isLoading: false,
     };
   }
-  componentDidMount() {
-    fetch("http://localhost:3000/data/detailData.json")
-      .then((res) => res.json())
-      .then((res) => this.setState({ detailData: res.detailData }));
-  }
+
+  componentDidMount = () => {
+    this.setState({ isLoading: true });
+    setTimeout(() => {
+      fetch("http://localhost:3000/data/detailData.json")
+        .then((res) => res.json())
+        .then((res) =>
+          this.setState({ detailData: res.detailData, isLoading: false })
+        );
+    }, 1000);
+  };
 
   sizeSelectHandler = (size) => {
     this.setState({ option: size });
@@ -29,6 +39,15 @@ class ProductDetail extends React.Component {
   arrowClickHandler = () => {
     const { click } = this.state;
     this.setState({ click: !click });
+  };
+
+  openModal = () => {
+    this.setState({ isModalOpen: true });
+    window.scrollTo(0, 0);
+  };
+
+  closeModal = () => {
+    this.setState({ isModalOpen: false });
   };
 
   render() {
@@ -40,144 +59,158 @@ class ProductDetail extends React.Component {
 
     return (
       <>
-        <Nav />
-        <main className="ProductDetail">
-          <header>
-            <button>{this.state.detailData.category}</button>
-            <span>></span>
-            <button>{this.state.detailData.subCategory}</button>
-            <span>></span>
-            <button>{this.state.detailData.subSubCategory}</button>
-          </header>
-          <div className="product-main-photo-and-info">
-            <section className="size">
-              <img
-                className="product-photo"
-                alt="product"
-                src={
-                  this.state.detailData.productImages &&
-                  this.state.detailData.productImages[0].img
-                }
-              />
-            </section>
-            <section className="product-info-wrapper size">
-              <div className="product-info">
-                <h1>{this.state.detailData.name}</h1>
-                <div className="price-detail">
-                  <span>
-                    ₩
-                    {this.state.detailData.price &&
-                      this.state.detailData.price.toLocaleString()}
-                  </span>
-                  <span className="import-incl">(Import Duties Included)</span>
-                </div>
-                <p>clothing standard</p>
-                <div className="select-a-size">
-                  <span>Size</span>
-                  <div
-                    onClick={this.arrowClickHandler}
-                    className="size-dropdown-bar"
-                  >
-                    <div className="drop-down">
-                      <div className="click-to-select">
-                        <span>
-                          {this.state.option !== ""
-                            ? this.state.option
-                            : "Select a size"}
-                        </span>
-                        <img
-                          class={this.state.click ? "clicked" : "x-clicked"}
-                          alt="arrow-icon"
-                          src={Arrowdown}
-                        />
-                      </div>
+        <ImageModal
+          isOpen={this.state.isModalOpen}
+          close={this.closeModal}
+          data={this.state.detailData.id && this.state.detailData.productImages}
+        />
 
-                      <ul
-                        className={`size-list ${
-                          this.state.click ? "show" : ""
-                        }`}
+        <Nav />
+        {this.state.isLoading ? (
+          <LoadingPage />
+        ) : (
+          <>
+            <main className="ProductDetail">
+              <header>
+                <button>{this.state.detailData.category}</button>
+                <span>></span>
+                <button>{this.state.detailData.subCategory}</button>
+                <span>></span>
+                <button>{this.state.detailData.subSubCategory}</button>
+              </header>
+              <div className="product-main-photo-and-info">
+                <section className="size">
+                  <img
+                    className="product-photo"
+                    alt="product"
+                    src={
+                      this.state.detailData.productImages &&
+                      this.state.detailData.productImages[0].img
+                    }
+                  />
+                </section>
+                <section className="product-info-wrapper size">
+                  <div className="product-info">
+                    <h1>{this.state.detailData.name}</h1>
+                    <div className="price-detail">
+                      <span>
+                        ₩
+                        {this.state.detailData.price &&
+                          this.state.detailData.price.toLocaleString()}
+                      </span>
+                      <span className="import-incl">
+                        (Import Duties Included)
+                      </span>
+                    </div>
+                    <p>clothing standard</p>
+                    <div className="select-a-size">
+                      <span>Size</span>
+                      <div
+                        onClick={this.arrowClickHandler}
+                        className="size-dropdown-bar"
                       >
-                        {this.state.detailData.size &&
-                          this.state.detailData.size.map((opt) => {
+                        <div className="drop-down">
+                          <div className="click-to-select">
+                            <span>
+                              {this.state.option !== ""
+                                ? this.state.option
+                                : "Select a size"}
+                            </span>
+                            <img
+                              class={this.state.click ? "clicked" : "x-clicked"}
+                              alt="arrow-icon"
+                              src={Arrowdown}
+                            />
+                          </div>
+
+                          <ul
+                            className={`size-list ${
+                              this.state.click ? "show" : ""
+                            }`}
+                          >
+                            {this.state.detailData.size &&
+                              this.state.detailData.size.map((opt) => {
+                                return (
+                                  <li
+                                    onClick={() => {
+                                      this.sizeSelectHandler(opt.option);
+                                    }}
+                                    name={opt.option}
+                                  >
+                                    {opt.option}
+                                  </li>
+                                );
+                              })}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="color-in-comment-box"></div>
+                    <div className="colors-options">
+                      <span>Colors</span>
+                      <div className="colors">
+                        {this.state.detailData.colors &&
+                          this.state.detailData.colors.map((obj) => {
                             return (
-                              <li
-                                onClick={() => {
-                                  this.sizeSelectHandler(opt.option);
-                                }}
-                                name={opt.option}
-                              >
-                                {opt.option}
-                              </li>
+                              <div className="colors-wrapper">
+                                <span>{obj.name}</span>
+                                <Link to={`/shopping/item1${obj.name}`}>
+                                  <img
+                                    alt="color-options"
+                                    className="circled-color"
+                                    src={obj.img}
+                                  />
+                                </Link>
+                              </div>
                             );
                           })}
-                      </ul>
+                      </div>
                     </div>
+                    <button className="add-to-cart">Add to cart</button>
+                  </div>
+                  <div className="product-detail-buttons">
+                    <button>Description</button>
+                    <button>Size Guide</button>
+                    <button>Shipping</button>
+                  </div>
+                </section>
+
+                {this.state.detailData.id &&
+                  imgsArray.map((imgobj) => {
+                    return (
+                      <section className="size">
+                        <img
+                          onClick={this.openModal}
+                          alt="product-img"
+                          className="product-photo"
+                          src={imgobj.img}
+                        />
+                      </section>
+                    );
+                  })}
+              </div>
+              <div className="customer-care-guide">
+                <div className="care-box">
+                  <div className="care">
+                    <h2>Customer Care</h2>
+                    <p>eshop@amiparis.fr</p>
+                    <p>+44 238 214 5908</p>
                   </div>
                 </div>
-                <div className="color-in-comment-box"></div>
-                <div className="colors-options">
-                  <span>Colors</span>
-                  <div className="colors">
-                    {this.state.detailData.colors &&
-                      this.state.detailData.colors.map((obj) => {
-                        return (
-                          <div className="colors-wrapper">
-                            <span>{obj.name}</span>
-                            <Link to={`/shopping/item1${obj.name}`}>
-                              <img
-                                alt="color-options"
-                                className="circled-color"
-                                src={obj.img}
-                              />
-                            </Link>
-                          </div>
-                        );
+                <div className="care-box">
+                  <div className="care">
+                    <h2>Care Guide</h2>
+                    {this.state.detailData.id &&
+                      this.state.detailData.careGuide.map((cg) => {
+                        return <p className="care-guide">{cg.careGuide}</p>;
                       })}
                   </div>
                 </div>
-                <button className="add-to-cart">Add to cart</button>
               </div>
-              <div className="product-detail-buttons">
-                <button>Description</button>
-                <button>Size Guide</button>
-                <button>Shipping</button>
-              </div>
-            </section>
-
-            {this.state.detailData.id &&
-              imgsArray.map((imgobj) => {
-                return (
-                  <section className="size">
-                    <img
-                      onClick={this.showModal}
-                      alt="product-img"
-                      className="product-photo"
-                      src={imgobj.img}
-                    />
-                  </section>
-                );
-              })}
-          </div>
-          <div className="customer-care-guide">
-            <div className="care-box">
-              <div className="care">
-                <h2>Customer Care</h2>
-                <p>eshop@amiparis.fr</p>
-                <p>+44 238 214 5908</p>
-              </div>
-            </div>
-            <div className="care-box">
-              <div className="care">
-                <h2>Care Guide</h2>
-                {this.state.detailData.id &&
-                  this.state.detailData.careGuide.map((cg) => {
-                    return <p className="care-guide">{cg.careGuide}</p>;
-                  })}
-              </div>
-            </div>
-          </div>
-        </main>
-        <Footer />
+            </main>
+            <Footer />
+          </>
+        )}
       </>
     );
   }
