@@ -10,12 +10,12 @@ import Heart from "../../Images/heart1.png";
 import Heart2 from "../../Images/red-heart.png";
 import "./ProductDetail.scss";
 
-class ProductDetail extends React.Component {
+class ProductDetailwData extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      detailData: {},
+      detailData: [],
       heartClick: false,
       showList: false,
       option: "",
@@ -31,18 +31,16 @@ class ProductDetail extends React.Component {
   componentDidMount = () => {
     this.setState({ isLoading: true });
     setTimeout(() => {
-      fetch("http://localhost:3003/data/detailData.json")
+      fetch("http://localhost:3001/data/detailDatadata.json")
         .then((res) => res.json())
         .then((res) =>
-          this.setState({ detailData: res.detailData, isLoading: false })
+          this.setState({ detailData: res.detailData[0], isLoading: false })
         );
     }, 1000);
     window.addEventListener("scroll", this.handleScroll);
   };
 
-  //   componentdidUpdate = (prevProps) => {
-  // if()
-  //   }
+
 
   componentWillUnmount = () => {
     window.removeEventListener("scroll", this.handleScroll);
@@ -78,7 +76,7 @@ class ProductDetail extends React.Component {
   };
 
   render() {
-    console.log(this.props);
+
     const {
       sizeSelectHandler,
       arrowClickHandler,
@@ -142,7 +140,7 @@ class ProductDetail extends React.Component {
                 </section>
                 <section className="product-info-wrapper size">
                   <div className="product-info">
-                    <h1>{detailData.name}</h1>
+                    <h1>{detailData.product_name}</h1>
                     <div className="price-detail">
                       <span>
                         ₩{detailData.price && detailData.price.toLocaleString()}
@@ -266,4 +264,4 @@ class ProductDetail extends React.Component {
   }
 }
 
-export default ProductDetail;
+export default ProductDetailwData;

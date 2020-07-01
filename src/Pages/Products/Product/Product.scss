@@ -4,11 +4,23 @@
   cursor: pointer;
 
   .imgs {
-    img {
+    position: relative;
+    .img-original {
       max-height: 588px;
       max-width: 392px;
       height: auto;
       width: 100%;
+    }
+    .heart-button {
+      position: absolute;
+      right: 0;
+      margin: 0;
+      width: 3%;
+      height: 3%;
+      display: inline-block;
+      top: 20px;
+      right: 25px;
+      cursor: pointer;
     }
   }
 

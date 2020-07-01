@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "product_id": 1,
+      "product_name": "Cigarette Fit Trousers",
+      "product_price": 470000,
+      "product_color": "BLACK",
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073831_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073832_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073833_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073834_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073835_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073836_500.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 2,
+      "product_name": "Unstructured Coat",
+      "product_price": 1620000,
+      "product_color": "BEIGE",
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073486_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073485_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073487_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073488_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27071361_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073490_1920.jpg?c=2"
+      ]
+    }
+  ]
+}
