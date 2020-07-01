@@ -1,12 +1,19 @@
 import React from "react";
 import "./Nav.scss";
 import ami_logo from "../../Images/amilogo.png";
+import Newsletter from "../Newsletter/Newsletter";
+import NewsletterPortal from "../Newsletter/NewsletterPortal";
+import Search from "../Search/Search";
+import SearchPortal from "../Search/SearchPortal";
+import { Link } from "react-router-dom";
 
 class Nav extends React.Component {
   constructor() {
     super();
     this.state = {
       activeTab: null,
+      Newsletter: false,
+      Search: false,
     };
   }
 
@@ -19,6 +26,30 @@ class Nav extends React.Component {
   mouseOut = () => {
     this.setState({
       activeTab: undefined,
+    });
+  };
+
+  handleOpenModal = () => {
+    this.setState({
+      Newsletter: true,
+    });
+  };
+
+  handleOpenSearch = () => {
+    this.setState({
+      Search: true,
+    });
+  };
+
+  handleCloseModal = () => {
+    this.setState({
+      Newsletter: false,
+    });
+  };
+
+  handleCloseSearch = () => {
+    this.setState({
+      Search: false,
     });
   };
 
@@ -80,7 +111,7 @@ class Nav extends React.Component {
                 this.state.activeTab === 1 ? "show" : "hide"
               }`}
             >
-              <ul className="red-text product-nav">
+              <ul className="sale-text product-nav">
                 <li>T-Shirts & Polos</li>
                 <li>Shirts</li>
                 <li>Trousers</li>
@@ -101,12 +132,12 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a
-              href="#!"
+            <Link
+              to="/shopping/man"
               className={this.state.activeTab === 2 ? "underline" : ""}
             >
               Man
-            </a>
+            </Link>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 2 ? "show" : "hide"
@@ -273,13 +304,13 @@ class Nav extends React.Component {
 
         <ul className="right-menu">
           <li>
-            <button>Newsletter</button>
+            <button onClick={this.handleOpenModal}>Newsletter</button>
           </li>
           <li>
-            <button>Search</button>
+            <button onClick={this.handleOpenSearch}>Search</button>
           </li>
           <li>
-            <a href="#!">Account</a>
+            <Link to ="/account">Account</Link>
           </li>
           <li>
             <button>Cart (0)</button>
@@ -288,6 +319,16 @@ class Nav extends React.Component {
             <button>KR ₩</button>
           </li>
         </ul>
+        {this.state.Newsletter && (
+          <NewsletterPortal>
+            <Newsletter onClose={this.handleCloseModal} />
+          </NewsletterPortal>
+        )}
+        {this.state.Search && (
+          <SearchPortal>
+            <Search onClose={this.handleCloseSearch} />
+          </SearchPortal>
+        )}
       </div>
     );
   }

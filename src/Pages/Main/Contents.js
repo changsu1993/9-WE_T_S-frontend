@@ -1,11 +1,25 @@
 import React from "react";
+import Slider from "react-slick";
 import "./Contents.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class Contents extends React.Component {
   render() {
+    const settings = {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+    };
     return (
       <div className="Contents">
-        <video loop autoPlay muted width="100%" height="100%">
+        <video
+          className="collection-video"
+          width="100%"
+          height="100%"
+          loop
+          autoPlay
+          muted
+        >
           <source
             src="https://player.vimeo.com/external/412737001.hd.mp4?s=3f71c64ea91fd46ed927a06d2eb80e143873cd6a&profile_id=175"
             type="video/mp4"
@@ -29,46 +43,80 @@ class Contents extends React.Component {
           </div>
         </div>
         <section>
-          <img
-            className="odd-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/36416111-2c6f-463a-890d-f3425bc55e8f_homepage-desktop-gay-pride.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="odd-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/36416111-2c6f-463a-890d-f3425bc55e8f_homepage-desktop-gay-pride.jpg"
+              alt=""
+            />
+          </div>
           <div className="gray-link">
             <div className="text">
               <p>AMI x GLAAD</p>
               <p>The Rainbow Collection</p>
             </div>
-
             <a href="#!">Discover now</a>
           </div>
         </section>
         <section>
           <div className="black-link">
             <div className="text">
-              <p>9 years of AMI shows by Loic Prigent</p>
+              <p>9 years of AMI shows</p>
+              <p> by Loic Prigent</p>
             </div>
             <a href="#!">Watch now</a>
           </div>
-          <video
-            width="788.2px"
-            autoPlay
-            // poster="https://www.amiparis.com/BWStaticContent/14000/68c560e9-08a8-49dc-9451-bec3460f449f_card-block-desktop.jpg"
-            controls
-          >
-            <source
-              src="https://www.amiparis.com/BWStaticContent/14000/c9005082-e162-457e-8f70-71da907a1c25_card-block-desktop.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <div className="video">
+            <video
+              width="100%"
+              height="100%"
+              autoPlay
+              // poster="https://www.amiparis.com/BWStaticContent/14000/68c560e9-08a8-49dc-9451-bec3460f449f_card-block-desktop.jpg"
+              controls
+            >
+              <source
+                src="https://www.amiparis.com/BWStaticContent/14000/c9005082-e162-457e-8f70-71da907a1c25_card-block-desktop.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
         </section>
         <section>
-          <img
-            className="odd-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/068ed2b2-47ae-431e-bc2d-abd5b082c486_desktop.jpg"
-            alt=""
-          />
-          <div></div>
+          <div className="img">
+            <img
+              className="odd-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/068ed2b2-47ae-431e-bc2d-abd5b082c486_desktop.jpg"
+              alt=""
+            />
+          </div>
+          <div className="gray-link slider-container">
+            <div className="text slide-text">New Pre-Collection</div>
+            <div className="slider-box">
+              <Slider className="slider" {...settings}>
+                <div className="slider-img">
+                  <img
+                    src="https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-denim-jacket_14942478_27093441_500.jpg"
+                    alt=""
+                  />
+                  <p>Ami De Coeur Denim Jacket</p>
+                </div>
+                <div className="slider-img">
+                  <img
+                    src="https://cdn-images.farfetch-contents.com/ami-chino-trousers_14942366_27093119_500.jpg"
+                    alt=""
+                  />
+                  <p>Chino Trousers</p>
+                </div>
+                <div className="slider-img">
+                  <img
+                    src="https://cdn-images.farfetch-contents.com/ami-multicolor-striped-sweater_14942390_27093250_500.jpg"
+                    alt=""
+                  />
+                  <p>Multicolor Striped Sweater</p>
+                </div>
+              </Slider>
+            </div>
+          </div>
         </section>
         <section>
           <div className="black-link">
@@ -78,19 +126,22 @@ class Contents extends React.Component {
             </div>
             <a href="#!">Discover our stores</a>
           </div>
-
-          <img
-            className="even-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/14000/76cc54ba-3bcc-49cf-82f0-48dade2a0e18_alger-desktop.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="even-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/14000/76cc54ba-3bcc-49cf-82f0-48dade2a0e18_alger-desktop.jpg"
+              alt=""
+            />
+          </div>
         </section>
         <section>
-          <img
-            className="odd-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/14000/76495c33-ece4-4c78-8793-f1cbd7340be1_card-block-desktop.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="odd-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/14000/76495c33-ece4-4c78-8793-f1cbd7340be1_card-block-desktop.jpg"
+              alt=""
+            />
+          </div>
           <div className="gray-link">
             <div className="text">
               <p>The House</p>
@@ -98,7 +149,6 @@ class Contents extends React.Component {
             <a href="#!">Discover our history</a>
           </div>
         </section>
-
         <section>
           <div className="gray-link">
             <div className="text">
@@ -106,30 +156,32 @@ class Contents extends React.Component {
               <p>Spring Summer collection</p>
             </div>
           </div>
-          <img
-            className="even-img"
-            src="https://www.amiparis.com/BWStaticContent/14000/14000/7b0af43c-36e1-4a19-a879-8938ed10a59c_press-homepage-desktop.jpg"
-            alt=""
-          />
+          <div className="img">
+            <img
+              className="even-img"
+              src="https://www.amiparis.com/BWStaticContent/14000/14000/7b0af43c-36e1-4a19-a879-8938ed10a59c_press-homepage-desktop.jpg"
+              alt=""
+            />
+          </div>
         </section>
         <div className="instagram">
           <div className="ami-account">@amiparis</div>
           <div className="img">
             <a href="#!">
               <img
-                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/104414995_3356795501005752_6716955123975908865_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=BgRfLv8UyooAX880AJh&oh=1997cc9401a5145a9cbaf796c9682cc8&oe=5EF402EF"
+                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/105935791_654132181804232_8218895128490461446_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=6EZAcDpDMAsAX8wvMyM&oh=70a29e4dfc2edae03ed762c7cfc0f4e1&oe=5F250FE0"
                 alt=""
               />
             </a>
             <a href="#!">
               <img
-                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/104693382_114066680167237_7461206670952152838_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=NqXLdC07tSUAX_h9M5J&oh=3b7c5622e4790330cdb00188804b4e3a&oe=5EF424F5"
+                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/105966063_986315321786027_2358599811101130750_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=M60ql_Jc-wgAX9CiYKv&oh=97e0d75aa2f9b4dda36b6c1748bf811b&oe=5F24F7B2"
                 alt=""
               />
             </a>
             <a href="#!">
               <img
-                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/104261226_768942533844730_1648711191895299970_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=zyjflzrDF8UAX-1fo32&oh=fa36727ba5247c1d6eda3e758913cbe2&oe=5EF3EAEF"
+                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/105966045_271224944198341_8882831273255785654_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=SKoqNGmrhesAX-qV70K&oh=ee3139bb232a0080218bdffffea16771&oe=5EFBBAA8"
                 alt=""
               />
             </a>

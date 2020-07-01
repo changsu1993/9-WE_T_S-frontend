@@ -1,108 +1,99 @@
 @mixin flex {
-    display: -webkit-flex;
-    display: flex;
-    ;
+  display: -webkit-flex;
+  display: flex;
 }
 
 @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.man {
-    margin-top: 120px;
-    padding: 0px 30px;
-    width: 100%;
+.ManProducts {
+  margin-top: 0px;
+  padding-top: 140px;
+  width: 100%;
 
-    .man-category {
-        font-family: "MierA-Regular";
-        text-align: center;
-        letter-spacing: 2.5px;
-        font-size: 30px;
-        padding-bottom: 20px;
+  .man-category {
+    font-family: "MierA-Regular";
+    text-align: center;
+    letter-spacing: 2.5px;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
 
-    }
+  .num-of-items {
+    font-family: "MierA-Regular";
+    font-size: 16px;
+    margin-bottom: 60px;
+    text-align: center;
+    letter-spacing: 1.33px;
+  }
 
-    .num-of-items {
-        font-family: "MierA-Regular";
-        font-size: 16px;
-        margin-bottom: 60px;
-        text-align: center;
-        letter-spacing: 1.33px;
+  .man-header {
+    @include flex;
+    text-align: center;
+    height: 50vh;
 
-    }
+    .man-wrapper {
+      margin: 0 30px;
+      display: flex;
+      width: 100%;
 
-    .man-header {
-        @include flex;
-        text-align: center;
-        height: 50vh;
+      .man-explained {
+        width: 50%;
+        @include flex-center;
+        flex-direction: column;
+        background-color: #f0f0f0;
 
-        .man-wrapper {
-            margin: 0 auto;
-            display: flex;
-            width: 100%;
-
-
-            .man-explained {
-                width: 50%;
-                @include flex-center;
-                flex-direction: column;
-                background-color: #F0F0F0;
-
-                p {
-                    font-size: 14px;
-                    letter-spacing: 0.92px;
-                    line-height: 35.7px;
-                    font-family: "MierA-Regular";
-                }
-            }
-
-            .man-main-photo {
-                width: 50%;
-                display: inline;
-                height: auto;
-                background-image: url("https://www.amiparis.com/BWStaticContent/14000/ef442444-31ca-4ec6-952e-60a8c22e3c79_banniere-menswear-tablet.jpg");
-                background-size: cover;
-            }
+        p {
+          font-size: 14px;
+          letter-spacing: 0.92px;
+          line-height: 35.7px;
+          font-family: "MierA-Regular";
         }
+      }
 
-
+      .man-main-photo {
+        width: 50%;
+        display: inline;
+        height: auto;
+        background-image: url("https://www.amiparis.com/BWStaticContent/14000/ef442444-31ca-4ec6-952e-60a8c22e3c79_banniere-menswear-tablet.jpg");
+        background-size: cover;
+      }
     }
+  }
 
-    .filter-bar {
-        padding: 30px 0 30px 0;
-        display: flex;
-        justify-content: space-between;
-        color: black;
+  .filter-bar {
+    padding: 30px 30px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
 
-        select {
-            font-family: "MierA-Regular";
-            font-size: 12px;
-            letter-spacing: 1px;
-            text-decoration: none;
-            border: none;
-            outline: none;
-            margin-left: 30px;
-            text-shadow: none;
+    select {
+      font-family: "MierA-Regular";
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      margin-left: 30px;
+      text-shadow: none;
 
-            option {
-                font-family: "MierA-Regular";
-                font-size: 12px;
-                letter-spacing: 1px;
-                text-decoration: none;
-                border: none;
-                outline: none;
-                margin-left: 30px;
-                text-shadow: none;
-
-            }
-        }
+      option {
+        font-family: "MierA-Regular";
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        margin-left: 30px;
+        text-shadow: none;
+      }
     }
-
-
+  }
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }

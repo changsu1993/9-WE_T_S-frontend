@@ -1,0 +1,61 @@
+.search {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  .search-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    background-color: white;
+    .search-box {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      .search-findbox {
+        margin-left: 50px;
+        font-size: 35px;
+        .search-img {
+          margin-right: 10px;
+          height: 20px;
+          width: 20px;
+        }
+        .search-text {
+          border: none;
+          font-size: 22px;
+          letter-spacing: 1.83px;
+          margin-left: 10px;
+          font-family: "MierA-Regular";
+        }
+      }
+      .close-btn {
+        border: 1px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: white;
+        font-size: 11px;
+        letter-spacing: 0.92px;
+        height: 22px;
+        width: 32.2188px;
+        padding: 5px 0 5px 0;
+        margin-right: 30px;
+        font-family: "MierA-Demi";
+      }
+    }
+    .ami-png {
+      display: flex;
+      justify-content: center;
+      margin-left: 80px;
+      margin-top: 70px;
+    }
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: black;
+}
