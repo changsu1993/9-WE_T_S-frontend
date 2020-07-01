@@ -1,6 +1,7 @@
 import React from "react";
 import "./Account_login.scss";
 import amilogo from "../../Images/amilogo.png";
+import eyes from "../../Images/button.png";
 
 class Account_login extends React.Component {
   constructor() {
@@ -10,6 +11,8 @@ class Account_login extends React.Component {
       loginPw: "",
       errorId: false,
       errorPassword: false,
+      inputId: false,
+      inputPw: false,
     };
   }
 
@@ -29,9 +32,25 @@ class Account_login extends React.Component {
   //기능구현 이해 못한 부분 때문에 주석처리
 
   changeHandler = (e) => {
+    const { loginId, loginPw } = this.state;
     this.setState({ [e.target.name]: e.target.value });
-    this.setState({ errorPassword: false }); // 로그인 기능 구현하던 중 잠시 중단
-    this.setState({ errorId: false }); // 로그인 기능 구현하던 중 잠시 중단
+    if (loginId.length >= 5 && loginId.includes("@" && ".")) {
+      // 로그인 기능 구현하던 중 잠시 중단
+      this.setState({ errorId: false }); // 로그인 기능 구현하던 중 잠시 중단
+    }
+    if (loginPw.length >= 5) {
+      this.setState({ errorPassword: false });
+    }
+  };
+
+  inputIdClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ inputId: !this.state.inputId });
+  };
+
+  inputPwClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ inputPw: !this.state.inputPw });
   };
 
   loginClickHandler = (e) => {
@@ -53,12 +72,14 @@ class Account_login extends React.Component {
       })
         .then((res) => res.json())
         .then((res) => console.log(res));
-    } else if (
-      this.state.loginId.length < 5 ||
-      // this.handlelgid.includes("@" && ".") &&
-      this.state.loginPw.length < 5
+    }
+    if (
+      this.state.loginId.length <= 5 &&
+      !this.state.loginId.includes("@" && ".")
     ) {
       this.setState({ errorId: true });
+    }
+    if (this.state.loginPw.length <= 5) {
       this.setState({ errorPassword: true });
     }
   };
@@ -83,32 +104,48 @@ class Account_login extends React.Component {
               type="text"
               className="loginId-text"
               id="loginId"
-              placeholder="Email Address *"
-              required
+              autocomplete="off"
+              // placeholder="Email Address *"
+              onFocus={this.inputIdClickHandler}
+              onBlur={this.inputIdClickHandler}
             />
+            <label
+              htmlFor="loginId"
+              className={this.state.inputId ? "id-up" : "id-down"}
+            >
+              Email Address *
+            </label>
           </form>
           <div
             className="error-id"
             style={{ display: this.state.errorId ? "block" : "none" }}
           >
-            Please enter email address
+            Please enter your email address properly.
           </div>
           <form className="login-password">
             <input
               onChange={this.changeHandler}
+              onFocus={this.inputPwClickHandler}
+              onBlur={this.inputPwClickHandler}
               type="password"
               id="loginPw"
               name="loginPw"
               className="loginPw-text"
-              placeholder="Password *"
-              required
+              // placeholder="Password *"
             />
+            <label
+              htmlFor="loginPw"
+              className={this.state.inputPw ? "pw-up" : "pw-down"}
+            >
+              Password *
+            </label>
+            <button className="eyes">눈</button>
           </form>
           <div
             className="error-password"
             style={{ display: this.state.errorPassword ? "block" : "none" }}
           >
-            Please enter email password
+            Please enter your email password properly.
           </div>
           <div className="last-wrapper">
             <div className="forgot">

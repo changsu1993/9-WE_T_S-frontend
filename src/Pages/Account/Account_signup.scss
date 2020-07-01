@@ -24,7 +24,9 @@
       display: flex;
       flex-direction: column;
       .name {
-        margin-bottom: 20px;
+        display: flex;
+        margin-bottom: 40px;
+        position: relative;
         .first-name,
         .last-name {
           border-top: none;
@@ -32,24 +34,128 @@
           border-right: none;
           border-bottom: 1px solid;
           font-size: 14px;
-          margin-bottom: 30px;
           width: 270.516px;
           height: 54px;
           padding-top: 20px;
           font-family: "MierA-Regular";
         }
+        .first-up {
+          position: absolute;
+          right: 85.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .first-down {
+          position: absolute;
+          right: 85.5%;
+          bottom: 15.5%;
+          font-family: "MierA-Regular";
+        }
         .last-name {
           margin-left: 40px;
         }
+        .last-up {
+          position: absolute;
+          right: 32.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .last-down {
+          position: absolute;
+          right: 32.5%;
+          bottom: 15.5%;
+          font-family: "MierA-Regular";
+        }
+        .firstError {
+          display: block;
+          color: red;
+          font-size: 14px;
+          padding-left: 130px;
+          font-family: "MierA-Regular";
+        }
+        .lastError {
+          display: block;
+          color: red;
+          font-size: 14px;
+
+          padding-left: 170px;
+          font-family: "MierA-Regular";
+        }
       }
       .email-address {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        position: relative;
+        .email-up {
+          position: absolute;
+          right: 82.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .email-down {
+          position: absolute;
+          right: 82.5%;
+          bottom: 15.5%;
+          font-family: "MierA-Regular";
+        }
+        .emailError {
+          display: block;
+          color: red;
+          font-size: 14px;
+          padding-left: 255px;
+          font-family: "MierA-Regular";
+        }
       }
       .email-password {
         margin-bottom: 20px;
+        position: relative;
+        .pw-up {
+          position: absolute;
+          right: 87.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .pw-down {
+          position: absolute;
+          right: 87.5%;
+          bottom: 15.5%;
+          font-family: "MierA-Regular";
+        }
       }
       .confirm-password {
         margin-bottom: 20px;
+        position: relative;
+        .con-up {
+          position: absolute;
+          right: 78.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .con-down {
+          position: absolute;
+          right: 78.5%;
+          bottom: 15.5%;
+          font-family: "MierA-Regular";
+        }
       }
     }
   }
@@ -67,7 +173,7 @@
     border-right: none;
     border-bottom: 1px solid;
     font-size: 14px;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     width: 504.016px;
     height: 54px;
     padding-top: 20px;
