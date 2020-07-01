@@ -1,6 +1,6 @@
 .Modal-wrapper {
   position: absolute;
-  z-index: 500;
+  z-index: 1000;
 
   .MyModalImages {
     img {
@@ -12,7 +12,7 @@
       position: fixed;
       right: 0;
       margin: 0;
-      z-index: 999;
+      z-index: 2000;
 
       button {
         border: none;

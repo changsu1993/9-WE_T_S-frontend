@@ -51,11 +51,11 @@ class ProductBottomBar extends React.Component {
                         return (
                           <li
                             onClick={() => {
-                              this.sizeSelectHandler(opt.option);
+                              this.sizeSelectHandler(opt);
                             }}
-                            name={opt.option}
+                            name={opt}
                           >
-                            {opt.option}
+                            {opt}
                           </li>
                         );
                       })}

@@ -28,23 +28,21 @@ class ProductDetailwData extends React.Component {
     };
   }
 
-  componentDidMount = () => {
+  componentDidMount() {
     this.setState({ isLoading: true });
     setTimeout(() => {
-      fetch("http://localhost:3001/data/detailDatadata.json")
+      fetch(`http://localhost:3000/data/detailDatadata.json`)
         .then((res) => res.json())
         .then((res) =>
           this.setState({ detailData: res.detailData[0], isLoading: false })
         );
     }, 1000);
     window.addEventListener("scroll", this.handleScroll);
-  };
+  }
 
-
-
-  componentWillUnmount = () => {
+  componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
-  };
+  }
 
   handleScroll = () => {
     this.setState({
@@ -76,7 +74,6 @@ class ProductDetailwData extends React.Component {
   };
 
   render() {
-
     const {
       sizeSelectHandler,
       arrowClickHandler,
@@ -96,18 +93,18 @@ class ProductDetailwData extends React.Component {
     } = this.state;
 
     const imgsArray =
-      detailData.productImages &&
-      detailData.productImages.filter((obj, idx) => {
-        return idx !== 0;
+      detailData.product_images &&
+      detailData.product_images.filter((obj, index) => {
+        return index !== 0;
       });
-    // console.log(imgsArray)
+    console.log(imgsArray);
 
     return (
       <>
         <ImageModal
           isOpen={isModalOpen}
           close={closeModal}
-          data={detailData.id && detailData.productImages}
+          data={detailData.product_id && detailData.product_images}
         />
 
         <Nav />
@@ -129,7 +126,7 @@ class ProductDetailwData extends React.Component {
                     className="product-photo"
                     alt="product-img"
                     src={
-                      detailData.productImages && detailData.productImages[0]
+                      detailData.product_images && detailData.product_images[0]
                     }
                   />
                   <img
@@ -143,7 +140,9 @@ class ProductDetailwData extends React.Component {
                     <h1>{detailData.product_name}</h1>
                     <div className="price-detail">
                       <span>
-                        ₩{detailData.price && detailData.price.toLocaleString()}
+                        ₩ {}
+                        {detailData.product_price &&
+                          detailData.product_price.toLocaleString()}
                       </span>
                       <span className="import-incl">
                         (Import Duties Included)
@@ -190,18 +189,16 @@ class ProductDetailwData extends React.Component {
                     <div className="colors-options">
                       <span>Colors</span>
                       <div className="colors">
-                        {detailData.colors &&
-                          detailData.colors.map((obj) => {
+                        {detailData.button_color_URL &&
+                          detailData.button_color_URL.map((obj) => {
                             return (
                               <div className="colors-wrapper">
-                                <span>{obj.name}</span>
-                                <Link to={`/shopping/item1${obj.name}`}>
-                                  <img
-                                    alt="color-options"
-                                    className="circled-color"
-                                    src={obj.img}
-                                  />
-                                </Link>
+                                <span>COLOR</span>
+                                <img
+                                  alt="color-options"
+                                  className="circled-color"
+                                  src={obj}
+                                />
                               </div>
                             );
                           })}
@@ -216,7 +213,7 @@ class ProductDetailwData extends React.Component {
                   </div>
                 </section>
 
-                {detailData.id &&
+                {imgsArray &&
                   imgsArray.map((imgobj) => {
                     return (
                       <section className="size">
@@ -241,7 +238,7 @@ class ProductDetailwData extends React.Component {
                 <div className="care-box">
                   <div className="care">
                     <h2>Care Guide</h2>
-                    {detailData.id &&
+                    {detailData.careGuide &&
                       detailData.careGuide.map((cg) => {
                         return <p className="care-guide">{cg}</p>;
                       })}
@@ -250,10 +247,10 @@ class ProductDetailwData extends React.Component {
               </div>
             </main>
             <Footer />
-            {detailData.id && (
+            {detailData.product_id && (
               <ProductBottomBar
                 isActive={isVisible}
-                price={detailData.price.toLocaleString()}
+                price={detailData.product_price.toLocaleString()}
                 size={detailData.size}
               />
             )}

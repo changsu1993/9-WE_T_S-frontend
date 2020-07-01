@@ -48,12 +48,6 @@ class Product extends React.Component {
     this.setState({ heartHovered: false });
   };
 
-  goToDetail = () => {
-    const { heartHovered } = this.state;
-    if (heartHovered) return;
-    this.props.history.push("/shopping/item1Red");
-  };
-
   render() {
     const {
       mouseOutHandler,
@@ -70,7 +64,6 @@ class Product extends React.Component {
     return (
       <div
         className="Product"
-        // onClick={this.goToDetail}
         onMouseOut={mouseOutHandler}
         onMouseOver={mouseOverHandler}
       >

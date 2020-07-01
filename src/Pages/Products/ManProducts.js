@@ -12,14 +12,14 @@ class ManProducts extends React.Component {
       data: [],
     };
   }
+
   componentDidMount() {
-    fetch("http://localhost:3003/data/datadata.json")
+    fetch("http://localhost:3000/data/datadata.json")
       .then((res) => res.json())
       .then((res) => this.setState({ data: res.data }));
   }
 
   render() {
-    console.log(this.props);
     return (
       <>
         <Nav />

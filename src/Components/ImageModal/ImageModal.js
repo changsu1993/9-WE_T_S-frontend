@@ -11,8 +11,8 @@ const ImageModal = (props) => {
               <button onClick={props.close}> close </button>
             </div>
 
-            {props.data.map((imgObject) => {
-              return <img alt="product-img-in-full-size" src={imgObject.img} />;
+            {props.data.map((img) => {
+              return <img alt="product-img-in-full-size" src={img} />;
             })}
           </div>
         </div>

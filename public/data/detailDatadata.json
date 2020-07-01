@@ -1,25 +1,26 @@
 {
   "detailData": [
     {
-      "product_id ": 1,
+      "product_id": 1,
       "product_color": "BLACK",
       "product_name": "Cigarette Fit Trousers",
       "product_price": 470000,
       "category": "Women",
       "subCategory": "Clothing",
-      "subSubCategory": "Tops",
+      "subSubCategory": "Pants",
       "size": ["S", "M", "XL"],
       "button_color": ["BLACK", "RED"],
       "button_color_URL": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
         "https://www.amiparis.com/BWContent/AMI/14374110_cs.jpg"
       ],
-      "productImages": [
-        "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074392_1920.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074389_1920.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27071743_1920.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074390_1920.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074391_1920.jpg?c=2"
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073831_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073832_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073833_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073834_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073835_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073836_500.jpg?c=2"
       ],
       "careGuide": [
         "Machine wash at 30°C gentle",
@@ -32,7 +33,7 @@
       ]
     },
     {
-      "product_id ": 2,
+      "product_id": 2,
       "product_color": "BEIGE",
       "product_name": "Unstructured Coat",
       "product_price": 1620000,
