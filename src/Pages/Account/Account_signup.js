@@ -1,6 +1,8 @@
 import React from "react";
-import "./Account_signup.scss";
+import zxcvbn from "zxcvbn";
 import amilogo from "../../Images/amilogo.png";
+import eyes from "../../Images/button.png";
+import "./Account_signup.scss";
 
 class Account_signup extends React.Component {
   constructor() {
@@ -11,55 +13,45 @@ class Account_signup extends React.Component {
       emailId: "",
       emailPw: "",
       emailCon: "",
-      firstError: false,
-      lastError: false,
-      emailError: false,
       inputFirst: false,
       inputLast: false,
       inputEmail: false,
       inputPw: false,
       inputCon: false,
+      oneEyes: false,
+      twoEyes: false,
     };
   }
 
-  // handleFirst = (event) => {
-  //   this.setState({
-  //     firstName: event.target.value,
-  //   });
-  // };
+  oneEyesClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ oneEyes: !this.state.oneEyes });
+  };
 
-  // handleLast = (event) => {
-  //   this.setState({
-  //     lastName: event.target.value,
-  //   });
-  // };
+  twoEyesClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ twoEyes: !this.state.twoEyes });
+  };
 
-  // handleId = (event) => {
-  //   this.setState({
-  //     emailId: event.target.value,
-  //   });
-  // };
-
-  // handlePw = (event) => {
-  //   this.setState({
-  //     emailPw: event.target.value,
-  //   });
-  // };
-
-  // handleCon = (event) => {
-  //   this.setState({
-  //     emailCon: event.target.value,
-  //   });
-  // };
-  // 기능구현과 접목해서 생각해보려고 지우지 않고 남겨둠
-  // first name은 한글만 받을 수 있게 조건 최소 1 최대 4
-  // last name도 한글이고 최소 1 최대 2
-  // 비밀번호  숫자 들어가고 특수문자그리고 영어 소문자 대문자 최소 8 최대 15 영문자 특수문자 숫자 하나씩 포함한 8자리 이상 15자리 이하
+  createPasswordLabel = (result) => {
+    switch (result.score) {
+      case 0:
+        return "Weak";
+      case 1:
+        return "Weak";
+      case 2:
+        return "Fair";
+      case 3:
+        return "Strong";
+      default:
+        return "Strong";
+    }
+  };
 
   checkFirstNameVaild = (emailId, emailPw, emailCon, firstName, lastName) => {
     const checkFirstName = /(?=.*^[가-힣]+$).{1,4}$/; // 백엔드 조건 first name 한글이면서 글자수 최소 1 - 최대 4
     const checkLastName = /(?=.*^[가-힣]+$).{1,2}$/; // 백엔드 조건 last name 한글이면서 글자수 최소 1 - 최대 2
-    const checkPw = /(?=.*\d{1,15})(?=.*[~`!@#$%\^&*()-+=]{1,15})(?=.*[a-zA-Z]{2,15}).{8,15}$/;
+    const checkPw = /(?=.*\d{1,15})(?=.*[~`!@#$%&*()-+=]{1,15})(?=.*[a-zA-Z]{2,15}).{8,15}$/;
     const checkEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
     //숫자, 특수문자 각 1회 이상, 영문은 2개 이상 사용하여 8자리 이상 입력.
     let result = false;
@@ -79,26 +71,41 @@ class Account_signup extends React.Component {
   inputFirstClickHandler = (e) => {
     e.preventDefault();
     this.setState({ inputFirst: !this.state.inputFirst });
+    if (this.state.firstName.length > 0) {
+      this.setState({ inputFirst: true });
+    }
   };
 
   inputLastClickHandler = (e) => {
     e.preventDefault();
     this.setState({ inputLast: !this.state.inputLast });
+    if (this.state.lastName.length > 0) {
+      this.setState({ inputLast: true });
+    }
   };
 
   inputEmailClickHandler = (e) => {
     e.preventDefault();
     this.setState({ inputEmail: !this.state.inputEmail });
+    if (this.state.emailId.length > 0) {
+      this.setState({ inputEmail: true });
+    }
   };
 
   inputPwClickHandler = (e) => {
     e.preventDefault();
     this.setState({ inputPw: !this.state.inputPw });
+    if (this.state.emailPw.length > 0) {
+      this.setState({ inputPw: true });
+    }
   };
 
   inputConClickHandler = (e) => {
     e.preventDefault();
     this.setState({ inputCon: !this.state.inputCon });
+    if (this.state.emailCon.length > 0) {
+      this.setState({ inputCon: true });
+    }
   };
 
   infoChangeHandler = (e) => {
@@ -109,11 +116,10 @@ class Account_signup extends React.Component {
     e.preventDefault();
     const { firstName, lastName, emailId, emailPw, emailCon } = this.state;
 
-    console.log("this.state : ", this.state);
     if (
       this.checkFirstNameVaild(emailId, emailPw, emailCon, firstName, lastName) // 비밀번호와 비밀번호 확인값이 다르면 애초에  fetch를 실행하지 말라는 조건문.
     ) {
-      fetch("http://10.58.6.200:8000/account/sign-up", {
+      fetch("http://10.58.7.177:8000/account/sign-up", {
         method: "POST",
         body: JSON.stringify({
           first_name: firstName,
@@ -121,13 +127,13 @@ class Account_signup extends React.Component {
           email: emailId,
           password: emailPw,
         }),
-      })
-        .then((res) => res.json())
-        .then((res) => console.log(res));
+      }).then((res) => console.log(res));
     }
   };
 
   render() {
+    const { emailPw } = this.state;
+    const testedResult = zxcvbn(emailPw);
     return (
       <div className="Signup">
         <div className="signup-container">
@@ -151,7 +157,7 @@ class Account_signup extends React.Component {
                 id="firstName"
                 className="first-name"
                 name="firstName"
-                autocomplete="off"
+                autoComplete="off"
               />
               <label
                 htmlFor="firstName"
@@ -167,7 +173,7 @@ class Account_signup extends React.Component {
                 id="lastName"
                 className="last-name"
                 name="lastName"
-                autocomplete="off"
+                autoComplete="off"
               />
               <label
                 htmlFor="lastName"
@@ -175,18 +181,6 @@ class Account_signup extends React.Component {
               >
                 Last Name *
               </label>
-              <div
-                className="firstError"
-                style={{ display: this.state.firstError ? "block" : "none" }}
-              >
-                Please enter first name
-              </div>
-              <div
-                className="lastError"
-                style={{ display: this.state.lastError ? "block" : "none" }}
-              >
-                Please enter last name
-              </div>
             </form>
             <form className="email-address">
               <input
@@ -197,7 +191,7 @@ class Account_signup extends React.Component {
                 id="emailId"
                 className="email-id"
                 name="emailId"
-                autocomplete="off"
+                autoComplete="off"
               />
               <label
                 htmlFor="emailId"
@@ -205,39 +199,52 @@ class Account_signup extends React.Component {
               >
                 Email Address *
               </label>
-              <div
-                className="emailError"
-                style={{ display: this.state.emailError ? "block" : "none" }}
-              >
-                Please enter your email address properly.
-              </div>
             </form>
             <form className="email-password">
               <input
                 onChange={this.infoChangeHandler}
                 onFocus={this.inputPwClickHandler}
                 onBlur={this.inputPwClickHandler}
-                type="password"
+                type={this.state.oneEyes ? "text" : "password"}
                 id="emailPw"
                 className="email-pw"
                 name="emailPw"
+                autoComplete="off"
               />
+              <progress
+                className={`password-strength-meter-progress strength-${this.createPasswordLabel(
+                  testedResult
+                )}`}
+                value={testedResult.score}
+                max="3"
+              />
+              <span className="security-strength">Password strength:</span>
+              <span className="password-security">
+                {this.createPasswordLabel(testedResult)}
+              </span>
               <label
                 htmlFor="emailPw"
                 className={this.state.inputPw ? "pw-up" : "pw-down"}
               >
                 Password *
               </label>
+              <button
+                className="oneEyes-button"
+                onClick={this.oneEyesClickHandler}
+              >
+                <img src={eyes} alt="eyes" className="oneEyes-image" />
+              </button>
             </form>
             <form className="confirm-password">
               <input
                 onChange={this.infoChangeHandler}
                 onFocus={this.inputConClickHandler}
                 onBlur={this.inputConClickHandler}
-                type="password"
+                type={this.state.twoEyes ? "text" : "password"}
                 id="emailCon"
                 className="email-con"
                 name="emailCon"
+                autoComplete="off"
               />
               <label
                 htmlFor="emailCon"
@@ -245,6 +252,12 @@ class Account_signup extends React.Component {
               >
                 Confirm Password *
               </label>
+              <button
+                className="twoEyes-button"
+                onClick={this.twoEyesClickHandler}
+              >
+                <img src={eyes} alt="eyes" className="twoEyes-image" />
+              </button>
             </form>
           </div>
           <div className="login-register-wrapper">

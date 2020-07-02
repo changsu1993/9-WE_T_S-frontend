@@ -24,9 +24,10 @@ class Account_guest extends React.Component {
 
   inputClickHandler = (e) => {
     e.preventDefault();
-    this.setState({
-      isInputActive: !this.state.isInputActive,
-    });
+    this.setState({ isInputActive: !this.state.isInputActive });
+    if (this.state.emailAddress.length > 0) {
+      this.setState({ isInputActive: true });
+    }
   };
 
   guestClickHandler = (e) => {
@@ -35,7 +36,7 @@ class Account_guest extends React.Component {
     console.log("this.state: ", this.state);
     const { emailAddress } = this.state;
     if (emailAddress.length >= 5 && emailAddress.includes("@" && ".")) {
-      fetch("http://10.58.4.83:8000/account/guest/sign-up", {
+      fetch("http://10.58.7.177:8000/account/guest/sign-up", {
         method: "POST",
         body: JSON.stringify({
           email: emailAddress,
@@ -67,9 +68,9 @@ class Account_guest extends React.Component {
             <input
               type="text"
               id="guest-id"
-              className="guest-text" //{this.state.isInputActive ? "guest-text" : ""}
+              className="guest-text"
               name="emailAddress"
-              autocomplete="off"
+              autoComplete="off"
               onChange={this.handleEmail}
               onFocus={this.inputClickHandler}
               onBlur={this.inputClickHandler}

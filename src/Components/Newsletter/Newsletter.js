@@ -43,6 +43,7 @@ class Newsletter extends Component {
                 <input
                   className="email-text"
                   type="text"
+                  autoComplete="off"
                   placeholder="Email Address *"
                   aria-required="true"
                   id="email-address"

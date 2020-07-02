@@ -1,7 +1,8 @@
 import React from "react";
-import "./Account_login.scss";
+import { withRouter } from "react-router-dom";
 import amilogo from "../../Images/amilogo.png";
 import eyes from "../../Images/button.png";
+import "./Account_login.scss";
 
 class Account_login extends React.Component {
   constructor() {
@@ -13,31 +14,23 @@ class Account_login extends React.Component {
       errorPassword: false,
       inputId: false,
       inputPw: false,
+      eyes: false,
     };
   }
 
-  // handlelgid = (event) => {
-  //   this.setState({
-  //     loginId: event.target.value,
-  //     errorId: false,
-  //   });
-  // };
-
-  // handlelgpw = (event) => {
-  //   this.setState({
-  //     loginPw: event.target.value,
-  //     errorPassword: false,
-  //   });
-  // };
-  //기능구현 이해 못한 부분 때문에 주석처리
+  passwordSecurityClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ eyes: !this.state.eyes });
+  };
 
   changeHandler = (e) => {
     const { loginId, loginPw } = this.state;
     this.setState({ [e.target.name]: e.target.value });
+
     if (loginId.length >= 5 && loginId.includes("@" && ".")) {
-      // 로그인 기능 구현하던 중 잠시 중단
-      this.setState({ errorId: false }); // 로그인 기능 구현하던 중 잠시 중단
+      this.setState({ errorId: false });
     }
+
     if (loginPw.length >= 5) {
       this.setState({ errorPassword: false });
     }
@@ -46,11 +39,19 @@ class Account_login extends React.Component {
   inputIdClickHandler = (e) => {
     e.preventDefault();
     this.setState({ inputId: !this.state.inputId });
+
+    if (this.state.loginId.length > 0) {
+      this.setState({ inputId: true });
+    }
   };
 
   inputPwClickHandler = (e) => {
     e.preventDefault();
     this.setState({ inputPw: !this.state.inputPw });
+
+    if (this.state.loginPw.length > 0) {
+      this.setState({ inputPw: true });
+    }
   };
 
   loginClickHandler = (e) => {
@@ -63,7 +64,7 @@ class Account_login extends React.Component {
       this.state.loginPw.length >= 5 &&
       this.state.loginId.includes("@" && ".")
     ) {
-      fetch("http://10.58.2.83:8000/account/sign-in", {
+      fetch("http://10.58.7.177:8000/account/sign-in", {
         method: "POST",
         body: JSON.stringify({
           email: this.state.loginId,
@@ -71,14 +72,23 @@ class Account_login extends React.Component {
         }),
       })
         .then((res) => res.json())
-        .then((res) => console.log(res));
+        .then((res) => {
+          localStorage.setItem("access_token", res.access_token);
+          this.props.history.push("/");
+        });
     }
+
+    if (this.state.loginId.length > 0) {
+      this.setState({});
+    }
+
     if (
       this.state.loginId.length <= 5 &&
       !this.state.loginId.includes("@" && ".")
     ) {
       this.setState({ errorId: true });
     }
+
     if (this.state.loginPw.length <= 5) {
       this.setState({ errorPassword: true });
     }
@@ -104,8 +114,7 @@ class Account_login extends React.Component {
               type="text"
               className="loginId-text"
               id="loginId"
-              autocomplete="off"
-              // placeholder="Email Address *"
+              autoComplete="off"
               onFocus={this.inputIdClickHandler}
               onBlur={this.inputIdClickHandler}
             />
@@ -127,11 +136,11 @@ class Account_login extends React.Component {
               onChange={this.changeHandler}
               onFocus={this.inputPwClickHandler}
               onBlur={this.inputPwClickHandler}
-              type="password"
+              type={this.state.eyes ? "text" : "password"}
               id="loginPw"
               name="loginPw"
+              autoComplete="off"
               className="loginPw-text"
-              // placeholder="Password *"
             />
             <label
               htmlFor="loginPw"
@@ -139,7 +148,12 @@ class Account_login extends React.Component {
             >
               Password *
             </label>
-            <button className="eyes">눈</button>
+            <button
+              className="eyes-button"
+              onClick={this.passwordSecurityClickHandler}
+            >
+              <img src={eyes} alt="eyes" className="eyes-image" />
+            </button>
           </form>
           <div
             className="error-password"
@@ -171,4 +185,4 @@ class Account_login extends React.Component {
   }
 }
 
-export default Account_login;
+export default withRouter(Account_login);

@@ -3,6 +3,7 @@
   width: 100%; // 952.5px
   height: 205px;
   .guest-container {
+    position: relative;
     .guest-checkout {
       font-size: 20px;
       letter-spacing: 1.67px;
@@ -40,15 +41,15 @@
       .text-down {
         position: absolute;
         right: 78.5%;
-        bottom: 15.5%;
+        bottom: 10.5%;
         font-family: "MierA-Regular";
       }
     }
     .emailAddressId {
+      position: absolute;
       display: block;
-      margin-left: 210px;
-      margin-top: 5px;
       color: red;
+      right: 0%;
       font-size: 14px;
       font-family: "MierA-Regular";
     }

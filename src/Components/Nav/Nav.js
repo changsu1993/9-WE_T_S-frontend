@@ -14,7 +14,14 @@ class Nav extends React.Component {
       activeTab: null,
       Newsletter: false,
       Search: false,
+      isLoggedIn: false,
     };
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem("access_token")) {
+      this.setState({ isLoggedIn: true });
+    }
   }
 
   mouseOver = (id) => {
@@ -310,7 +317,9 @@ class Nav extends React.Component {
             <button onClick={this.handleOpenSearch}>Search</button>
           </li>
           <li>
-            <Link to ="/account">Account</Link>
+            <Link to="/account">
+              {this.state.isLoggedIn ? "Hello" : "Account"}
+            </Link>
           </li>
           <li>
             <button>Cart (0)</button>
