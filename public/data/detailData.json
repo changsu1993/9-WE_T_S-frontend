@@ -6,7 +6,7 @@
     "subSubCategory": "Tops",
     "name": "T-shirt With Ami De Coeur Logo",
     "price": 128000,
-    "size": [{ "option": "S" }, { "option": "M" }, { "option": "XL" }],
+    "size": ["S", "M", "XL"],
     "colors": [
       {
         "name": "Red",
@@ -28,33 +28,20 @@
     ],
 
     "productImages": [
-      {
-        "img": "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074387_1920.jpg?c=2"
-      },
-      {
-        "img": "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074392_1920.jpg?c=2"
-      },
-      {
-        "img": "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074389_1920.jpg?c=2"
-      },
-      {
-        "img": "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27071743_1920.jpg?c=2"
-      },
-      {
-        "img": "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074390_1920.jpg?c=2"
-      },
-      {
-        "img": "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074391_1920.jpg?c=2"
-      }
+      "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074392_1920.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074389_1920.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27071743_1920.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074390_1920.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-t-shirt-with-ami-de-coeur-logo_14374157_27074391_1920.jpg?c=2"
     ],
     "careGuide": [
-      { "careGuide": "Machine wash at 30°C gentle" },
-      { "careGuide": "Do not bleach" },
-      { "careGuide": "Do not tumble dry" },
-      { "careGuide": "Medium Iron inside out" },
-      { "careGuide": "Do not dry clean" },
-      { "careGuide": "Reshape whilst damp" },
-      { "careGuide": "Wash inside out" }
+      "Machine wash at 30°C gentle",
+      "Do not bleach",
+      "Do not tumble dry",
+      "Medium Iron inside out",
+      "Do not dry clean",
+      "Reshape whilst damp",
+      "Wash inside out"
     ]
   }
 }

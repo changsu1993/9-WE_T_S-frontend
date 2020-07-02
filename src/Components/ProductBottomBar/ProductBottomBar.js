@@ -12,8 +12,8 @@ class ProductBottomBar extends React.Component {
     };
   }
 
-  sizeSelectHandler = (size) => {
-    this.setState({ option: size });
+  sizeSelectHandler = (option) => {
+    this.setState({ option });
   };
 
   arrowClickHandler = () => {
@@ -22,7 +22,6 @@ class ProductBottomBar extends React.Component {
   };
 
   render() {
-    console.log(this.props.size);
     return (
       <div className={`ProductBottomBar ${this.props.isActive ? "" : "hide"}`}>
         <div className="bottom-bar-wrapper">
@@ -52,11 +51,11 @@ class ProductBottomBar extends React.Component {
                         return (
                           <li
                             onClick={() => {
-                              this.sizeSelectHandler(opt.option);
+                              this.sizeSelectHandler(opt);
                             }}
-                            name={opt.option}
+                            name={opt}
                           >
-                            {opt.option}
+                            {opt}
                           </li>
                         );
                       })}

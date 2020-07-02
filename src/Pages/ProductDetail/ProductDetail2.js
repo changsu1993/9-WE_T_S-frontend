@@ -16,7 +16,7 @@ class ProductDetail2 extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3000/data/detailData2.json")
+    fetch("10.58.1.198:8000/product-list")
       .then((res) => res.json())
       .then((res) => this.setState({ detailData: res.detailData }));
   }
