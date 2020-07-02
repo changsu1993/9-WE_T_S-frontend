@@ -348,22 +348,13 @@ class Nav extends React.Component {
 
         <ul className="right-menu">
           <li>
-            <button className={colorchange}>Newsletter</button>
+            <button  className={colorchange} onClick={this.handleOpenModal}>Newsletter</button>
           </li>
           <li>
-            <button className={colorchange}>Search</button>
+            <button className={colorchange} onClick={this.handleOpenSearch}>Search</button>
           </li>
           <li>
-            <a href="#!" className={colorchange}>
-              Account
-            </a>
-            <button onClick={this.handleOpenModal}>Newsletter</button>
-          </li>
-          <li>
-            <button onClick={this.handleOpenSearch}>Search</button>
-          </li>
-          <li>
-            <Link to ="/account">Account</Link>
+            <Link to ="/account" className={colorchange}>Account</Link>
           </li>
           <li>
             <button className={colorchange}>Cart (0)</button>
