@@ -25,3 +25,9 @@ p {
 a {
   text-decoration: none;
 }
+
+input:focus,
+button:focus,
+select:focus {
+  outline: none;
+}

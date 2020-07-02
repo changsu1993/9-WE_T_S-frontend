@@ -3,6 +3,11 @@ import "./Nav.scss";
 import ami_logo from "../../Images/amilogo.png";
 import ami_white from "../../Images/amilogo-white.png";
 import ami_black from "../../Images/amilogo1.png";
+import Newsletter from "../Newsletter/Newsletter";
+import NewsletterPortal from "../Newsletter/NewsletterPortal";
+import Search from "../Search/Search";
+import SearchPortal from "../Search/SearchPortal";
+import { Link } from "react-router-dom";
 
 class Nav extends React.Component {
   constructor() {
@@ -12,6 +17,8 @@ class Nav extends React.Component {
       prevScrollpos: window.pageYOffset,
       visible: true,
       mouseEnter: false,
+      Newsletter: false,
+      Search: false,
     };
   }
 
@@ -67,6 +74,30 @@ class Nav extends React.Component {
     } else {
       return ami_logo;
     }
+  }
+
+  handleOpenModal = () => {
+    this.setState({
+      Newsletter: true,
+    });
+  };
+
+  handleOpenSearch = () => {
+    this.setState({
+      Search: true,
+    });
+  };
+
+  handleCloseModal = () => {
+    this.setState({
+      Newsletter: false,
+    });
+  };
+
+  handleCloseSearch = () => {
+    this.setState({
+      Search: false,
+    });
   };
 
   render() {
@@ -151,8 +182,12 @@ class Nav extends React.Component {
             className="category-btn"
           >
             <a href="#!" className={colorchange}>
+            <Link
+              to="/shopping/man"
+              className={this.state.activeTab === 2 ? "underline" : ""}
+            >
               Man
-            </a>
+            </Link>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 2 ? "show" : "hide"
@@ -323,6 +358,13 @@ class Nav extends React.Component {
             <a href="#!" className={colorchange}>
               Account
             </a>
+            <button onClick={this.handleOpenModal}>Newsletter</button>
+          </li>
+          <li>
+            <button onClick={this.handleOpenSearch}>Search</button>
+          </li>
+          <li>
+            <Link to ="/account">Account</Link>
           </li>
           <li>
             <button className={colorchange}>Cart (0)</button>
@@ -331,6 +373,16 @@ class Nav extends React.Component {
             <button className={colorchange}>KR ₩</button>
           </li>
         </ul>
+        {this.state.Newsletter && (
+          <NewsletterPortal>
+            <Newsletter onClose={this.handleCloseModal} />
+          </NewsletterPortal>
+        )}
+        {this.state.Search && (
+          <SearchPortal>
+            <Search onClose={this.handleCloseSearch} />
+          </SearchPortal>
+        )}
       </div>
     );
   }

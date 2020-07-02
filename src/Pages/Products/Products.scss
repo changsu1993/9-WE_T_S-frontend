@@ -9,9 +9,9 @@
   justify-content: center;
 }
 
-.man {
-  margin-top: 120px;
-  padding: 0px 30px;
+.ManProducts {
+  margin-top: 0px;
+  padding-top: 140px;
   width: 100%;
 
   .man-category {
@@ -36,7 +36,7 @@
     height: 50vh;
 
     .man-wrapper {
-      margin: 0 auto;
+      margin: 0 30px;
       display: flex;
       width: 100%;
 
@@ -65,7 +65,7 @@
   }
 
   .filter-bar {
-    padding: 30px 0 30px 0;
+    padding: 30px 30px 30px 0px;
     display: flex;
     justify-content: space-between;
     color: black;
