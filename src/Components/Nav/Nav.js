@@ -181,10 +181,9 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className={colorchange}>
             <Link
               to="/shopping/man"
-              className={this.state.activeTab === 2 ? "underline" : ""}
+              className={colorchange}
             >
               Man
             </Link>
