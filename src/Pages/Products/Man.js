@@ -1,10 +1,9 @@
 import React from "react";
-import Nav from "../../Components/Nav/Nav";
-import ProductList from "./ProductList/ProductList";
-import Footer from "../../Components/Footer/Footer";
 import "./Products.scss";
+import ProductList from "./ProductList/ProductList";
+import Nav from "../../Components/Nav/Nav";
 
-class ManProducts extends React.Component {
+class Man extends React.Component {
   constructor() {
     super();
 
@@ -12,19 +11,17 @@ class ManProducts extends React.Component {
       data: [],
     };
   }
-
   componentDidMount() {
-    fetch("http://localhost:3000/data/finaldatalist.json")
-      // fetch("http://10.58.7.232:8000/product/list")
+    fetch("http://localhost:3000/data/data.json")
       .then((res) => res.json())
-      .then((res) => this.setState({ data: res.product_data }));
+      .then((res) => this.setState({ data: res.data }));
   }
 
   render() {
     return (
       <>
         <Nav />
-        <main className="ManProducts">
+        <main className="man">
           <div className="man-category"> Man </div>
           <div className="num-of-items">{this.state.data.length} items</div>
 
@@ -72,10 +69,9 @@ class ManProducts extends React.Component {
           </section>
           <ProductList data={this.state.data} />
         </main>
-        <Footer />
       </>
     );
   }
 }
 
-export default ManProducts;
+export default Man;

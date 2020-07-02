@@ -1,6 +1,8 @@
 import React from "react";
 import "./Nav.scss";
 import ami_logo from "../../Images/amilogo.png";
+import ami_white from "../../Images/amilogo-white.png";
+import ami_black from "../../Images/amilogo1.png";
 import Newsletter from "../Newsletter/Newsletter";
 import NewsletterPortal from "../Newsletter/NewsletterPortal";
 import Search from "../Search/Search";
@@ -12,9 +14,14 @@ class Nav extends React.Component {
     super();
     this.state = {
       activeTab: null,
+      prevScrollpos: window.pageYOffset,
+      visible: true,
+      mouseEnter: false,
       Newsletter: false,
       Search: false,
       isLoggedIn: false,
+      cartClick: false,
+      category: [],
     };
   }
 
@@ -22,7 +29,30 @@ class Nav extends React.Component {
     if (localStorage.getItem("access_token")) {
       this.setState({ isLoggedIn: true });
     }
+    window.addEventListener("scroll", this.handleScroll);
+    fetch("http://10.58.7.177:8000")
+      .then((res) => res.json())
+      .then((res) =>
+        this.setState({
+          category: res.category_list,
+        })
+      );
   }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const { prevScrollpos } = this.state;
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible,
+    });
+  };
 
   mouseOver = (id) => {
     this.setState({
@@ -34,6 +64,29 @@ class Nav extends React.Component {
     this.setState({
       activeTab: undefined,
     });
+  };
+
+  mouseEnterNav = () => {
+    this.setState({
+      mouseEnter: true,
+    });
+  };
+
+  mouseLeaveNav = () => {
+    this.setState({
+      mouseEnter: false,
+    });
+  };
+
+  imgHandler = () => {
+    if (this.state.visible) {
+      if (this.state.mouseEnter) {
+        return ami_black;
+      }
+      return ami_white;
+    } else {
+      return ami_logo;
+    }
   };
 
   handleOpenModal = () => {
@@ -60,22 +113,36 @@ class Nav extends React.Component {
     });
   };
 
+  cartClickHandler = (e) => {
+    this.setState({
+      cartClick: true,
+    });
+  };
+
   render() {
+    console.log(this.state.category);
+    const colorchange =
+      this.state.visible && this.state.mouseEnter === false
+        ? "white-color"
+        : "";
+
     return (
-      <div className="Nav">
+      <div
+        className={`Nav ${this.state.visible ? "text-logo" : ""}`}
+        onMouseEnter={this.mouseEnterNav}
+        onMouseLeave={this.mouseLeaveNav}
+      >
         <ul className="left-menu">
           <li
             onMouseOver={() => this.mouseOver(0)}
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <span className={this.state.activeTab === 0 ? "underline" : ""}>
-              Menu
-            </span>
+            <span className={colorchange}>Menu</span>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 0 ? "show" : "hide"
-              }`}
+              } ${this.state.visible ? "text-logo" : ""}`}
             >
               <ul className="product-nav">
                 <li>Rainbow Capsule Collection</li>
@@ -105,18 +172,13 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a
-              href="#!"
-              className={`sale-tab ${
-                this.state.activeTab === 1 ? "underline" : ""
-              }`}
-            >
+            <a href="#!" className="sale-tab">
               Sale
             </a>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 1 ? "show" : "hide"
-              }`}
+              } ${this.state.visible ? "text-logo" : ""}`}
             >
               <ul className="sale-text product-nav">
                 <li>T-Shirts & Polos</li>
@@ -139,20 +201,21 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <Link
-              to="/shopping/man"
-              className={this.state.activeTab === 2 ? "underline" : ""}
-            >
+            <Link to="/shopping/man" className={colorchange}>
               Man
             </Link>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 2 ? "show" : "hide"
-              }`}
+              } ${this.state.visible ? "text-logo" : ""}`}
             >
               <ul className="product-nav">
                 <li className="sale-tab">Sale</li>
-                <li>New Arrivals</li>
+                {this.state.category &&
+                  this.state.category.map((list, i) => {
+                    return <li key={i}>{list.category_name}</li>;
+                  })}
+                {/* <li>New Arrivals</li>
                 <li>Rainbow Collection</li>
                 <li>Ami de Coeur</li>
                 <li>T-Shirts & Polos</li>
@@ -168,7 +231,7 @@ class Nav extends React.Component {
                 <li>Leather</li>
                 <li>Jewelry</li>
                 <li>Accessories</li>
-                <li>Shoes</li>
+                <li>Shoes</li> */}
               </ul>
 
               <div className="red-text">
@@ -188,16 +251,13 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a
-              href="#!"
-              className={this.state.activeTab === 3 ? "underline" : ""}
-            >
+            <a href="#!" className={colorchange}>
               Woman
             </a>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 3 ? "show" : "hide"
-              }`}
+              } ${this.state.visible ? "text-logo" : ""}`}
             >
               <ul className="product-nav">
                 <li className="sale-tab">Sale</li>
@@ -236,16 +296,13 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a
-              href="#!"
-              className={this.state.activeTab === 4 ? "underline" : ""}
-            >
+            <a href="#!" className={colorchange}>
               Accessories
             </a>
             <div
               className={`hover-nav acc-nav ${
                 this.state.activeTab === 4 ? "show" : "hide"
-              }`}
+              } ${this.state.visible ? "text-logo" : ""}`}
             >
               <ul className="product-nav">
                 <li>Beanies & Caps</li>
@@ -275,16 +332,13 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a
-              href="#!"
-              className={this.state.activeTab === 5 ? "underline" : ""}
-            >
+            <a href="#!" className={colorchange}>
               Shoes
             </a>
             <div
               className={`hover-nav acc-nav ${
                 this.state.activeTab === 5 ? "show" : "hide"
-              }`}
+              } ${this.state.visible ? "text-logo" : ""}`}
             >
               <ul className="product-nav shoes-nav">
                 <li>Sneakers</li>
@@ -306,26 +360,39 @@ class Nav extends React.Component {
         </ul>
 
         <div className="logo">
-          <img src={ami_logo} alt="" />
+          <img
+            className={this.state.visible ? "text-logo" : ""}
+            src={this.imgHandler()}
+            alt=""
+          />
         </div>
 
         <ul className="right-menu">
           <li>
-            <button onClick={this.handleOpenModal}>Newsletter</button>
+            <button className={colorchange} onClick={this.handleOpenModal}>
+              Newsletter
+            </button>
           </li>
           <li>
-            <button onClick={this.handleOpenSearch}>Search</button>
+            <button className={colorchange} onClick={this.handleOpenSearch}>
+              Search
+            </button>
           </li>
           <li>
             <Link to="/account">
               {this.state.isLoggedIn ? "Hello" : "Account"}
             </Link>
+            <Link to="/account" className={colorchange}>
+              Account
+            </Link>
           </li>
           <li>
-            <button>Cart (0)</button>
+            <button className={colorchange} onClick={this.cartClickHandler}>
+              Cart (0)
+            </button>
           </li>
           <li>
-            <button>KR ₩</button>
+            <button className={colorchange}>KR ₩</button>
           </li>
         </ul>
         {this.state.Newsletter && (
