@@ -1,0 +1,163 @@
+.newsletter {
+  background: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  .newsletter-main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 630px;
+    width: 700px;
+    background-color: white;
+    .close {
+      display: flex;
+      justify-content: center;
+      margin-left: 600px;
+      margin-top: 30px;
+      margin-bottom: 50px;
+      .close-button {
+        border: 1px solid;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: white;
+        font-size: 11px;
+        letter-spacing: 0.92px;
+        height: 22px;
+        width: 32.2188px;
+        padding: 5px 0 5px 0;
+        font-family: "MierA-Demi";
+      }
+    }
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      .ami-logo {
+        margin-bottom: 20px;
+      }
+      .center-title {
+        font-size: 20px;
+        letter-spacing: 1.67px;
+        margin-bottom: 20px;
+        font-family: "MierA-Regular";
+      }
+      .center-letter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 11px;
+        letter-spacing: 1px;
+        line-height: 22px;
+        font-family: "MierA-Regular";
+      }
+    }
+    .center-information {
+      .email-information {
+        margin-bottom: 40px;
+        margin-left: 40px;
+        .email {
+          .email-text {
+            border: 1px solid;
+            width: 460px;
+            height: 54px;
+            padding-top: 20px;
+            font-size: 13px;
+            letter-spacing: 1.08px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-family: "MierA-Regular";
+          }
+        }
+      }
+      .country-information {
+        margin-bottom: 50px;
+        margin-left: 40px;
+        .country-main {
+          .country-box {
+            .country-select {
+              border-top: none;
+              border-left: none;
+              border-right: none;
+              padding-right: 30px;
+              width: 187.844px;
+              height: 39px;
+              padding-top: 10px;
+              font-size: 13px;
+              letter-spacing: 1.08px;
+              font-family: "MierA-Regular";
+            }
+            .gender-checkbox {
+              margin-left: 35px;
+              .menswear-label {
+                .men-check {
+                  width: 22px;
+                  height: 22px;
+                }
+                .menswear {
+                  margin-left: 15px;
+                  margin-right: 15px;
+                  font-size: 14px;
+                  line-height: 22px;
+                  width: 64.4062px;
+                  height: 22px;
+                  font-family: "MierA-Regular";
+                }
+              }
+              .womenswear-label {
+                .women-check {
+                  width: 22px;
+                  height: 22px;
+                }
+                .womenswear {
+                  margin-left: 15px;
+                  font-size: 14px;
+                  line-height: 22px;
+                  height: 22px;
+                  font-family: "MierA-Regular";
+                }
+              }
+            }
+          }
+        }
+      }
+      .register {
+        display: flex;
+        width: 500px;
+        height: 150px;
+        margin-left: 40px;
+        .register-button {
+          width: 141px;
+          height: 49px;
+          font-size: 14px;
+          letter-spacing: 0.12px;
+          line-height: 21px;
+          background-color: black;
+          color: white;
+          border: none;
+          font-family: "MierA-Regular";
+        }
+        .register-letter {
+          margin-left: 40px;
+          font-size: 11px;
+          letter-spacing: 1px;
+          line-height: 22px;
+          color: gray;
+          font-family: "MierA-Regular";
+        }
+      }
+    }
+  }
+}
+input::-webkit-input-placeholder {
+  color: black;
+}

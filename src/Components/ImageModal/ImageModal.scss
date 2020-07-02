@@ -1,0 +1,35 @@
+.Modal-wrapper {
+  position: absolute;
+  z-index: 500;
+
+  .MyModalImages {
+    img {
+      width: 100%;
+      vertical-align: bottom;
+    }
+
+    .button-wrap {
+      position: fixed;
+      right: 0;
+      margin: 0;
+      z-index: 999;
+
+      button {
+        border: none;
+        font-weight: 400;
+        padding-top: 20px;
+        font-family: "MierA-regular";
+        color: black;
+        text-align: center;
+        background-color: transparent;
+        font-size: 13px;
+        cursor: pointer;
+        border-bottom-color: black;
+        border-bottom-width: 1.6px;
+        border-bottom-style: solid;
+        letter-spacing: 1px;
+        padding: auto 10px;
+      }
+    }
+  }
+}

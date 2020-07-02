@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import "./Product.scss";
 
 class Product extends React.Component {
@@ -24,13 +24,15 @@ class Product extends React.Component {
   };
 
   colorMouseOver = (img) => {
-    console.log("haha", img);
     this.setState({ imageSrc: img, colorHovered: true });
   };
 
   colorMouseOut = () => {
-    console.log("hahaddddddd");
     this.setState({ imgSrc: this.props.imageUrl, colorHovered: false });
+  };
+
+  goToDetail = () => {
+    this.props.history.push("/shopping/item1Black");
   };
 
   render() {
@@ -46,49 +48,44 @@ class Product extends React.Component {
     return (
       <div
         className="Product"
+        onClick={this.goToDetail}
         onMouseOut={mouseOutHandler}
         onMouseOver={mouseOverHandler}
       >
-        <Link to="/shopping/man">
-          <div className="imgs">
-            <img
-              alt="product-img"
-              className="img-original"
-              src={imageSrc}
-            />
+        <div className="imgs">
+          <img alt="product-img" className="img-original" src={imageSrc} />
+        </div>
+        <div className="text-wrapper">
+          <div className="name-and-price">
+            <span className="product-name">{name}</span>
+            <span className="product-price">{price}</span>
           </div>
-          <div className="text-wrapper">
-            <div className="name-and-price">
-              <span className="product-name">{name}</span>
-              <span className="product-price">{price}</span>
+          <div
+            className={
+              colorHovered || hovered
+                ? "color-and-add show"
+                : "color-and-add hide"
+            }
+          >
+            <div className="color-options">
+              {colors.map((color) => {
+                return (
+                  <img
+                    onMouseEnter={() => colorMouseOver(color.imageUrl)}
+                    onMouseLeave={colorMouseOut}
+                    alt=""
+                    className="color-option"
+                    src={color.colorImage}
+                  />
+                );
+              })}
             </div>
-            <div
-              className={
-                colorHovered || hovered
-                  ? "color-and-add show"
-                  : "color-and-add hide"
-              }
-            >
-              <div className="color-options">
-                {colors.map((color) => {
-                  return (
-                    <img
-                      onMouseEnter={() => colorMouseOver(color.imageUrl)}
-                      onMouseLeave={colorMouseOut}
-                      alt=""
-                      className="color-option"
-                      src={color.colorImage}
-                    />
-                  );
-                })}
-              </div>
-              <button className="quick-add-hovered">Quick Add</button>
-            </div>
+            <button className="quick-add-hovered">Quick Add</button>
           </div>
-        </Link>
+        </div>
       </div>
     );
   }
 }
 
-export default Product;
+export default withRouter(Product);
