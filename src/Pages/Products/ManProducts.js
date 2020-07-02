@@ -10,6 +10,7 @@ class ManProducts extends React.Component {
 
     this.state = {
       data: [],
+      activeTab: "",
     };
   }
 
@@ -17,20 +18,42 @@ class ManProducts extends React.Component {
     fetch("http://localhost:3000/data/finaldatalist.json")
       // fetch("http://10.58.7.232:8000/product/list")
       .then((res) => res.json())
-      .then((res) => this.setState({ data: res.product_data }));
+      .then((res) => this.setState({ data: res.product_data, activeTab: 0 }));
   }
 
-  changeHandler = (e) => {
-    console.log(e);
+  valueHandler = (e) => {
+    this.setState({ activeTab: e.target.value });
   };
 
   render() {
+    const { data, activeTab } = this.state;
+
+    const parsePrice = (x) => x;
+
+    const sortByLowerPrices = data
+      .slice()
+      .sort(
+        (a, b) => parsePrice(a.product_price) - parsePrice(b.product_price)
+      );
+
+    const sortByHigerPrices = data
+      .slice()
+      .sort(
+        (a, b) => parsePrice(b.product_price) - parsePrice(a.product_price)
+      );
+
+    const obj = {
+      0: <ProductList data={data} />,
+      1: <ProductList data={sortByLowerPrices} />,
+      2: <ProductList data={sortByHigerPrices} />,
+    };
+
     return (
       <>
         <Nav />
         <main className="ManProducts">
           <div className="man-category"> Man </div>
-          <div className="num-of-items">{this.state.data.length} items</div>
+          <div className="num-of-items">{data.length} items</div>
 
           <section className="man-header">
             <div className="man-wrapper">
@@ -55,30 +78,24 @@ class ManProducts extends React.Component {
                 <option value="0">Categories</option>
                 <option value="1">Categories</option>
               </select>
-              <select onChange={this.changeHandler}>
+              <select>
                 <option value>Colors</option>
-                <option>BLACK</option>
-                <option value="1">BEIGE</option>
-                <option value="2">HEATHER GREY</option>
-                <option value="3">OFF WHITE</option>
-                <option value="4">SILVER</option>
-                <option value="5">TAUPE</option>
-                <option value="6">SAGE</option>
-                <option value="7">OXFORD BLUE</option>
-                <option value="8">BURGUNDY</option>
-                <option value="9">RED</option>
-                <option value="10">PINK</option>
+
+                {data &&
+                  data.map((obj, idx) => {
+                    return <option value={idx}>{obj.product_color}</option>;
+                  })}
               </select>
             </div>
             <div className="sort-by">
-              <select>
-                <option value>Sort by</option>
-                <option value="0">Lower prices</option>
-                <option value="1">Higher prices</option>
+              <select onChange={this.valueHandler}>
+                <option value="0">Sort by</option>
+                <option value="1">Lower prices</option>
+                <option value="2">Higher prices</option>
               </select>
             </div>
           </section>
-          <ProductList data={this.state.data} />
+          {data && obj[activeTab]}
         </main>
         <Footer />
       </>

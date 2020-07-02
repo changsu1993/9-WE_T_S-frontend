@@ -91,13 +91,6 @@ class Product extends React.Component {
             }
           >
             <div className="color-options">
-              {/* <img
-                onMouseEnter={() => colorMouseOver(imageUrl)}
-                onMouseLeave={colorMouseOut}
-                alt=""
-                className="color-option"
-                src={color}
-              /> */}
               {colors.map((color) => {
                 return (
                   <img
