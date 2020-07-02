@@ -4,9 +4,8 @@ import { withRouter } from "react-router-dom";
 import "./ProductList.scss";
 
 class ProductList extends React.Component {
-  
-  clickHandler = (id, color) => {
-    this.props.history.push(`/shopping/man/${id}/${color}`);
+  clickHandler = (id, colorId) => {
+    this.props.history.push(`/shopping/man/${id}/color/${colorId}`);
   };
 
   render() {
@@ -17,7 +16,7 @@ class ProductList extends React.Component {
             return (
               <div
                 onClick={() =>
-                  this.clickHandler(item.product_id, item.product_color)
+                  this.clickHandler(item.product_id, item.product_color_id)
                 }
               >
                 <Product
@@ -28,6 +27,7 @@ class ProductList extends React.Component {
                   imageUrl={item.product_images[0]}
                   imageHovered={item.product_images[1]}
                   color={item.button_image}
+                  colorId={item.product_color_id}
                 />
               </div>
             );

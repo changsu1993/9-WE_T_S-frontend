@@ -14,9 +14,10 @@ class ManProducts extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/datadata.json")
+    fetch("http://localhost:3000/data/finaldatalist.json")
+      // fetch("http://10.58.7.232:8000/product/list")
       .then((res) => res.json())
-      .then((res) => this.setState({ data: res.data }));
+      .then((res) => this.setState({ data: res.product_data }));
   }
 
   render() {

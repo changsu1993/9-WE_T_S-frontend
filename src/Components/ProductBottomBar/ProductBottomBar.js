@@ -12,8 +12,8 @@ class ProductBottomBar extends React.Component {
     };
   }
 
-  sizeSelectHandler = (size) => {
-    this.setState({ option: size });
+  sizeSelectHandler = (option) => {
+    this.setState({ option });
   };
 
   arrowClickHandler = () => {

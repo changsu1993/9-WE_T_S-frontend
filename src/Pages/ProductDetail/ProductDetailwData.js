@@ -15,7 +15,7 @@ class ProductDetailwData extends React.Component {
     super(props);
 
     this.state = {
-      detailData: [],
+      detailData: {},
       heartClick: false,
       showList: false,
       option: "",
@@ -29,14 +29,20 @@ class ProductDetailwData extends React.Component {
   }
 
   componentDidMount() {
+    const { id, colorId } = this.props.match.params;
     this.setState({ isLoading: true });
     setTimeout(() => {
       fetch(`http://localhost:3000/data/detailDatadata.json`)
+        // fetch(`http://10.58.7.232:8000/product/${id}/color/${colorId}`)
         .then((res) => res.json())
         .then((res) =>
-          this.setState({ detailData: res.detailData[0], isLoading: false })
+          this.setState({
+            detailData: res.product_data,
+            isLoading: false,
+          })
         );
     }, 1000);
+
     window.addEventListener("scroll", this.handleScroll);
   }
 
@@ -50,8 +56,8 @@ class ProductDetailwData extends React.Component {
     });
   };
 
-  sizeSelectHandler = (size) => {
-    this.setState({ option: size });
+  sizeSelectHandler = (option) => {
+    this.setState({ option });
   };
 
   arrowClickHandler = () => {
@@ -97,14 +103,13 @@ class ProductDetailwData extends React.Component {
       detailData.product_images.filter((obj, index) => {
         return index !== 0;
       });
-    console.log(imgsArray);
 
     return (
       <>
         <ImageModal
           isOpen={isModalOpen}
           close={closeModal}
-          data={detailData.product_id && detailData.product_images}
+          images={detailData.product_images}
         />
 
         <Nav />
@@ -114,11 +119,11 @@ class ProductDetailwData extends React.Component {
           <>
             <main className="ProductDetail">
               <header>
-                <button>{detailData.category}</button>
+                <button>Man</button>
                 <span>{`>`}</span>
-                <button>{detailData.subCategory}</button>
+                <button>Clothing</button>
                 <span>{`>`}</span>
-                <button>{detailData.subSubCategory}</button>
+                <button>{detailData.sub_sub_category}</button>
               </header>
               <div className="product-main-photo-and-info">
                 <section className="size">
@@ -168,8 +173,8 @@ class ProductDetailwData extends React.Component {
                           </div>
 
                           <ul className={`size-list ${click ? "show" : ""}`}>
-                            {detailData.size &&
-                              detailData.size.map((opt) => {
+                            {detailData.product_size &&
+                              detailData.product_size.map((opt) => {
                                 return (
                                   <li
                                     onClick={() => {
@@ -189,8 +194,8 @@ class ProductDetailwData extends React.Component {
                     <div className="colors-options">
                       <span>Colors</span>
                       <div className="colors">
-                        {detailData.button_color_URL &&
-                          detailData.button_color_URL.map((obj) => {
+                        {detailData.button_images &&
+                          detailData.button_images.map((obj) => {
                             return (
                               <div className="colors-wrapper">
                                 <span>COLOR</span>
@@ -238,8 +243,8 @@ class ProductDetailwData extends React.Component {
                 <div className="care-box">
                   <div className="care">
                     <h2>Care Guide</h2>
-                    {detailData.careGuide &&
-                      detailData.careGuide.map((cg) => {
+                    {detailData.product_guide &&
+                      detailData.product_guide.map((cg) => {
                         return <p className="care-guide">{cg}</p>;
                       })}
                   </div>
@@ -247,11 +252,11 @@ class ProductDetailwData extends React.Component {
               </div>
             </main>
             <Footer />
-            {detailData.product_id && (
+            {detailData.product_size && (
               <ProductBottomBar
                 isActive={isVisible}
                 price={detailData.product_price.toLocaleString()}
-                size={detailData.size}
+                size={detailData.product_size}
               />
             )}
           </>

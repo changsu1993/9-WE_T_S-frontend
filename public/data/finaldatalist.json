@@ -1,0 +1,1338 @@
+{
+  "product_data": [
+    {
+      "product_id": 1,
+      "product_name": "Cigarette Fit Trousers",
+      "product_price": 470000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073831_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073832_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073833_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073834_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073835_500.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073836_500.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 2,
+      "product_name": "Unstructured Coat",
+      "product_price": 1620000,
+      "product_color": "BEIGE",
+      "button_colors": [
+        "BEIGE",
+        "BURGUNDY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371238_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073486_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073485_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073487_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073488_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27071361_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371273_27073490_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 3,
+      "product_name": "Oversize Mac Coat",
+      "product_price": 1610000,
+      "product_color": "CLAY",
+      "button_colors": [
+        "CLAY",
+        "DARK OLIVE GREEN"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073787_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27071507_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073790_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073788_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073789_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371966_27073791_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 4,
+      "product_name": "Two Buttons Jacket",
+      "product_price": 1380000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "HEATHER GREY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14372047_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942752_27094273_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942752_27093551_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942752_27093550_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942752_27093552_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942752_27093553_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942752_27094274_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 5,
+      "product_name": "Pleated Bermuda Shorts",
+      "product_price": 320000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372021_27074061_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372021_27074062_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372021_27074064_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372021_27074063_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372021_27074065_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372021_27071591_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 6,
+      "product_name": "Patch Pockets Bermuda Shorts",
+      "product_price": 470000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "TAUPE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372029_27074083_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372029_27074084_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372029_27071594_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372029_27071593_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372029_27071595_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372029_27074087_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 7,
+      "product_name": "Embroidered Shirt",
+      "product_price": 470000,
+      "product_color": "OFF WHITE",
+      "button_colors": [
+        "OFF WHITE",
+        "BLACK"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371939_27071468_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371939_27073674_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371939_27071469_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371939_27073675_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371939_27073676_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371939_27071470_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 8,
+      "product_name": "Straight Fit Trousers",
+      "product_price": 830000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "RED"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14372047_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372004_27233884_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372004_27233886_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372004_27233887_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372004_27233888_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372004_27233889_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372004_27233890_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 9,
+      "product_name": "Side Slits Oversize Shirt",
+      "product_price": 440000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "OFF WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371922_27073603_1920.jpg",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371922_27073605_1920.jpg",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371922_27073604_1920.jpg",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371922_27073606_1920.jpg",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371922_27071427_1920.jpg",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371922_27073607_1920.jpg"
+      ]
+    },
+    {
+      "product_id": 10,
+      "product_name": "Carrot Fit Pleated Trousers",
+      "product_price": 490000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371994_27073962_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371994_27073964_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371994_27073965_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371994_27073966_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371994_27071531_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371994_27073968_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 11,
+      "product_name": "Striped Crewneck Sweater",
+      "product_price": 530000,
+      "product_color": "OFFWHITE/BLACK",
+      "button_colors": [
+        "OFFWHITE/BLACK",
+        "SAGE/OFF-WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371247_E20HK024.004319_v2_v6.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371246_27073367_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371246_27073368_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371246_27071311_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371246_27071312_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371246_27073369_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371246_27073371_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 12,
+      "product_name": "Light T-shirt",
+      "product_price": 160000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "OFF WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371196_27073176_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371196_27071238_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371196_27073177_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371196_27071239_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371196_27073178_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371196_27071240_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 13,
+      "product_name": "Elasticized Waist Trousers",
+      "product_price": 510000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27094096_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093067_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093071_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093069_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093072_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093073_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 14,
+      "product_name": "Ami De Coeur Scarf",
+      "product_price": 274000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "PINK"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/15196348_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-scarf_15196346_27109910_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-scarf_15196346_27109911_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-scarf_15196346_27109912_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093069_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093072_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093073_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 15,
+      "product_name": "Small Box Bag",
+      "product_price": 810000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "GREEN"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14942281_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942280_27092095_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942280_27092097_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942280_27090861_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942280_27091800_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942280_27090863_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942356_27093073_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 16,
+      "product_name": "Ami De Coeur Polo Shirt",
+      "product_price": 200000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "SAGE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371225_27073257_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371225_27073258_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371225_27073260_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371225_27073261_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371225_27071268_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371225_27071269_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 17,
+      "product_name": "Ami De Coeur Cap",
+      "product_price": 185000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "BEIGE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942223_27091718_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942223_27090732_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942223_27087986_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942223_27091719_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942223_27090733_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371225_27071269_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 18,
+      "product_name": "Necklace With Bells and Ami De Coeur Clasp",
+      "product_price": 760000,
+      "product_color": "SILVER",
+      "button_colors": [
+        "SILVER",
+        "BEIGE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14369761_E20A915.361900_v1_v3_v6_v8.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14369761_E20A915.361900_v1_v3_v6_v8.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-necklace-with-bells-and-ami-de-coeur-clasp_14369761_27070670_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-necklace-with-bells-and-ami-de-coeur-clasp_14369761_27070671_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-necklace-with-bells-and-ami-de-coeur-clasp_14369761_27068992_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-necklace-with-bells-and-ami-de-coeur-clasp_14369761_27070672_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942223_27090733_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371225_27071269_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 19,
+      "product_name": "Crewneck Rugby-striped Sweater",
+      "product_price": 510000,
+      "product_color": "BLACK/WHITE",
+      "button_colors": [
+        "BLACK/WHITE",
+        "GREEN/WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14942401_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942402_27093326_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942402_27093327_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942402_27093329_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942402_27093328_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942402_27093330_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942402_27093331_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 20,
+      "product_name": "Spring Low Sneakers",
+      "product_price": 580000,
+      "product_color": "TAUPE",
+      "button_colors": [
+        "TAUPE",
+        "BLACK"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370480_27070843_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370480_27070845_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370480_27071108_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370480_27071109_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370480_27070847_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942402_27093331_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 21,
+      "product_name": "Mini Accordion Bag",
+      "product_price": 690000,
+      "product_color": "OLIVE GREEN",
+      "button_colors": [
+        "OLIVE GREEN",
+        "TAUPE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14369746_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14369746_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369746_27070537_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369746_27070539_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369746_27070538_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369746_27070540_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369746_27070542_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369746_27070541_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 22,
+      "product_name": "Sunglasses",
+      "product_price": 440000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "TAUPE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-sunglasses_14369771_27071030_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-sunglasses_14369771_27070757_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-sunglasses_14369771_27070756_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-sunglasses_14369771_27071032_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369746_27070542_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369746_27070541_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 23,
+      "product_name": "Chest Pockets Overshirt",
+      "product_price": 450000,
+      "product_color": "SAGE",
+      "button_colors": [
+        "SAGE",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371944_27073694_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371944_27073695_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371944_27073696_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371944_27073697_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371944_27073698_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371944_27073699_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 24,
+      "product_name": "Laced Ankle Boots With Tractor Sole",
+      "product_price": 760000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "BLACK",
+        "BLACK/WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370475_27070834_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370475_27071097_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370475_27071098_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370475_27070835_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370475_27071099_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371944_27073699_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 25,
+      "product_name": "Zipped Suede Jacket",
+      "product_price": 2430000,
+      "product_color": "DARK OLIVE GREEN",
+      "button_colors": [
+        "DARK OLIVE GREEN",
+        "BLACK/WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-zipped-suede-jacket_14371262_27073444_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-zipped-suede-jacket_14371262_27071338_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-zipped-suede-jacket_14371262_27073445_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-zipped-suede-jacket_14371262_27071339_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-zipped-suede-jacket_14371262_27073446_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-zipped-suede-jacket_14371262_27071340_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 26,
+      "product_name": "Ami De Coeur Swim Shorts",
+      "product_price": 250000,
+      "product_color": "OLIVE GREEN/BLACK",
+      "button_colors": [
+        "OLIVE GREEN/BLACK",
+        "OFFWHITE/BLACK"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371040_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371040_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371040_27070853_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371040_27071114_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371040_27070855_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371040_27070854_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371040_27071115_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371040_27070856_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 27,
+      "product_name": "Oversize Carrott Fit Chino Trousers",
+      "product_price": 400000,
+      "product_color": "SAGE",
+      "button_colors": [
+        "SAGE",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372011_27071564_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372011_27074016_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372011_27074017_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372011_27071565_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372011_27071566_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372011_27071567_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 28,
+      "product_name": "Gingham Ami De Coeur Shirt",
+      "product_price": 330000,
+      "product_color": "OFFWHITE/BLACK",
+      "button_colors": [
+        "OFFWHITE/BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-gingham-ami-de-coeur-shirt_14371913_27073565_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-gingham-ami-de-coeur-shirt_14371913_27071417_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-gingham-ami-de-coeur-shirt_14371913_27073566_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-gingham-ami-de-coeur-shirt_14371913_27073567_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-gingham-ami-de-coeur-shirt_14371913_27071418_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-gingham-ami-de-coeur-shirt_14371913_27073568_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 29,
+      "product_name": "Ami Embroidery Shirt",
+      "product_price": 310000,
+      "product_color": "OXFORD BLUE",
+      "button_colors": [
+        "OXFORD BLUE",
+        "OFF WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371912_E20HC006.45454_v2_v6.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371912_E20HC006.45454_v2_v6.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371912_27073559_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371912_27071415_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371912_27071414_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371912_27073561_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371912_27071416_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371912_27073562_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 1,
+      "product_name": "Cigarette Fit Trousers",
+      "product_price": 470000,
+      "product_color": "CLAY",
+      "button_colors": [
+        "BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27073839_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27073840_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27073842_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27073841_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27071519_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371976_27073844_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 2,
+      "product_name": "Unstructured Coat",
+      "product_price": 1620000,
+      "product_color": "BURGUNDY",
+      "button_colors": [
+        "BEIGE",
+        "BURGUNDY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371238_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371238_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27073491_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27073492_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27073493_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27071364_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27071363_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-unstructured-coat_14371275_27073495_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 3,
+      "product_name": "Oversize Mac Coat",
+      "product_price": 1610000,
+      "product_color": "DARK OLIVE GREEN",
+      "button_colors": [
+        "CLAY",
+        "DARK OLIVE GREEN"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27073793_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27073795_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27071508_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27073796_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27073797_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-mac-coat_14371967_27073798_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 4,
+      "product_name": "Two Buttons Jacket",
+      "product_price": 1380000,
+      "product_color": "HEATHER GREY",
+      "button_colors": [
+        "BLACK",
+        "HEATHER GREY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14372047_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14372047_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942751_27094270_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942751_27093547_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942751_27093545_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942751_27093546_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942751_27094271_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-two-buttons-jacket_14942751_27094272_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 5,
+      "product_name": "Pleated Bermuda Shorts",
+      "product_price": 320000,
+      "product_color": "CLAY",
+      "button_colors": [
+        "BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372024_27074069_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372024_27074068_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372024_27074070_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372024_27074071_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372024_27074072_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-pleated-bermuda-shorts_14372024_27074075_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 6,
+      "product_name": "Patch Pockets Bermuda Shorts",
+      "product_price": 470000,
+      "product_color": "TAUPE",
+      "button_colors": [
+        "BLACK",
+        "TAUPE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372031_27071597_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372031_27071596_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372031_27074089_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372031_27074088_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372031_27074090_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-patch-pockets-bermuda-shorts_14372031_27071598_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 7,
+      "product_name": "Embroidered Shirt",
+      "product_price": 470000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "OFF WHITE",
+        "BLACK"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371938_27168093_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371938_27168095_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371938_27168094_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371938_27168096_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371938_27170338_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-embroidered-shirt_14371938_27170339_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 8,
+      "product_name": "Straight Fit Trousers",
+      "product_price": 830000,
+      "product_color": "RED",
+      "button_colors": [
+        "BLACK",
+        "RED"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14372047_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14372047_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372006_27074003_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372006_27074002_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372006_27071547_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372006_27071548_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372006_27071546_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-straight-fit-trousers_14372006_27071549_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 9,
+      "product_name": "Side Slits Oversize Shirt",
+      "product_price": 440000,
+      "product_color": "OFF WHITE",
+      "button_colors": [
+        "BLACK",
+        "OFF WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371923_27073610_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371923_27073611_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371923_27073612_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371923_27071428_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371923_27073613_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-side-slits-oversize-shirt_14371923_27073614_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 10,
+      "product_name": "Carrot Fit Pleated Trousers",
+      "product_price": 490000,
+      "product_color": "CLAY",
+      "button_colors": [
+        "BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371996_27073970_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371996_27073969_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371996_27073971_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371996_27071533_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371996_27073972_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-carrot-fit-pleated-trousers_14371996_27073973_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 11,
+      "product_name": "Striped Crewneck Sweater",
+      "product_price": 530000,
+      "product_color": "SAGE/OFF-WHITE",
+      "button_colors": [
+        "OFFWHITE/BLACK",
+        "SAGE/OFF-WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371247_E20HK024.004319_v2_v6.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371247_E20HK024.004319_v2_v6.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371247_27073373_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371247_27073374_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371247_27071313_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371247_27073375_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371247_27073376_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-striped-crewneck-sweater_14371247_27073378_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 12,
+      "product_name": "Light T-shirt",
+      "product_price": 160000,
+      "product_color": "OFF WHITE",
+      "button_colors": [
+        "BLACK",
+        "OFF WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371197_27073181_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371197_27073180_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371197_27073183_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371197_27073182_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371197_27073184_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-light-t-shirt_14371197_27071242_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 13,
+      "product_name": "Elasticized Waist Trousers",
+      "product_price": 510000,
+      "product_color": "CLAY",
+      "button_colors": [
+        "BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27093050_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27094091_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27094093_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27093053_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27093057_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27093062_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 14,
+      "product_name": "Ami De Coeur Scarf",
+      "product_price": 274000,
+      "product_color": "PINK",
+      "button_colors": [
+        "BLACK",
+        "PINK"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/15196348_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/15196348_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-scarf_15196348_27109915_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-scarf_15196348_27109916_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-scarf_15196348_27109917_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27093053_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27093057_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27093062_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 15,
+      "product_name": "Small Box Bag",
+      "product_price": 810000,
+      "product_color": "GREEN",
+      "button_colors": [
+        "BLACK",
+        "GREEN"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14942281_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14942281_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942281_27090864_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942281_27091802_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942281_27090865_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942281_27090866_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-small-box-bag_14942281_27092098_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-elasticized-waist-trousers_14942354_27093062_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 16,
+      "product_name": "Ami De Coeur Polo Shirt",
+      "product_price": 200000,
+      "product_color": "SAGE",
+      "button_colors": [
+        "BLACK",
+        "SAGE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371228_27071271_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371228_27073271_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371228_27073274_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371228_27073272_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371228_27073273_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371228_27073275_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 17,
+      "product_name": "Ami De Coeur Cap",
+      "product_price": 185000,
+      "product_color": "BEIGE",
+      "button_colors": [
+        "BLACK",
+        "BEIGE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27091721_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27091722_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27090734_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27087988_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27090735_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371228_27073275_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 18,
+      "product_name": "Necklace With Bells and Ami De Coeur Clasp",
+      "product_price": 760000,
+      "product_color": "BEIGE",
+      "button_colors": [
+        "SILVER",
+        "BEIGE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14369761_E20A915.361900_v1_v3_v6_v8.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27091721_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27091722_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27090734_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27087988_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-cap_14942224_27090735_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-polo-shirt_14371228_27073275_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 19,
+      "product_name": "Crewneck Rugby-striped Sweater",
+      "product_price": 510000,
+      "product_color": "GREEN/WHITE",
+      "button_colors": [
+        "BLACK/WHITE",
+        "GREEN/WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14942401_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14942401_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942401_27094199_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942401_27093321_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942401_27093322_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942401_27094200_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942401_27094201_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942401_27093324_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 20,
+      "product_name": "Spring Low Sneakers",
+      "product_price": 580000,
+      "product_color": "BLACK",
+      "button_colors": [
+        "TAUPE",
+        "BLACK"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370479_27101952_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370479_27104696_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370479_27104693_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370479_27104694_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-spring-low-sneakers_14370479_27104695_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-crewneck-rugby-striped-sweater_14942401_27093324_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 21,
+      "product_name": "Mini Accordion Bag",
+      "product_price": 690000,
+      "product_color": "TAUPE",
+      "button_colors": [
+        "OLIVE GREEN",
+        "TAUPE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14369746_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27068941_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27068943_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27070528_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27068944_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27068946_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27070529_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 22,
+      "product_name": "Sunglasses",
+      "product_price": 440000,
+      "product_color": "TAUPE",
+      "button_colors": [
+        "BLACK",
+        "TAUPE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27068941_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27068943_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27070528_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27068944_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27068946_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-mini-accordion-bag_14369745_27070529_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 23,
+      "product_name": "Chest Pockets Overshirt",
+      "product_price": 450000,
+      "product_color": "CLAY",
+      "button_colors": [
+        "SAGE",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371942_27073686_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371942_27073687_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371942_27073688_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371942_27073689_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371942_27073691_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371942_27073692_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 24,
+      "product_name": "Laced Ankle Boots With Tractor Sole",
+      "product_price": 760000,
+      "product_color": "BLACK/WHITE",
+      "button_colors": [
+        "BLACK",
+        "BLACK/WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27070837_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27071101_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27070838_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27070839_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27071102_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371942_27073692_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 25,
+      "product_name": "Zipped Suede Jacket",
+      "product_price": 2430000,
+      "product_color": "BLACK/WHITE",
+      "button_colors": [
+        "DARK OLIVE GREEN",
+        "BLACK/WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27070837_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27071101_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27070838_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27070839_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-laced-ankle-boots-with-tractor-sole_14370476_27071102_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-chest-pockets-overshirt_14371942_27073692_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 26,
+      "product_name": "Ami De Coeur Swim Shorts",
+      "product_price": 250000,
+      "product_color": "OFFWHITE/BLACK",
+      "button_colors": [
+        "OLIVE GREEN/BLACK",
+        "OFFWHITE/BLACK"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371040_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371039_27071111_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371039_27070848_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371039_27071112_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371039_27070849_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371039_27070850_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-de-coeur-swim-shorts_14371039_27071113_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 27,
+      "product_name": "Oversize Carrott Fit Chino Trousers",
+      "product_price": 400000,
+      "product_color": "CLAY",
+      "button_colors": [
+        "SAGE",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27074013_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27074012_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27071560_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27071561_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27071562_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27071563_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 28,
+      "product_name": "Gingham Ami De Coeur Shirt",
+      "product_price": 330000,
+      "product_color": "CLAY",
+      "button_colors": [
+        "OFFWHITE/BLACK",
+        "CLAY"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27074013_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27074012_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27071560_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27071561_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27071562_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-oversize-carrott-fit-chino-trousers_14372010_27071563_1920.jpg?c=2"
+      ]
+    },
+    {
+      "product_id": 29,
+      "product_name": "Ami Embroidery Shirt",
+      "product_price": 310000,
+      "product_color": "OFF WHITE",
+      "button_colors": [
+        "OXFORD BLUE",
+        "OFF WHITE"
+      ],
+      "button_image": "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
+      "button_images": [
+        "https://www.amiparis.com/BWContent/AMI/14371912_E20HC006.45454_v2_v6.jpg",
+        "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg"
+      ],
+      "product_images": [
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371911_27071412_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371911_27073556_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371911_27071411_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371911_27073555_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371911_27071413_1920.jpg?c=2",
+        "https://cdn-images.farfetch-contents.com/ami-ami-embroidery-shirt_14371911_27073557_1920.jpg?c=2"
+      ]
+    }
+  ]
+}
