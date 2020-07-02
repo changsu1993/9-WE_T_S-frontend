@@ -150,4 +150,44 @@
       }
     }
   }
+  .empty-product {
+    padding-top: 70px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .img {
+      width: 40px;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    div:nth-child(2) {
+      font-size: 16px;
+      letter-spacing: 1.33px;
+      p {
+        text-align: center;
+        &:first-child {
+          margin: 30px 0 20px 0;
+        }
+        &:last-child {
+          margin-bottom: 50px;
+        }
+      }
+    }
+    button {
+      width: 178px;
+      height: 49px;
+      border: none;
+      background: black;
+      color: white;
+      font-size: 14px;
+      font-family: "MierA-Regular";
+    }
+  }
 }
