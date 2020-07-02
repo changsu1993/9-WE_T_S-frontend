@@ -115,6 +115,7 @@ class ProductDetailwData extends React.Component {
       wishList,
       openWishlist: true,
       heartClick: !heartClick });
+    localStorage.setItem("wishlist",JSON.stringify(wishList))
   };
 
    closeWishlist = () => {
@@ -170,7 +171,7 @@ class ProductDetailwData extends React.Component {
 
         <CartModal
           cartList={this.state.cartList}
-          wishList={this.state.wishList}
+          // wishList={this.state.wishList}
           closeCart={this.closeCart}
           closeWishlist={this.closeWishlist}
           openCart={this.state.openCart}

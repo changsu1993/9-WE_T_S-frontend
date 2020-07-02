@@ -4,6 +4,10 @@ import CartProduct from "./CartProduct";
 import WishProduct from "../Wishlist/WishProduct";
 
 class CartModal extends React.Component {
+  getWishlist = () => {
+    let wishlist = localStorage.getItem("wishlist");
+    console.log(wishlist)
+  }
   quantityHandler = (count) => {
     const newObj = { ...this.props.cartList[0] };
     if (count === 1) {
