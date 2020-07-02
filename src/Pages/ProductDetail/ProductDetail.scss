@@ -10,6 +10,7 @@
     width: 100%;
     height: 90px;
     background-color: white;
+    z-index: 900;
 
     button {
       position: relative;
@@ -28,7 +29,7 @@
       transition: 0.3s;
     }
 
-    .button-underline::before {
+    button::before {
       content: "";
       border-bottom: 0.5px solid black;
       padding: 0 0.1px;
@@ -41,12 +42,12 @@
       transition: 0.3s;
     }
 
-    .button-underline:hover::before {
+    button:hover::before {
       width: 100%;
       padding: 0;
     }
 
-    .button-underline:active {
+    button:active {
       background: black;
       color: white;
       transition: none;
