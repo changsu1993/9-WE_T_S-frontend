@@ -9,6 +9,8 @@ import Search from "../Search/Search";
 import SearchPortal from "../Search/SearchPortal";
 import { Link } from "react-router-dom";
 
+
+
 class Nav extends React.Component {
   constructor() {
     super();
@@ -19,6 +21,7 @@ class Nav extends React.Component {
       mouseEnter: false,
       Newsletter: false,
       Search: false,
+      cartClick : false,
       category : []
     };
   }
@@ -58,6 +61,7 @@ class Nav extends React.Component {
       activeTab: undefined,
     });
   };
+
 
   mouseEnterNav = () => {
     this.setState({
@@ -105,6 +109,12 @@ class Nav extends React.Component {
       Search: false,
     });
   };
+
+  cartClickHandler = (e) => {
+    this.setState({
+      cartClick : true,
+    })
+  }
 
   render() {
     console.log(this.state.category)
@@ -192,6 +202,7 @@ class Nav extends React.Component {
               to="/shopping/man"
               className={colorchange}
             >
+
               Man
             </Link>
             <div
@@ -365,7 +376,7 @@ class Nav extends React.Component {
             <Link to ="/account" className={colorchange}>Account</Link>
           </li>
           <li>
-            <button className={colorchange}>Cart (0)</button>
+            <button className={colorchange} onClick={this.cartClickHandler}>Cart (0)</button>
           </li>
           <li>
             <button className={colorchange}>KR ₩</button>
