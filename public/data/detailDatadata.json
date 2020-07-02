@@ -1,0 +1,30 @@
+{
+  "product_data": {
+    "sub_sub_category": "Pants",
+    "product_name": "Cigarette Fit Trousers",
+    "product_price": 470000,
+    "product_guide": [
+      "Do not wash",
+      " Do not bleach",
+      " Do not tumble dry",
+      " Cool iron",
+      " Dry clean delicate"
+    ],
+    "product_color": "BLACK",
+    "product_color_id": 1,
+    "product_size": ["36", " 38", " 40", " 42", " 44"],
+    "button_colors": ["BLACK", "CLAY"],
+    "button_images": [
+      "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
+      "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
+    ],
+    "product_images": [
+      "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073831_500.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073832_500.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073833_500.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073834_500.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073835_500.jpg?c=2",
+      "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073836_500.jpg?c=2"
+    ]
+  }
+}
