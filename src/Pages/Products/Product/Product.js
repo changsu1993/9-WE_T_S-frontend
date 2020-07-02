@@ -59,11 +59,12 @@ class Product extends React.Component {
       leaveHeartHandler,
     } = this;
     const { imageSrc, hovered, colorHovered, heartClick } = this.state;
-    const { name, price, color, imageUrl } = this.props;
+    const { name, price, colors, imageUrl, onClick } = this.props;
 
     return (
       <div
         className="Product"
+        onClick={onClick}
         onMouseOut={mouseOutHandler}
         onMouseOver={mouseOverHandler}
       >
@@ -90,14 +91,14 @@ class Product extends React.Component {
             }
           >
             <div className="color-options">
-              <img
+              {/* <img
                 onMouseEnter={() => colorMouseOver(imageUrl)}
                 onMouseLeave={colorMouseOut}
                 alt=""
                 className="color-option"
                 src={color}
-              />
-              {/* {colors.map((color) => {
+              /> */}
+              {colors.map((color) => {
                 return (
                   <img
                     onMouseEnter={() => colorMouseOver(imageUrl)}
@@ -107,7 +108,7 @@ class Product extends React.Component {
                     src={color}
                   />
                 );
-              })} */}
+              })}
             </div>
             <button className="quick-add-hovered">Quick Add</button>
           </div>

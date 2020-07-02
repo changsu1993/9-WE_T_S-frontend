@@ -9,27 +9,25 @@ class ProductList extends React.Component {
   };
 
   render() {
+    const { data } = this.props;
     return (
-      <div className="product-list">
-        {this.props.data &&
-          this.props.data.map((item, idx) => {
+      <div className="ProductList">
+        {data &&
+          data.map((item, idx) => {
             return (
-              <div
+              <Product
                 onClick={() =>
                   this.clickHandler(item.product_id, item.product_color_id)
                 }
-              >
-                <Product
-                  key={idx}
-                  id={item.product_id}
-                  name={item.product_name}
-                  price={item.product_price}
-                  imageUrl={item.product_images[0]}
-                  imageHovered={item.product_images[1]}
-                  color={item.button_image}
-                  colorId={item.product_color_id}
-                />
-              </div>
+                key={idx}
+                id={item.product_id}
+                name={item.product_name}
+                price={item.product_price}
+                imageUrl={item.product_images[0]}
+                imageHovered={item.product_images[1]}
+                colors={item.button_images}
+                colorId={item.product_color_id}
+              />
             );
           })}
       </div>

@@ -20,6 +20,10 @@ class ManProducts extends React.Component {
       .then((res) => this.setState({ data: res.product_data }));
   }
 
+  changeHandler = (e) => {
+    console.log(e);
+  };
+
   render() {
     return (
       <>
@@ -48,18 +52,22 @@ class ManProducts extends React.Component {
             <div className="cat-col-size">
               <select>
                 <option value>Categories</option>
-                <option value="0">Lower prices</option>
-                <option value="1">Higher prices</option>
+                <option value="0">Categories</option>
+                <option value="1">Categories</option>
               </select>
-              <select>
+              <select onChange={this.changeHandler}>
                 <option value>Colors</option>
-                <option value="0">Lower prices</option>
-                <option value="1">Higher prices</option>
-              </select>
-              <select>
-                <option value>Sizes</option>
-                <option value="0">Lower prices</option>
-                <option value="1">Higher prices</option>
+                <option>BLACK</option>
+                <option value="1">BEIGE</option>
+                <option value="2">HEATHER GREY</option>
+                <option value="3">OFF WHITE</option>
+                <option value="4">SILVER</option>
+                <option value="5">TAUPE</option>
+                <option value="6">SAGE</option>
+                <option value="7">OXFORD BLUE</option>
+                <option value="8">BURGUNDY</option>
+                <option value="9">RED</option>
+                <option value="10">PINK</option>
               </select>
             </div>
             <div className="sort-by">
