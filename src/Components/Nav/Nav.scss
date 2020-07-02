@@ -8,6 +8,16 @@
   padding: 0 70px;
   position: fixed;
   z-index: 1;
+  transition: 0.2s;
+
+  &.text-logo {
+    height: 80px;
+    background: transparent;
+
+    &:hover {
+      background: white;
+    }
+  }
 
   .left-menu {
     display: flex;
@@ -39,6 +49,10 @@
         margin-bottom: -4px;
         transition: color 0.3s ease 0s;
         position: relative;
+
+        &.white-color {
+          color: white;
+        }
       }
       .sale-tab {
         color: #ff0000;
@@ -57,12 +71,12 @@
         width: 0;
         transition: 0.2s;
       }
-      .underline::before {
+
+      span:hover::before,
+      a:hover::before {
+        border-bottom: 1px solid #999999;
         width: 100%;
         padding: 0;
-      }
-      .underline:hover::before {
-        border-bottom: 1px solid #999999;
       }
 
       span:hover,
@@ -83,6 +97,9 @@
         &.show {
           visibility: visible;
           opacity: 1;
+          &.text-logo {
+            top: 80px;
+          }
         }
 
         &.hide {
@@ -174,6 +191,11 @@
 
     img {
       width: 22px;
+
+      &.text-logo {
+        width: 100%;
+        opacity: 1;
+      }
     }
   }
 
@@ -204,7 +226,11 @@
         color: black;
         position: relative;
         border: none;
-        background-color: white;
+        background: none;
+
+        &.white-color {
+          color: white;
+        }
       }
       button::before,
       a::before {

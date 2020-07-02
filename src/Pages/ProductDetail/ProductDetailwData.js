@@ -4,6 +4,7 @@ import ImageModal from "../../Components/ImageModal/ImageModal";
 import LoadingPage from "../../Components/LoadingPage/LoadingPage";
 import Nav from "../../Components/Nav/Nav";
 import ProductBottomBar from "../../Components/ProductBottomBar/ProductBottomBar";
+import CartModal from "../Products/Cart/CartModal"
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
 import Heart from "../../Images/heart1.png";
@@ -25,6 +26,10 @@ class ProductDetailwData extends React.Component {
       isLoading: false,
       prevScrollpos: window.pageYOffset,
       isVisible: false,
+      openCart: false,
+      openWishlist: false,
+      cartList: [],
+      wishList: [],
     };
   }
 
@@ -37,7 +42,7 @@ class ProductDetailwData extends React.Component {
         .then((res) => res.json())
         .then((res) =>
           this.setState({
-            detailData: res.product_data,
+            detailData: { ...res.product_data, quantity: 1 },
             isLoading: false,
           })
         );
@@ -65,9 +70,57 @@ class ProductDetailwData extends React.Component {
     this.setState({ click: !click });
   };
 
+  addBtnClick = () => {
+    if (this.state.option !== "") {
+      let cartList = this.state.cartList;
+      cartList = cartList.concat({
+        productImage: this.state.detailData.product_images[0],
+        name: this.state.detailData.product_name,
+        size: this.state.detailData.product_size,
+        selectedOption: this.state.option,
+        color: this.state.detailData.product_color,
+        quantity: this.state.detailData.quantity,
+        price: this.state.detailData.product_price,
+      });
+      this.setState({
+        cartList,
+        openCart: true,
+      });
+    } else {
+      this.setState({
+        click: !this.state.click,
+      });
+    }
+  };
+
+  closeCart = () => {
+    this.setState({
+      openCart: false,
+    });
+  };
+
   heartClickHandler = () => {
     const { heartClick } = this.state;
-    this.setState({ heartClick: !heartClick });
+    let wishList = this.state.wishList;
+    wishList = wishList.concat({
+      productImage: this.state.detailData.product_images[0],
+      name: this.state.detailData.product_name,
+      size: this.state.detailData.product_size,
+      color: this.state.detailData.product_color,
+      price: this.state.detailData.product_price,
+      quantity: this.state.detailData.quantity,
+    });
+
+    this.setState({
+      wishList,
+      openWishlist: true,
+      heartClick: !heartClick });
+  };
+
+   closeWishlist = () => {
+    this.setState({
+      openWishlist: false,
+    });
   };
 
   openModal = () => {
@@ -80,6 +133,7 @@ class ProductDetailwData extends React.Component {
   };
 
   render() {
+    console.log(this.state.detailData)
     const {
       sizeSelectHandler,
       arrowClickHandler,
@@ -113,6 +167,15 @@ class ProductDetailwData extends React.Component {
         />
 
         <Nav />
+
+        <CartModal
+          cartList={this.state.cartList}
+          wishList={this.state.wishList}
+          closeCart={this.closeCart}
+          closeWishlist={this.closeWishlist}
+          openCart={this.state.openCart}
+          openWishlist={this.state.openWishlist}
+        />
         {isLoading ? (
           <LoadingPage />
         ) : (
@@ -209,7 +272,7 @@ class ProductDetailwData extends React.Component {
                           })}
                       </div>
                     </div>
-                    <button className="add-to-cart">Add to cart</button>
+                    <button className="add-to-cart" onClick={this.addBtnClick}>Add to cart</button>
                   </div>
                   <div className="product-detail-buttons">
                     <button>Description</button>

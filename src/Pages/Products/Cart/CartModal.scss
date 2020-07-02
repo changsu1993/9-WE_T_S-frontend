@@ -1,0 +1,111 @@
+.product-container {
+  position: fixed;
+  top: 54px;
+  right: 30px;
+  z-index: 2;
+  width: 490px;
+  border: 1px solid rgb(242, 242, 242);
+  background: #ffffff;
+
+  &show {
+    display: none;
+  }
+
+  .bag-title {
+    height: 60px;
+    padding: 22px 20px;
+    display: flex;
+    border-bottom: 1px solid rgb(242, 242, 242);
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-family: "MierA-Regular";
+      letter-spacing: 1px;
+      font-size: 12px;
+      padding: 0 0 4px 0;
+      position: relative;
+
+      &.close {
+        color: black;
+        justify-self: flex-end;
+        margin-left: auto;
+        font-family: "MierA-Demi";
+        font-size: 11px;
+        letter-spacing: 0.92px;
+        border-bottom: 1px solid black;
+        padding: 0 0 3px 0;
+      }
+    }
+    div {
+      button:first-child {
+        color: #999999;
+
+        &.change {
+          color: black;
+          border-bottom: 1px solid black;
+          &:hover {
+            border-bottom: 1px solid #999999;
+          }
+        }
+
+        &:hover {
+          color: black;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          border-bottom: 1px solid black;
+          padding: 0px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 0;
+          transition: 0.3s;
+        }
+        &:hover::before {
+          width: 100%;
+          padding: 0;
+          border-bottom: 1px solid #999999;
+        }
+      }
+
+      button:last-child {
+        margin: 0 0 -4px 40px;
+        color: #999999;
+        &.change {
+          color: black;
+          border-bottom: 1px solid black;
+          &:hover {
+            border-bottom: 1px solid #999999;
+          }
+        }
+
+        &:hover {
+          color: black;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          border-bottom: 1px solid black;
+          padding: 0px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 0;
+          transition: 0.3s;
+        }
+        &:hover::before {
+          width: 100%;
+          padding: 0;
+          border-bottom: 1px solid #999999;
+        }
+      }
+    }
+  }
+}

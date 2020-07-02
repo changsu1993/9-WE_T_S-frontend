@@ -1,0 +1,174 @@
+.bag-box {
+  padding: 12px 20px 0 20px;
+  width: 100%;
+  height: 228.75px;
+
+  .product {
+    padding: 18.5px 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .product-img {
+      width: 120px;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .product-box {
+      margin: 5px 0 5px 30px;
+      display: flex;
+      flex-direction: column;
+
+      .product-name {
+        height: 18px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        letter-spacing: 1.08px;
+        line-height: 18.2px;
+      }
+
+      .select-box {
+        font-size: 11px;
+        letter-spacing: 0.92px;
+        flex: 0 0 50%;
+        margin-top: auto;
+        justify-self: flex-end;
+        display: flex;
+        flex-direction: column;
+
+        > * {
+          display: flex;
+          justify-content: flex-start;
+          margin-right: auto;
+
+          span {
+            padding: 5px 0;
+          }
+
+          .control {
+            padding: 0px 20px;
+            display: flex;
+            align-items: center;
+
+            button {
+              font-family: "MierA-Regular";
+              padding: 1px 6px;
+              border: none;
+              background: none;
+              width: 20px;
+              height: 13px;
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            input {
+              font-family: "MierA-Regular";
+              border: none;
+              width: 30px;
+              text-align: center;
+            }
+
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+        }
+
+        .size {
+          margin: 5px 0 -6px 0;
+
+          .control {
+            margin-bottom: 6px;
+
+            select {
+              padding: 5px 20px 5px 0;
+              border: none;
+              background: none;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .colour {
+          span:last-child {
+            padding: 5px 20px;
+          }
+        }
+      }
+    }
+
+    .remove-price {
+      margin: 5px 0 5px auto;
+      display: flex;
+      flex-direction: column;
+      font-size: 13px;
+      text-align: right;
+
+      .remove {
+        margin-bottom: auto;
+        padding: 0;
+        justify-self: flex-start;
+        border: none;
+        background: none;
+        font-family: "MierA-Demi";
+        font-weight: 600;
+        letter-spacing: 1.08px;
+        cursor: pointer;
+      }
+
+      .price {
+        letter-spacing: 1.08px;
+      }
+    }
+  }
+}
+.price-box {
+  width: 100%;
+  height: 171px;
+  padding: 40px;
+  background: rgb(242, 242, 242);
+
+  li {
+    display: flex;
+
+    span {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    span:last-child {
+      justify-self: flex-end;
+      margin-left: auto;
+    }
+  }
+  li:nth-child(2) {
+    padding: 20px 0;
+  }
+  li:last-child {
+    font-family: "MierA-Demi";
+  }
+}
+.btn-box {
+  height: 109px;
+  padding: 30px 28px;
+  button {
+    width: 150px;
+    height: 49px;
+    border: none;
+    background: black;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  button:last-child {
+    margin-left: 28px;
+  }
+}
