@@ -19,11 +19,17 @@ class Nav extends React.Component {
       mouseEnter: false,
       Newsletter: false,
       Search: false,
+      category : []
     };
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    fetch("http://10.58.7.177:8000")
+    .then(res => res.json())
+    .then(res => this.setState({
+      category : res.category_list
+    }))
   }
 
   componentWillUnmount() {
@@ -101,6 +107,7 @@ class Nav extends React.Component {
   };
 
   render() {
+    console.log(this.state.category)
     const colorchange =
       this.state.visible && this.state.mouseEnter === false
         ? "white-color"
@@ -194,7 +201,8 @@ class Nav extends React.Component {
             >
               <ul className="product-nav">
                 <li className="sale-tab">Sale</li>
-                <li>New Arrivals</li>
+         {this.state.category&&this.state.category.map((list,i)=>{return <li key={i}>{list.category_name}</li>})}
+                {/* <li>New Arrivals</li>
                 <li>Rainbow Collection</li>
                 <li>Ami de Coeur</li>
                 <li>T-Shirts & Polos</li>
@@ -210,7 +218,7 @@ class Nav extends React.Component {
                 <li>Leather</li>
                 <li>Jewelry</li>
                 <li>Accessories</li>
-                <li>Shoes</li>
+                <li>Shoes</li> */}
               </ul>
 
               <div className="red-text">
