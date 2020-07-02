@@ -20,6 +20,7 @@ class Nav extends React.Component {
       mouseEnter: false,
       Newsletter: false,
       Search: false,
+      cartClick : false,
     };
   }
 
@@ -101,6 +102,12 @@ class Nav extends React.Component {
       Search: false,
     });
   };
+
+  cartClickHandler = (e) => {
+    this.setState({
+      cartClick : true,
+    })
+  }
 
   render() {
     const colorchange =
@@ -358,10 +365,9 @@ class Nav extends React.Component {
           </li>
           <li>
             <Link to ="/account" className={colorchange}>Account</Link>
-
           </li>
           <li>
-            <button className={colorchange}>Cart (0)</button>
+            <button className={colorchange} onClick={this.cartClickHandler}>Cart (0)</button>
           </li>
           <li>
             <button className={colorchange}>KR ₩</button>
