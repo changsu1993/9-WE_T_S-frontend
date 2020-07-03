@@ -209,7 +209,7 @@ class Nav extends React.Component {
                 <li>Ami de Coeur</li>
                 <li>T-Shirts & Polos</li>
                 <li>Shirts</li>
-                <li>Shorts</li>
+                <li>Shorts</li> 
                 <li>Trousers</li>
                 <li>Swimshorts</li>
                 <li>Denim</li>

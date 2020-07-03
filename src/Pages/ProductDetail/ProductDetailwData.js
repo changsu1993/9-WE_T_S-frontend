@@ -111,6 +111,15 @@ class ProductDetailwData extends React.Component {
       quantity: this.state.detailData.quantity,
     });
 
+    fetch("http://10.58.7.16:8000/order/like-product",{
+      method : "POST",
+      headers:{
+        Authorization : localStorage.getItem("access_token")
+      }
+    })
+    .then(res=>res.json())
+    .then(res => console.log(res))
+
     this.setState({
       wishList,
       openWishlist: true,

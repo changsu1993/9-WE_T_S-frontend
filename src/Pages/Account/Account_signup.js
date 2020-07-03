@@ -55,7 +55,7 @@ class Account_signup extends React.Component {
     console.log("this.state : ", this.state);
     // 비밀번호와 비밀번호 확인값이 다르면 애초에  fetch를 실행하지 말라는 조건문.
     if (this.state.emailPw === this.state.emailCon) {
-      fetch("http://10.58.2.83:8000/account/sign-up", {
+      fetch("http://10.58.7.16:8000/account/sign-up", {
         method: "POST",
         body: JSON.stringify({
           first_name: this.state.firstName,
