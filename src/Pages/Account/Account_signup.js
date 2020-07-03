@@ -1,6 +1,8 @@
 import React from "react";
-import "./Account_signup.scss";
+import zxcvbn from "zxcvbn";
 import amilogo from "../../Images/amilogo.png";
+import eyes from "../../Images/button.png";
+import "./Account_signup.scss";
 
 class Account_signup extends React.Component {
   constructor() {
@@ -11,39 +13,100 @@ class Account_signup extends React.Component {
       emailId: "",
       emailPw: "",
       emailCon: "",
+      inputFirst: false,
+      inputLast: false,
+      inputEmail: false,
+      inputPw: false,
+      inputCon: false,
+      oneEyes: false,
+      twoEyes: false,
     };
   }
 
-  // handleFirst = (event) => {
-  //   this.setState({
-  //     firstName: event.target.value,
-  //   });
-  // };
+  oneEyesClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ oneEyes: !this.state.oneEyes });
+  };
 
-  // handleLast = (event) => {
-  //   this.setState({
-  //     lastName: event.target.value,
-  //   });
-  // };
+  twoEyesClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ twoEyes: !this.state.twoEyes });
+  };
 
-  // handleId = (event) => {
-  //   this.setState({
-  //     emailId: event.target.value,
-  //   });
-  // };
+  createPasswordLabel = (result) => {
+    switch (result.score) {
+      case 0:
+        return "Weak";
+      case 1:
+        return "Weak";
+      case 2:
+        return "Fair";
+      case 3:
+        return "Strong";
+      default:
+        return "Strong";
+    }
+  };
 
-  // handlePw = (event) => {
-  //   this.setState({
-  //     emailPw: event.target.value,
-  //   });
-  // };
+  checkFirstNameVaild = (emailId, emailPw, emailCon, firstName, lastName) => {
+    const checkFirstName = /(?=.*^[가-힣]+$).{1,4}$/; // 백엔드 조건 first name 한글이면서 글자수 최소 1 - 최대 4
+    const checkLastName = /(?=.*^[가-힣]+$).{1,2}$/; // 백엔드 조건 last name 한글이면서 글자수 최소 1 - 최대 2
+    const checkPw = /(?=.*\d{1,15})(?=.*[~`!@#$%&*()-+=]{1,15})(?=.*[a-zA-Z]{2,15}).{8,15}$/;
+    const checkEmail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+    //숫자, 특수문자 각 1회 이상, 영문은 2개 이상 사용하여 8자리 이상 입력.
+    let result = false;
 
-  // handleCon = (event) => {
-  //   this.setState({
-  //     emailCon: event.target.value,
-  //   });
-  // };
-  // 기능구현과 접목해서 생각해보려고 지우지 않고 남겨둠
+    result =
+      emailId.length >= 5 &&
+      checkEmail.test(emailId) &&
+      emailPw.length >= 5 &&
+      checkPw.test(emailPw) &&
+      emailPw === emailCon &&
+      checkFirstName.test(firstName) &&
+      checkLastName.test(lastName);
+
+    return result;
+  };
+
+  inputFirstClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ inputFirst: !this.state.inputFirst });
+    if (this.state.firstName.length > 0) {
+      this.setState({ inputFirst: true });
+    }
+  };
+
+  inputLastClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ inputLast: !this.state.inputLast });
+    if (this.state.lastName.length > 0) {
+      this.setState({ inputLast: true });
+    }
+  };
+
+  inputEmailClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ inputEmail: !this.state.inputEmail });
+    if (this.state.emailId.length > 0) {
+      this.setState({ inputEmail: true });
+    }
+  };
+
+  inputPwClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ inputPw: !this.state.inputPw });
+    if (this.state.emailPw.length > 0) {
+      this.setState({ inputPw: true });
+    }
+  };
+
+  inputConClickHandler = (e) => {
+    e.preventDefault();
+    this.setState({ inputCon: !this.state.inputCon });
+    if (this.state.emailCon.length > 0) {
+      this.setState({ inputCon: true });
+    }
+  };
 
   infoChangeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -51,23 +114,26 @@ class Account_signup extends React.Component {
 
   signUpClickHandler = (e) => {
     e.preventDefault();
+    const { firstName, lastName, emailId, emailPw, emailCon } = this.state;
 
-    console.log("this.state : ", this.state);
-    // 비밀번호와 비밀번호 확인값이 다르면 애초에  fetch를 실행하지 말라는 조건문.
-    if (this.state.emailPw === this.state.emailCon) {
-      fetch("http://10.58.2.83:8000/account/sign-up", {
+    if (
+      this.checkFirstNameVaild(emailId, emailPw, emailCon, firstName, lastName) // 비밀번호와 비밀번호 확인값이 다르면 애초에  fetch를 실행하지 말라는 조건문.
+    ) {
+      fetch("http://10.58.7.177:8000/account/sign-up", {
         method: "POST",
         body: JSON.stringify({
-          first_name: this.state.firstName,
-          last_name: this.state.lastName,
-          email: this.state.emailId,
-          password: this.state.emailPw,
+          first_name: firstName,
+          last_name: lastName,
+          email: emailId,
+          password: emailPw,
         }),
-      }).then((res) => console.log("res >>>", res));
+      }).then((res) => console.log(res));
     }
   };
 
   render() {
+    const { emailPw } = this.state;
+    const testedResult = zxcvbn(emailPw);
     return (
       <div className="Signup">
         <div className="signup-container">
@@ -85,50 +151,113 @@ class Account_signup extends React.Component {
             <form className="name">
               <input
                 onChange={this.infoChangeHandler}
+                onFocus={this.inputFirstClickHandler}
+                onBlur={this.inputFirstClickHandler}
                 type="text"
                 id="firstName"
                 className="first-name"
-                placeholder="First Name *"
                 name="firstName"
+                autoComplete="off"
               />
+              <label
+                htmlFor="firstName"
+                className={this.state.inputFirst ? "first-up" : "first-down"}
+              >
+                First Name *
+              </label>
               <input
                 onChange={this.infoChangeHandler}
+                onFocus={this.inputLastClickHandler}
+                onBlur={this.inputLastClickHandler}
                 type="text"
                 id="lastName"
                 className="last-name"
-                placeholder="Last Name *"
                 name="lastName"
+                autoComplete="off"
               />
+              <label
+                htmlFor="lastName"
+                className={this.state.inputLast ? "last-up" : "last-down"}
+              >
+                Last Name *
+              </label>
             </form>
             <form className="email-address">
               <input
                 onChange={this.infoChangeHandler}
+                onFocus={this.inputEmailClickHandler}
+                onBlur={this.inputEmailClickHandler}
                 type="text"
                 id="emailId"
                 className="email-id"
-                placeholder="Email Address *"
                 name="emailId"
+                autoComplete="off"
               />
+              <label
+                htmlFor="emailId"
+                className={this.state.inputEmail ? "email-up" : "email-down"}
+              >
+                Email Address *
+              </label>
             </form>
             <form className="email-password">
               <input
                 onChange={this.infoChangeHandler}
-                type="password"
+                onFocus={this.inputPwClickHandler}
+                onBlur={this.inputPwClickHandler}
+                type={this.state.oneEyes ? "text" : "password"}
                 id="emailPw"
                 className="email-pw"
-                placeholder="Password *"
                 name="emailPw"
+                autoComplete="off"
               />
+              <progress
+                className={`password-strength-meter-progress strength-${this.createPasswordLabel(
+                  testedResult
+                )}`}
+                value={testedResult.score}
+                max="3"
+              />
+              <span className="security-strength">Password strength:</span>
+              <span className="password-security">
+                {this.createPasswordLabel(testedResult)}
+              </span>
+              <label
+                htmlFor="emailPw"
+                className={this.state.inputPw ? "pw-up" : "pw-down"}
+              >
+                Password *
+              </label>
+              <button
+                className="oneEyes-button"
+                onClick={this.oneEyesClickHandler}
+              >
+                <img src={eyes} alt="eyes" className="oneEyes-image" />
+              </button>
             </form>
             <form className="confirm-password">
               <input
                 onChange={this.infoChangeHandler}
-                type="password"
+                onFocus={this.inputConClickHandler}
+                onBlur={this.inputConClickHandler}
+                type={this.state.twoEyes ? "text" : "password"}
                 id="emailCon"
                 className="email-con"
-                placeholder="Confirm Password *"
                 name="emailCon"
+                autoComplete="off"
               />
+              <label
+                htmlFor="emailCon"
+                className={this.state.inputCon ? "con-up" : "con-down"}
+              >
+                Confirm Password *
+              </label>
+              <button
+                className="twoEyes-button"
+                onClick={this.twoEyesClickHandler}
+              >
+                <img src={eyes} alt="eyes" className="twoEyes-image" />
+              </button>
             </form>
           </div>
           <div className="login-register-wrapper">

@@ -2,39 +2,67 @@
   display: flex;
   width: 100%; // 952.5px
   height: 205px;
-  .guest-checkout {
-    font-size: 20px;
-    letter-spacing: 1.67px;
-    font-family: "MierA-Regular";
-    margin-bottom: 38px;
-    .guest-ami {
-      margin-right: 25px;
+  .guest-container {
+    position: relative;
+    .guest-checkout {
+      font-size: 20px;
+      letter-spacing: 1.67px;
+      font-family: "MierA-Regular";
+      margin-bottom: 38px;
+      .guest-ami {
+        margin-right: 25px;
+      }
     }
-  }
-  .guest-text {
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid;
-    padding-top: 20px;
-    font-size: 14px;
-    width: 465.922px;
-    height: 54px;
-    font-family: "MierA-Regular";
-    margin-bottom: 5px;
-  }
-  input::placeholder {
-    color: black;
-  }
-  .connect-button {
-    height: 49px;
-    width: 141px;
-    letter-spacing: 0.12px;
-    font-size: 14px;
-    background-color: black;
-    color: white;
-    border: none;
-    font-family: "MierA-Regular";
-    margin-top: 55px;
+    .guest-id {
+      position: relative;
+      .guest-text {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid;
+        padding-top: 20px;
+        font-size: 14px;
+        width: 465.922px;
+        height: 54px;
+        font-family: "MierA-Regular";
+        margin-bottom: 5px;
+      }
+      .text-up {
+        position: absolute;
+        right: 78.5%;
+        bottom: 78.5%;
+        color: gray;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-family: "MierA-Regular";
+        transition: all 0.2s ease 0s;
+      }
+
+      .text-down {
+        position: absolute;
+        right: 78.5%;
+        bottom: 10.5%;
+        font-family: "MierA-Regular";
+      }
+    }
+    .emailAddressId {
+      position: absolute;
+      display: block;
+      color: red;
+      right: 0%;
+      font-size: 14px;
+      font-family: "MierA-Regular";
+    }
+    .connect-button {
+      height: 49px;
+      width: 141px;
+      letter-spacing: 0.12px;
+      font-size: 14px;
+      background-color: black;
+      color: white;
+      border: none;
+      font-family: "MierA-Regular";
+      margin-top: 55px;
+    }
   }
 }
