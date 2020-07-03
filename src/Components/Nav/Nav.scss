@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 0 70px;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   transition: 0.2s;
 
   &.text-logo {
@@ -36,8 +36,7 @@
       display: flex;
       align-items: center;
 
-      span,
-      a {
+      .menu-tab {
         font-family: "MierA-Demi";
         color: black;
         width: 100%;
@@ -58,8 +57,7 @@
         color: #ff0000;
       }
 
-      span::before,
-      a::before {
+      .menu-tab::before {
         content: "";
         position: absolute;
         border-bottom: 1px solid black;
@@ -72,15 +70,13 @@
         transition: 0.2s;
       }
 
-      span:hover::before,
-      a:hover::before {
+      .menu-tab:hover::before {
         border-bottom: 1px solid #999999;
         width: 100%;
         padding: 0;
       }
 
-      span:hover,
-      a:hover {
+      .menu-tab:hover {
         color: #999999;
       }
 
@@ -213,7 +209,7 @@
       margin-right: 40px;
 
       button,
-      a {
+      .account-tab {
         font-family: "MierA-Demi";
         height: 22px;
         padding: 0;
@@ -234,7 +230,7 @@
         }
       }
       button::before,
-      a::before {
+      .account-tab::before {
         content: "";
         position: absolute;
         border-bottom: 1px solid black;
@@ -246,14 +242,15 @@
         width: 0;
         transition: 0.3s;
       }
+
       button:hover::before,
-      a:hover::before {
+      .account-tab:hover::before {
         width: 100%;
         padding: 0;
         border-bottom: 1px solid #999999;
       }
 
-      a:hover {
+      .account-tab:hover {
         color: #999999;
       }
     }

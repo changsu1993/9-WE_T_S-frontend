@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🎨미니멀한 프린트 및 색상과 소재만으로 고유의 유니크한 매력을 담아내는 아미 파리스(Ami Paris) 웹사이트 클론 프로젝트
 
-## Available Scripts
+### 프로젝트 기간🚩
 
-In the project directory, you can run:
+**2020년 6월 22일~7월 3일 (총 2주)**
+프론트 3명, 백엔드 3명
 
-### `npm start`
+### 프로젝트 깃허브 주소 📁
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+프론트 : https://github.com/wecode-bootcamp-korea/9-WE_T_S-frontend
+백엔드 : https://github.com/wecode-bootcamp-korea/9-WE_T_S-backend
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### 사용된 기술 스택 (프론트) 🤼‍♀️
 
-### `npm test`
+- HTML
+- SCSS
+- React
+- 사용한 React library
+- slick slider(메인 페이지 슬라이더 적용)
+- zxcvbn(암호 강도 컬러바 적용)
+- React icon
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 구현 페이지 🌐
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- **메인 페이지 ** -반응형 Nav bar(스크롤, 페이지 별 반응 이벤트 적용) -메뉴 카테고리 서버 통신/호출 하여 적용 -이미지 슬라이더
+- **로그인 / 회원가입** -정규식 비밀번호 적용 -조건식 비밀번호 애니메이션 기능 적용
+- **제품 리스트/제품 상세 페이지** -제품 리스트 색상 별 필터 이벤트 -제품 가격 별 sort 함수 적용 -반응 형 hover 애니메이션 -상세 상품 스크롤 이벤트 -사이즈 옵션 클릭 이벤트 -이미지 확대 modal 창 -제품리스트/상세페이지 서버 통신 호출하여 화면에 render
+- **장바구니 /위시리스트**
+  -reduce 함수 적용한 제품 수량 변경 -모달 창 사용한 팝업형 장바구니/위시리스트 구현 -위시리스트 서버 통신 호출하여 사용자 정보를 맞는 리스트를 render
+- **Newsletter/search** -뉴스레터와 서치 페이지 UI구현

@@ -29,6 +29,7 @@ class ProductDetailwData extends React.Component {
       openWishlist: false,
       cartList: [],
       wishList: [],
+      id : null
     };
   }
 
@@ -42,6 +43,7 @@ class ProductDetailwData extends React.Component {
           this.setState({
             detailData: { ...res.product_data, quantity: 1 },
             isLoading: false,
+            id,
           })
         );
     }, 1000);
@@ -109,14 +111,17 @@ class ProductDetailwData extends React.Component {
       quantity: this.state.detailData.quantity,
     });
 
-    fetch("http://10.58.7.16:8000/order/like-product", {
-      method: "POST",
-      headers: {
-        Authorization: localStorage.getItem("access_token"),
+    fetch("http://10.58.7.16:8000/order/like-product",{
+      method : "POST",
+      headers:{
+        "Authorization": localStorage.getItem("access_token")
       },
+      body: JSON.stringify({
+        product_id: this.state.id
+      })
     })
-      .then((res) => res.json())
-      .then((res) => console.log(res));
+      // .then(console.log("haha"))
+      // .then((res) => console.log(res));
 
     this.setState({
       wishList,
@@ -143,7 +148,7 @@ class ProductDetailwData extends React.Component {
   };
 
   render() {
-    console.log(this.state.detailData);
+    console.log("date",this.state.detailData);
     const {
       sizeSelectHandler,
       arrowClickHandler,
@@ -176,7 +181,7 @@ class ProductDetailwData extends React.Component {
           images={detailData.product_images}
         />
 
-        <Nav />
+        <Nav cartList={this.state.cartList}/>
 
         <CartModal
           cartList={this.state.cartList}

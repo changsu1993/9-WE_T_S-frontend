@@ -34,7 +34,7 @@ class WishBag extends React.Component {
             <div className="remove-price">
               <button className="remove">Remove</button>
               <div className="price">
-                ₩{this.props.price && this.props.price.toLocaleString()}
+                ₩{this.props.price && Number(this.props.price.slice(0,-5)).toLocaleString()}
               </div>
               <button className="add-cart">Add to cart</button>
             </div>

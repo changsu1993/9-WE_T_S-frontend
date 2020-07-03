@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 class WishProduct extends React.Component {
   render() {
+    console.log(this.props.wishList)
     return (
       <>
         {this.props.wishList&&this.props.wishList.map((product, i) => {
@@ -12,7 +13,7 @@ class WishProduct extends React.Component {
             <WishBag
               key={i}
               name={product.name}
-              productImage={product.productImage}
+              productImage={product.image}
               color={product.color}
               size={product.size}
               price={product.price}

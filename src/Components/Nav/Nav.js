@@ -30,7 +30,7 @@ class Nav extends React.Component {
       this.setState({ isLoggedIn: true });
     }
     window.addEventListener("scroll", this.handleScroll);
-    fetch("http://10.58.7.177:8000")
+    fetch("http://10.58.7.16:8000/menu")
       .then((res) => res.json())
       .then((res) =>
         this.setState({
@@ -105,15 +105,20 @@ class Nav extends React.Component {
     });
   };
 
-  cartClickHandler = (e) => {
-    console.log(e)
-    this.setState({
-      cartClick: true,
-    });
-  };
+  cartQuantityHandler = ()=>{
+    if(this.props.cartList === undefined){
+      return 0;
+    }
+    if(this.props.cartList.length === 1){
+      return this.props.cartList[0].quantity
+    }
+    if(this.props.cartList.length > 1){
+      this.props.cartList.reduce((a, b) => {
+        return a.quantity + b.quantity})
+    }
+  }
 
   render() {
-    // console.log(this.state.category)
     const colorchange =
       this.state.visible && this.props.mouseEnter === false && this.props.whiteColor
         ? "white-color"
@@ -122,7 +127,7 @@ class Nav extends React.Component {
     return (
       <>
       <div
-        className={`Nav ${this.state.visible ? "text-logo" : ""}`}
+        className={`Nav ${this.state.visible && this.state.prevScrollpos === 0 ? "text-logo" : ""}`}
         onMouseEnter={this.props.mouseEnterNav}
         onMouseLeave={this.props.mouseLeaveNav}
       >
@@ -132,7 +137,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <span className={colorchange}>Menu</span>
+            <span className={`${colorchange} menu-tab`}>Menu</span>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 0 ? "show" : "hide"
@@ -166,7 +171,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className="sale-tab">
+            <a href="#!" className="sale-tab menu-tab">
               Sale
             </a>
             <div
@@ -195,7 +200,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <Link to="/shopping/man" className={colorchange}>
+            <Link to="/shopping/man" className={`${colorchange} menu-tab`}>
               Man
             </Link>
             <div
@@ -245,7 +250,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className={colorchange}>
+            <a href="#!" className={`${colorchange} menu-tab`}>
               Woman
             </a>
             <div
@@ -290,7 +295,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className={colorchange}>
+            <a href="#!" className={`${colorchange} menu-tab`}>
               Accessories
             </a>
             <div
@@ -326,7 +331,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className={colorchange}>
+            <a href="#!" className={`${colorchange} menu-tab`}>
               Shoes
             </a>
             <div
@@ -373,16 +378,13 @@ class Nav extends React.Component {
             </button>
           </li>
           <li>
-            <Link to="/account">
+            <Link to="/account" className={`${colorchange} account-tab`}>
               {this.state.isLoggedIn ? "Hello" : "Account"}
-            </Link>
-            <Link to="/account" className={colorchange}>
-              Account
             </Link>
           </li>
           <li>
             <button className={colorchange} onClick={this.cartClickHandler}>
-              Cart (0)
+              Cart ({this.cartQuantityHandler()})
             </button>
           </li>
           <li>
@@ -400,7 +402,6 @@ class Nav extends React.Component {
           </SearchPortal>
         )}
       </div>
-      {/* {this.state.cartClick ? <CartModal /> : null} */}
       </>
     );
   }

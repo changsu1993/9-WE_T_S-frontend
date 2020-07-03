@@ -7,16 +7,29 @@ class CartModal extends React.Component {
   constructor(){
     super();
     this.state={
-      wishList : []
+      wishList : [],
     }
   }
 
   componentDidMount() {
-    let wishList = localStorage.getItem("wishlist");
-    wishList = JSON.parse(wishList);
-    this.setState({
-      wishList
+    console.log(localStorage.getItem("access_token"))
+    
+    fetch("http://10.58.7.16:8000/order/like-product", {
+      method: "GET",
+      headers: {
+        Authorization: localStorage.getItem("access_token")
+      }
     })
+      .then(res => res.json())
+      .then(res => this.setState({
+        wishList : res.wish_list
+      }))
+
+    //   let wishList = localStorage.getItem("wishlist");
+    // wishList = JSON.parse(wishList);
+    // this.setState({
+    //   wishList
+    // })
   }
 
   quantityHandler = (count) => {
@@ -37,6 +50,7 @@ class CartModal extends React.Component {
 
   render() {
     console.log(this.state.wishList)
+  
     return (
       <>
         {this.props.openCart ? (
@@ -72,12 +86,7 @@ class CartModal extends React.Component {
                 <button>Bag (0)</button>
                 <button className="change">
                   Wishlist (
-                  {/* {this.state.wishList.length === 1
-                    ? this.state.wishList[0].quantity
-                    : this.state.wishList &&
-                      this.state.wishList.reduce((a, b) => {
-                        return a.quantity + b.quantity;
-                      })} */}
+                  {this.state.wishList.length}
                   )
                 </button>
               </div>
@@ -85,7 +94,9 @@ class CartModal extends React.Component {
                 Close
               </button>
             </div>
+            <div className="wish">
             <WishProduct wishList={this.state.wishList}/>
+            </div>
           </div>
         ) : null}
       </>
