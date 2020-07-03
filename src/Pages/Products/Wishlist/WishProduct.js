@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 
 class WishProduct extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <>
-        {this.props.wishList.map((product, i) => {
+        {this.props.wishList&&this.props.wishList.map((product, i) => {
           return (
             <WishBag
               key={i}
