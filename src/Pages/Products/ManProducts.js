@@ -42,10 +42,35 @@ class ManProducts extends React.Component {
         (a, b) => parsePrice(b.product_price) - parsePrice(a.product_price)
       );
 
+    const blackColorOnly = data.filter((obj) => {
+      return obj.product_color === "BLACK";
+    });
+
+    const beigeColorOnly = data.filter((obj) => {
+      return obj.product_color === "BEIGE";
+    });
+
+    const offWhiteColorOnly = data.filter((obj) => {
+      return obj.product_color === "OFF WHITE";
+    });
+
+    const taupeColorOnly = data.filter((obj) => {
+      return obj.product_color === "TAUPE";
+    });
+
+    const clayColorOnly = data.filter((obj) => {
+      return obj.product_color === "CLAY";
+    });
+
     const obj = {
       0: <ProductList data={data} />,
       1: <ProductList data={sortByLowerPrices} />,
       2: <ProductList data={sortByHigerPrices} />,
+      3: <ProductList data={blackColorOnly} />,
+      4: <ProductList data={beigeColorOnly} />,
+      5: <ProductList data={offWhiteColorOnly} />,
+      6: <ProductList data={taupeColorOnly} />,
+      7: <ProductList data={clayColorOnly} />,
     };
 
     return (
@@ -74,17 +99,15 @@ class ManProducts extends React.Component {
           <section className="filter-bar">
             <div className="cat-col-size">
               <select>
-                <option value>Categories</option>
-                <option value="0">Categories</option>
-                <option value="1">Categories</option>
+                <option>Categories</option>
               </select>
-              <select>
-                <option value>Colors</option>
-
-                {data &&
-                  data.map((obj, idx) => {
-                    return <option value={idx}>{obj.product_color}</option>;
-                  })}
+              <select onChange={this.valueHandler}>
+                <option value="0">Colors</option>
+                <option value="3">Black</option>
+                <option value="4">Beige</option>
+                <option value="5">Off-white</option>
+                <option value="6">Taupe</option>
+                <option value="7">Clay</option>
               </select>
             </div>
             <div className="sort-by">
