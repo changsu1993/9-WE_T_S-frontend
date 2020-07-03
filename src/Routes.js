@@ -4,8 +4,6 @@ import Account from "./Pages/Account/Account";
 import Newsletter from "./Components/Newsletter/Newsletter";
 import Main from "./Pages/Main/Main";
 import Man from "./Pages/Products/ManProducts";
-import ProductDetail from "./Pages/ProductDetail/ProductDetail";
-import ProductDetail2 from "./Pages/ProductDetail/ProductDetail2";
 import ProductDetailwData from "./Pages/ProductDetail/ProductDetailwData";
 import Cart from "./Pages/Products/Cart/Cart";
 import Wishlist from "./Pages/Products/Wishlist/Wishlist";

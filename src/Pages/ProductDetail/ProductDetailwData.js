@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ImageModal from "../../Components/ImageModal/ImageModal";
 import LoadingPage from "../../Components/LoadingPage/LoadingPage";
 import Nav from "../../Components/Nav/Nav";
 import ProductBottomBar from "../../Components/ProductBottomBar/ProductBottomBar";
-import CartModal from "../Products/Cart/CartModal"
+import CartModal from "../Products/Cart/CartModal";
 import Footer from "../../Components/Footer/Footer";
 import Arrowdown from "../../Images/arrow-down.png";
 import Heart from "../../Images/heart1.png";
@@ -37,8 +36,7 @@ class ProductDetailwData extends React.Component {
     const { id, colorId } = this.props.match.params;
     this.setState({ isLoading: true });
     setTimeout(() => {
-      fetch(`http://localhost:3000/data/detailDatadata.json`)
-        // fetch(`http://10.58.7.232:8000/product/${id}/color/${colorId}`)
+      fetch(`http://13.125.209.103:8000/product/${id}/color/${colorId}`)
         .then((res) => res.json())
         .then((res) =>
           this.setState({
@@ -119,20 +117,21 @@ class ProductDetailwData extends React.Component {
       body: JSON.stringify({
         product_id: this.state.detailData.product_id
     })
+
     })
-    .then(res=>res.json())
-    .then(res => console.log(res))
+      .then((res) => res.json())
+      .then((res) => console.log(res));
 
     this.setState({
       wishList,
       openWishlist: true,
-      heartClick: !heartClick
+      heartClick: !heartClick,
     });
 
-    localStorage.setItem("wishlist",JSON.stringify(wishList))
+    localStorage.setItem("wishlist", JSON.stringify(wishList));
   };
 
-   closeWishlist = () => {
+  closeWishlist = () => {
     this.setState({
       openWishlist: false,
     });
@@ -148,7 +147,7 @@ class ProductDetailwData extends React.Component {
   };
 
   render() {
-    console.log(this.state.detailData)
+    console.log(this.state.detailData);
     const {
       sizeSelectHandler,
       arrowClickHandler,
@@ -212,6 +211,7 @@ class ProductDetailwData extends React.Component {
                     }
                   />
                   <img
+                  alt="heart-button"
                     className="heart-button"
                     src={heartClick ? Heart2 : Heart}
                     onClick={heartClickHandler}
@@ -286,7 +286,9 @@ class ProductDetailwData extends React.Component {
                           })}
                       </div>
                     </div>
-                    <button className="add-to-cart" onClick={this.addBtnClick}>Add to cart</button>
+                    <button className="add-to-cart" onClick={this.addBtnClick}>
+                      Add to cart
+                    </button>
                   </div>
                   <div className="product-detail-buttons">
                     <button>Description</button>
