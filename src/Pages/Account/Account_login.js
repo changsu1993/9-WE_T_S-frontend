@@ -64,7 +64,8 @@ class Account_login extends React.Component {
       this.state.loginPw.length >= 5 &&
       this.state.loginId.includes("@" && ".")
     ) {
-      fetch("http://10.58.7.177:8000/account/sign-in", {
+
+      fetch("http://10.58.7.16:8000/account/sign-in", {
         method: "POST",
         body: JSON.stringify({
           email: this.state.loginId,

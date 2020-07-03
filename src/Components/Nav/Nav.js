@@ -66,26 +66,18 @@ class Nav extends React.Component {
     });
   };
 
-  mouseEnterNav = () => {
-    this.setState({
-      mouseEnter: true,
-    });
-  };
-
-  mouseLeaveNav = () => {
-    this.setState({
-      mouseEnter: false,
-    });
-  };
-
   imgHandler = () => {
     if (this.state.visible) {
-      if (this.state.mouseEnter) {
+      if(this.props.whiteColor){
+        if(this.props.mouseEnter){
+          return ami_black;
+        }
+        return ami_white;
+      }else{
         return ami_black;
-      }
-      return ami_white;
-    } else {
-      return ami_logo;
+      } 
+    }else{
+        return ami_logo;
     }
   };
 
@@ -114,23 +106,25 @@ class Nav extends React.Component {
   };
 
   cartClickHandler = (e) => {
+    console.log(e)
     this.setState({
       cartClick: true,
     });
   };
 
   render() {
-    console.log(this.state.category);
+    // console.log(this.state.category)
     const colorchange =
-      this.state.visible && this.state.mouseEnter === false
+      this.state.visible && this.props.mouseEnter === false && this.props.whiteColor
         ? "white-color"
         : "";
 
     return (
+      <>
       <div
         className={`Nav ${this.state.visible ? "text-logo" : ""}`}
-        onMouseEnter={this.mouseEnterNav}
-        onMouseLeave={this.mouseLeaveNav}
+        onMouseEnter={this.props.mouseEnterNav}
+        onMouseLeave={this.props.mouseLeaveNav}
       >
         <ul className="left-menu">
           <li
@@ -220,7 +214,7 @@ class Nav extends React.Component {
                 <li>Ami de Coeur</li>
                 <li>T-Shirts & Polos</li>
                 <li>Shirts</li>
-                <li>Shorts</li>
+                <li>Shorts</li> 
                 <li>Trousers</li>
                 <li>Swimshorts</li>
                 <li>Denim</li>
@@ -358,15 +352,15 @@ class Nav extends React.Component {
             </div>
           </li>
         </ul>
-
-        <div className="logo">
-          <img
-            className={this.state.visible ? "text-logo" : ""}
-            src={this.imgHandler()}
-            alt=""
-          />
-        </div>
-
+        <Link to="/">
+          <div className="logo">
+            <img
+              className={this.state.visible ? "text-logo" : ""}
+              src={this.imgHandler()}
+              alt=""
+            />
+          </div>
+        </Link>
         <ul className="right-menu">
           <li>
             <button className={colorchange} onClick={this.handleOpenModal}>
@@ -406,6 +400,8 @@ class Nav extends React.Component {
           </SearchPortal>
         )}
       </div>
+      {/* {this.state.cartClick ? <CartModal /> : null} */}
+      </>
     );
   }
 }
