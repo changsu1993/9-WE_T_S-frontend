@@ -1,5 +1,6 @@
 import React from "react";
 import zxcvbn from "zxcvbn";
+import { withRouter } from "react-router-dom";
 import amilogo from "../../Images/amilogo.png";
 import eyes from "../../Images/button.png";
 import "./Account_signup.scss";
@@ -129,6 +130,7 @@ class Account_signup extends React.Component {
         }),
       }).then((res) => console.log(res));
     }
+    this.props.history.push("/");
   };
 
   render() {
@@ -293,4 +295,4 @@ class Account_signup extends React.Component {
   }
 }
 
-export default Account_signup;
+export default withRouter(Account_signup);
