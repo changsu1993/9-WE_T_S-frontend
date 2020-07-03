@@ -19,18 +19,24 @@ class Nav extends React.Component {
       mouseEnter: false,
       Newsletter: false,
       Search: false,
-      cartClick : false,
-      category : []
+      isLoggedIn: false,
+      cartClick: false,
+      category: [],
     };
   }
 
   componentDidMount() {
+    if (localStorage.getItem("access_token")) {
+      this.setState({ isLoggedIn: true });
+    }
     window.addEventListener("scroll", this.handleScroll);
     fetch("http://10.58.7.177:8000")
-    .then(res => res.json())
-    .then(res => this.setState({
-      category : res.category_list
-    }))
+      .then((res) => res.json())
+      .then((res) =>
+        this.setState({
+          category: res.category_list,
+        })
+      );
   }
 
   componentWillUnmount() {
@@ -73,7 +79,7 @@ class Nav extends React.Component {
     }else{
         return ami_logo;
     }
-  }
+  };
 
   handleOpenModal = () => {
     this.setState({
@@ -102,9 +108,9 @@ class Nav extends React.Component {
   cartClickHandler = (e) => {
     console.log(e)
     this.setState({
-      cartClick : true,
-    })
-  }
+      cartClick: true,
+    });
+  };
 
   render() {
     // console.log(this.state.category)
@@ -189,11 +195,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <Link
-              to="/shopping/man"
-              className={colorchange}
-            >
-
+            <Link to="/shopping/man" className={colorchange}>
               Man
             </Link>
             <div
@@ -203,7 +205,10 @@ class Nav extends React.Component {
             >
               <ul className="product-nav">
                 <li className="sale-tab">Sale</li>
-         {this.state.category&&this.state.category.map((list,i)=>{return <li key={i}>{list.category_name}</li>})}
+                {this.state.category &&
+                  this.state.category.map((list, i) => {
+                    return <li key={i}>{list.category_name}</li>;
+                  })}
                 {/* <li>New Arrivals</li>
                 <li>Rainbow Collection</li>
                 <li>Ami de Coeur</li>
@@ -358,16 +363,27 @@ class Nav extends React.Component {
         </Link>
         <ul className="right-menu">
           <li>
-            <button  className={colorchange} onClick={this.handleOpenModal}>Newsletter</button>
+            <button className={colorchange} onClick={this.handleOpenModal}>
+              Newsletter
+            </button>
           </li>
           <li>
-            <button className={colorchange} onClick={this.handleOpenSearch}>Search</button>
+            <button className={colorchange} onClick={this.handleOpenSearch}>
+              Search
+            </button>
           </li>
           <li>
-            <Link to ="/account" className={colorchange}>Account</Link>
+            <Link to="/account">
+              {this.state.isLoggedIn ? "Hello" : "Account"}
+            </Link>
+            <Link to="/account" className={colorchange}>
+              Account
+            </Link>
           </li>
           <li>
-            <button className={colorchange} onClick={this.cartClickHandler}>Cart (0)</button>
+            <button className={colorchange} onClick={this.cartClickHandler}>
+              Cart (0)
+            </button>
           </li>
           <li>
             <button className={colorchange}>KR ₩</button>

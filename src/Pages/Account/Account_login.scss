@@ -5,6 +5,7 @@
   height: 550px;
 
   .login-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 542.922px;
@@ -20,6 +21,7 @@
       }
     }
     .login-id {
+      position: relative;
       .loginId-text {
         border-top: none;
         border-left: none;
@@ -31,18 +33,38 @@
         height: 54px;
         font-family: "MierA-Regular";
       }
+      .id-up {
+        position: absolute;
+        right: 81.5%;
+        bottom: 81.5%;
+        color: gray;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-family: "MierA-Regular";
+        transition: all 0.2s ease 0s;
+      }
+      .id-down {
+        position: absolute;
+        right: 81.5%;
+        bottom: 1.5%;
+        font-family: "MierA-Regular";
+      }
     }
     input::placeholder {
       color: black;
     }
     .error-id {
+      position: absolute;
       display: block;
-      margin-left: 300px;
       color: red;
+      bottom: 66%;
+      right: 16%;
       font-size: 14px;
       font-family: "MierA-Regular";
     }
     .login-password {
+      position: relative;
+      margin-top: 20px;
       .loginPw-text {
         border-top: none;
         border-left: none;
@@ -55,12 +77,40 @@
         font-family: "MierA-Regular";
         margin-bottom: 5px;
       }
+      .pw-up {
+        position: absolute;
+        right: 86.5%;
+        bottom: 81.5%;
+        color: gray;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-family: "MierA-Regular";
+        transition: all 0.2s ease 0s;
+      }
+      .pw-down {
+        position: absolute;
+        right: 86.5%;
+        bottom: 4.5%;
+        font-family: "MierA-Regular";
+      }
+      .eyes-button {
+        border: none;
+        background-color: white;
+        position: absolute;
+        right: 14%;
+        bottom: 15%;
+        .eyes-image {
+          background-color: white;
+          height: 15px;
+        }
+      }
     }
     .error-password {
+      position: absolute;
       display: none;
-      margin-left: 290px;
-      margin-bottom: 40px;
       color: red;
+      bottom: 43%;
+      right: 15%;
       font-size: 14px;
       font-family: "MierA-Regular";
     }
@@ -68,7 +118,7 @@
       .forgot {
         font-size: 11px;
         font-family: "MierA-Regular";
-        margin-bottom: 54px;
+        margin-bottom: 40px;
         a {
           color: black;
           border-bottom: 1px solid black;

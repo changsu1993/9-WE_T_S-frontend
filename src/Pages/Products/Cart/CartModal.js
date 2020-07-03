@@ -4,6 +4,21 @@ import CartProduct from "./CartProduct";
 import WishProduct from "../Wishlist/WishProduct";
 
 class CartModal extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      wishList : []
+    }
+  }
+
+  componentDidMount() {
+    let wishList = localStorage.getItem("wishlist");
+    wishList = JSON.parse(wishList);
+    this.setState({
+      wishList
+    })
+  }
+
   quantityHandler = (count) => {
     const newObj = { ...this.props.cartList[0] };
     if (count === 1) {
@@ -21,7 +36,7 @@ class CartModal extends React.Component {
   };
 
   render() {
-    console.log(this.props.cartList)
+    console.log(this.state.wishList)
     return (
       <>
         {this.props.openCart ? (
@@ -57,12 +72,12 @@ class CartModal extends React.Component {
                 <button>Bag (0)</button>
                 <button className="change">
                   Wishlist (
-                  {this.props.wishList.length === 1
-                    ? this.props.wishList[0].quantity
-                    : this.props.wishList &&
-                      this.props.wishList.reduce((a, b) => {
+                  {/* {this.state.wishList.length === 1
+                    ? this.state.wishList[0].quantity
+                    : this.state.wishList &&
+                      this.state.wishList.reduce((a, b) => {
                         return a.quantity + b.quantity;
-                      })}
+                      })} */}
                   )
                 </button>
               </div>
@@ -70,7 +85,7 @@ class CartModal extends React.Component {
                 Close
               </button>
             </div>
-            <WishProduct wishList={this.props.wishList} />
+            <WishProduct wishList={this.state.wishList}/>
           </div>
         ) : null}
       </>

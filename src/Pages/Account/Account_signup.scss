@@ -12,7 +12,7 @@
 
     .new-customer {
       font-size: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 35px;
       font-family: "MierA-Regular";
       letter-spacing: 1.67px;
       .ami-image {
@@ -24,7 +24,9 @@
       display: flex;
       flex-direction: column;
       .name {
-        margin-bottom: 20px;
+        display: flex;
+        margin-bottom: 40px;
+        position: relative;
         .first-name,
         .last-name {
           border-top: none;
@@ -32,24 +34,201 @@
           border-right: none;
           border-bottom: 1px solid;
           font-size: 14px;
-          margin-bottom: 30px;
           width: 270.516px;
           height: 54px;
           padding-top: 20px;
           font-family: "MierA-Regular";
         }
+        .first-up {
+          position: absolute;
+          right: 85.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .first-down {
+          position: absolute;
+          right: 85.5%;
+          bottom: 2.5%;
+          font-family: "MierA-Regular";
+        }
         .last-name {
           margin-left: 40px;
         }
+        .last-up {
+          position: absolute;
+          right: 32.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .last-down {
+          position: absolute;
+          right: 32.5%;
+          bottom: 2.5%;
+          font-family: "MierA-Regular";
+        }
+        .firstError {
+          position: absolute;
+          display: block;
+          color: red;
+          font-size: 14px;
+          top: 107%;
+          left: 22%;
+          font-family: "MierA-Regular";
+        }
+        .lastError {
+          display: block;
+          color: red;
+          font-size: 14px;
+
+          padding-left: 170px;
+          font-family: "MierA-Regular";
+        }
       }
       .email-address {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        position: relative;
+        .email-up {
+          position: absolute;
+          right: 82.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .email-down {
+          position: absolute;
+          right: 82.5%;
+          bottom: 2.5%;
+          font-family: "MierA-Regular";
+        }
+        .emailError {
+          display: block;
+          color: red;
+          font-size: 14px;
+          padding-left: 255px;
+          font-family: "MierA-Regular";
+        }
       }
       .email-password {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        position: relative;
+        .password-strength-meter {
+          text-align: left;
+        }
+
+        .password-strength-meter-progress {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 250px;
+          height: 8px;
+        }
+
+        .password-strength-meter-progress::-webkit-progress-bar {
+          background-color: white;
+          border-radius: 3px;
+        }
+
+        .password-strength-meter-label {
+          font-size: 14px;
+        }
+
+        .password-strength-meter-progress::-webkit-progress-value {
+          border-radius: 2px;
+          background-size: 35px 20px, 100% 100%, 100% 100%;
+        }
+
+        .strength-Weak::-webkit-progress-value {
+          background-color: red;
+          color: red;
+        }
+        .strength-Fair::-webkit-progress-value {
+          background-color: orange;
+        }
+        .strength-Strong::-webkit-progress-value {
+          background-color: green;
+        }
+        .security-strength {
+          font-family: "MierA-Regular";
+          font-size: 11px;
+          position: absolute;
+          right: 21%;
+          bottom: 3%;
+        }
+        .password-security {
+          font-family: "MierA-Regular";
+          font-size: 11px;
+          position: absolute;
+          right: 15%;
+          bottom: 3%;
+        }
+        .pw-up {
+          position: absolute;
+          right: 87.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .pw-down {
+          position: absolute;
+          right: 87.5%;
+          bottom: 24.5%;
+          font-family: "MierA-Regular";
+        }
+        .oneEyes-button {
+          border: none;
+          background-color: white;
+          position: absolute;
+          right: 13%;
+          bottom: 34%;
+          .oneEyes-image {
+            background-color: white;
+            height: 15px;
+          }
+        }
       }
       .confirm-password {
-        margin-bottom: 20px;
+        margin-bottom: 70px;
+        position: relative;
+        .con-up {
+          position: absolute;
+          right: 78.5%;
+          bottom: 85.5%;
+          color: gray;
+          font-size: 12px;
+          letter-spacing: 1px;
+          font-family: "MierA-Regular";
+          transition: all 0.2s ease 0s;
+        }
+        .con-down {
+          position: absolute;
+          right: 78.5%;
+          bottom: 2.5%;
+          font-family: "MierA-Regular";
+        }
+        .twoEyes-button {
+          border: none;
+          background-color: white;
+          position: absolute;
+          right: 13%;
+          bottom: 8%;
+          .twoEyes-image {
+            background-color: white;
+            height: 15px;
+          }
+        }
       }
     }
   }
@@ -67,7 +246,7 @@
     border-right: none;
     border-bottom: 1px solid;
     font-size: 14px;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     width: 504.016px;
     height: 54px;
     padding-top: 20px;
@@ -84,7 +263,7 @@
       font-family: "MierA-Regular";
       letter-spacing: 0.92px;
       .send-box {
-        margin-bottom: 50px;
+        margin-bottom: 80px;
         .send-check {
           margin-right: 10px;
         }

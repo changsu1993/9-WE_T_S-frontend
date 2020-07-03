@@ -6,7 +6,7 @@ import Nav from "../../Components/Nav/Nav";
 import Footer from "../../Components/Footer/Footer";
 import "./Account.scss";
 
-class Account extends React.Component {
+class Account extends Component {
   render() {
     return (
       <>
