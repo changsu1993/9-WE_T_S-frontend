@@ -36,7 +36,7 @@ class CartModal extends React.Component {
   };
 
   render() {
-    console.log(this.state.wishList)
+  
     return (
       <>
         {this.props.openCart ? (
@@ -72,12 +72,12 @@ class CartModal extends React.Component {
                 <button>Bag (0)</button>
                 <button className="change">
                   Wishlist (
-                  {/* {this.state.wishList.length === 1
+                  {this.state.wishList.length === 1
                     ? this.state.wishList[0].quantity
                     : this.state.wishList &&
                       this.state.wishList.reduce((a, b) => {
                         return a.quantity + b.quantity;
-                      })} */}
+                      })}
                   )
                 </button>
               </div>

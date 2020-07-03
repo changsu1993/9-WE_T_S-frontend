@@ -1,5 +1,6 @@
 .Cart {
   padding-top: 30px;
+  width: 100%;
 
   .title {
     margin: 90px 0 40px 0;
@@ -8,7 +9,7 @@
     text-align: center;
   }
 
-  .container {
+  .cart-container {
     display: flex;
     padding-bottom: 30px;
 

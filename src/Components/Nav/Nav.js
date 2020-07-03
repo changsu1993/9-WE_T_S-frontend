@@ -112,8 +112,21 @@ class Nav extends React.Component {
     });
   };
 
+  cartQuantityHandler = ()=>{
+    if(this.props.cartList.length === 1){
+      return this.props.cartList[0].quantity
+    }
+    if(this.props.cartList.length === 0){
+      return 0;
+    }
+    if(this.props.cartList.length > 1){
+      this.props.cartList.reduce((a, b) => {
+        return a.quantity + b.quantity})
+    }
+  }
+
   render() {
-    // console.log(this.state.category)
+    console.log(this.props.cartList)
     const colorchange =
       this.state.visible && this.props.mouseEnter === false && this.props.whiteColor
         ? "white-color"
@@ -132,7 +145,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <span className={colorchange}>Menu</span>
+            <span className={`${colorchange} menu-tab`}>Menu</span>
             <div
               className={`hover-nav ${
                 this.state.activeTab === 0 ? "show" : "hide"
@@ -166,7 +179,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className="sale-tab">
+            <a href="#!" className="sale-tab menu-tab">
               Sale
             </a>
             <div
@@ -195,7 +208,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <Link to="/shopping/man" className={colorchange}>
+            <Link to="/shopping/man" className={`${colorchange} menu-tab`}>
               Man
             </Link>
             <div
@@ -245,7 +258,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className={colorchange}>
+            <a href="#!" className={`${colorchange} menu-tab`}>
               Woman
             </a>
             <div
@@ -290,7 +303,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className={colorchange}>
+            <a href="#!" className={`${colorchange} menu-tab`}>
               Accessories
             </a>
             <div
@@ -326,7 +339,7 @@ class Nav extends React.Component {
             onMouseOut={this.mouseOut}
             className="category-btn"
           >
-            <a href="#!" className={colorchange}>
+            <a href="#!" className={`${colorchange} menu-tab`}>
               Shoes
             </a>
             <div
@@ -373,16 +386,13 @@ class Nav extends React.Component {
             </button>
           </li>
           <li>
-            <Link to="/account">
+            <Link to="/account" className={`${colorchange} account-tab`}>
               {this.state.isLoggedIn ? "Hello" : "Account"}
-            </Link>
-            <Link to="/account" className={colorchange}>
-              Account
             </Link>
           </li>
           <li>
             <button className={colorchange} onClick={this.cartClickHandler}>
-              Cart (0)
+              Cart ({this.cartQuantityHandler()})
             </button>
           </li>
           <li>

@@ -114,8 +114,11 @@ class ProductDetailwData extends React.Component {
     fetch("http://10.58.7.16:8000/order/like-product",{
       method : "POST",
       headers:{
-        Authorization : localStorage.getItem("access_token")
-      }
+        "Authorization": localStorage.getItem("access_token")
+      },
+      body: JSON.stringify({
+        product_id: this.state.detailData.product_id
+    })
     })
     .then(res=>res.json())
     .then(res => console.log(res))
@@ -178,7 +181,7 @@ class ProductDetailwData extends React.Component {
           images={detailData.product_images}
         />
 
-        <Nav />
+        <Nav cartList={this.state.cartList}/>
 
         <CartModal
           cartList={this.state.cartList}

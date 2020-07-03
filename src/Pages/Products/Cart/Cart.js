@@ -37,7 +37,7 @@ class Cart extends React.Component {
         <Nav />
         <div className="Cart">
           <div className="title">My Shopping Bag Ami</div>
-          <div className="container">
+          <div className="cart-container">
             <div className="left-container">
               {this.state.cartList &&
                 this.state.cartList.map((product, i) => {
@@ -189,7 +189,7 @@ class Cart extends React.Component {
                       right, you have 14 days to send it back to us.
                     </p>
                     <p>
-                      Read more in our
+                      Read more in our&nbsp;
                       <a href="#!">returns and refund policy.</a>
                     </p>
                   </div>
