@@ -15,8 +15,7 @@ class ManProducts extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/data/finaldatalist.json")
-      // fetch("http://10.58.7.232:8000/product/list")
+    fetch("http://13.125.209.103:8000/product/list")
       .then((res) => res.json())
       .then((res) => this.setState({ data: res.product_data, activeTab: 0 }));
   }

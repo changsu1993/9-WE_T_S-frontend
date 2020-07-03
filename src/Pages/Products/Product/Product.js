@@ -71,6 +71,7 @@ class Product extends React.Component {
         <div className="imgs">
           <img alt="product-img" className="img-original" src={imageSrc} />
           <img
+            alt="heart-button"
             className="heart-button"
             src={heartClick ? Heart2 : Heart}
             onClick={heartClickHandler}

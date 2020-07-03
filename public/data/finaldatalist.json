@@ -1,37 +1,11 @@
 {
   "product_data": [
     {
-      "product_id": 1,
-      "product_name": "Cigarette Fit Trousers",
-      "product_price": 470000,
-      "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "CLAY"
-      ],
-      "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
-      "button_images": [
-        "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
-        "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg"
-      ],
-      "product_images": [
-        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073831_500.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073832_500.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073833_500.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073834_500.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073835_500.jpg?c=2",
-        "https://cdn-images.farfetch-contents.com/ami-cigarette-fit-trousers_14371975_27073836_500.jpg?c=2"
-      ]
-    },
-    {
       "product_id": 2,
       "product_name": "Unstructured Coat",
       "product_price": 1620000,
       "product_color": "BEIGE",
-      "button_colors": [
-        "BEIGE",
-        "BURGUNDY"
-      ],
+      "button_colors": ["BEIGE", "BURGUNDY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
@@ -51,10 +25,7 @@
       "product_name": "Oversize Mac Coat",
       "product_price": 1610000,
       "product_color": "CLAY",
-      "button_colors": [
-        "CLAY",
-        "DARK OLIVE GREEN"
-      ],
+      "button_colors": ["CLAY", "DARK OLIVE GREEN"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
@@ -74,10 +45,7 @@
       "product_name": "Two Buttons Jacket",
       "product_price": 1380000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "HEATHER GREY"
-      ],
+      "button_colors": ["BLACK", "HEATHER GREY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -97,10 +65,7 @@
       "product_name": "Pleated Bermuda Shorts",
       "product_price": 320000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -120,10 +85,7 @@
       "product_name": "Patch Pockets Bermuda Shorts",
       "product_price": 470000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "TAUPE"
-      ],
+      "button_colors": ["BLACK", "TAUPE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -143,10 +105,7 @@
       "product_name": "Embroidered Shirt",
       "product_price": 470000,
       "product_color": "OFF WHITE",
-      "button_colors": [
-        "OFF WHITE",
-        "BLACK"
-      ],
+      "button_colors": ["OFF WHITE", "BLACK"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
@@ -166,10 +125,7 @@
       "product_name": "Straight Fit Trousers",
       "product_price": 830000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "RED"
-      ],
+      "button_colors": ["BLACK", "RED"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -189,10 +145,7 @@
       "product_name": "Side Slits Oversize Shirt",
       "product_price": 440000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "OFF WHITE"
-      ],
+      "button_colors": ["BLACK", "OFF WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -212,10 +165,7 @@
       "product_name": "Carrot Fit Pleated Trousers",
       "product_price": 490000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -235,10 +185,7 @@
       "product_name": "Striped Crewneck Sweater",
       "product_price": 530000,
       "product_color": "OFFWHITE/BLACK",
-      "button_colors": [
-        "OFFWHITE/BLACK",
-        "SAGE/OFF-WHITE"
-      ],
+      "button_colors": ["OFFWHITE/BLACK", "SAGE/OFF-WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
@@ -258,10 +205,7 @@
       "product_name": "Light T-shirt",
       "product_price": 160000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "OFF WHITE"
-      ],
+      "button_colors": ["BLACK", "OFF WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -281,10 +225,7 @@
       "product_name": "Elasticized Waist Trousers",
       "product_price": 510000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -304,10 +245,7 @@
       "product_name": "Ami De Coeur Scarf",
       "product_price": 274000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "PINK"
-      ],
+      "button_colors": ["BLACK", "PINK"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -327,10 +265,7 @@
       "product_name": "Small Box Bag",
       "product_price": 810000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "GREEN"
-      ],
+      "button_colors": ["BLACK", "GREEN"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -350,10 +285,7 @@
       "product_name": "Ami De Coeur Polo Shirt",
       "product_price": 200000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "SAGE"
-      ],
+      "button_colors": ["BLACK", "SAGE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -373,10 +305,7 @@
       "product_name": "Ami De Coeur Cap",
       "product_price": 185000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "BEIGE"
-      ],
+      "button_colors": ["BLACK", "BEIGE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -396,10 +325,7 @@
       "product_name": "Necklace With Bells and Ami De Coeur Clasp",
       "product_price": 760000,
       "product_color": "SILVER",
-      "button_colors": [
-        "SILVER",
-        "BEIGE"
-      ],
+      "button_colors": ["SILVER", "BEIGE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14369761_E20A915.361900_v1_v3_v6_v8.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14369761_E20A915.361900_v1_v3_v6_v8.jpg",
@@ -419,10 +345,7 @@
       "product_name": "Crewneck Rugby-striped Sweater",
       "product_price": 510000,
       "product_color": "BLACK/WHITE",
-      "button_colors": [
-        "BLACK/WHITE",
-        "GREEN/WHITE"
-      ],
+      "button_colors": ["BLACK/WHITE", "GREEN/WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
@@ -442,10 +365,7 @@
       "product_name": "Spring Low Sneakers",
       "product_price": 580000,
       "product_color": "TAUPE",
-      "button_colors": [
-        "TAUPE",
-        "BLACK"
-      ],
+      "button_colors": ["TAUPE", "BLACK"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
@@ -465,10 +385,7 @@
       "product_name": "Mini Accordion Bag",
       "product_price": 690000,
       "product_color": "OLIVE GREEN",
-      "button_colors": [
-        "OLIVE GREEN",
-        "TAUPE"
-      ],
+      "button_colors": ["OLIVE GREEN", "TAUPE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14369746_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14369746_cs.jpg",
@@ -488,10 +405,7 @@
       "product_name": "Sunglasses",
       "product_price": 440000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "TAUPE"
-      ],
+      "button_colors": ["BLACK", "TAUPE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -511,10 +425,7 @@
       "product_name": "Chest Pockets Overshirt",
       "product_price": 450000,
       "product_color": "SAGE",
-      "button_colors": [
-        "SAGE",
-        "CLAY"
-      ],
+      "button_colors": ["SAGE", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
@@ -534,10 +445,7 @@
       "product_name": "Laced Ankle Boots With Tractor Sole",
       "product_price": 760000,
       "product_color": "BLACK",
-      "button_colors": [
-        "BLACK",
-        "BLACK/WHITE"
-      ],
+      "button_colors": ["BLACK", "BLACK/WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -557,10 +465,7 @@
       "product_name": "Zipped Suede Jacket",
       "product_price": 2430000,
       "product_color": "DARK OLIVE GREEN",
-      "button_colors": [
-        "DARK OLIVE GREEN",
-        "BLACK/WHITE"
-      ],
+      "button_colors": ["DARK OLIVE GREEN", "BLACK/WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg",
@@ -580,10 +485,7 @@
       "product_name": "Ami De Coeur Swim Shorts",
       "product_price": 250000,
       "product_color": "OLIVE GREEN/BLACK",
-      "button_colors": [
-        "OLIVE GREEN/BLACK",
-        "OFFWHITE/BLACK"
-      ],
+      "button_colors": ["OLIVE GREEN/BLACK", "OFFWHITE/BLACK"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371040_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371040_cs.jpg",
@@ -603,10 +505,7 @@
       "product_name": "Oversize Carrott Fit Chino Trousers",
       "product_price": 400000,
       "product_color": "SAGE",
-      "button_colors": [
-        "SAGE",
-        "CLAY"
-      ],
+      "button_colors": ["SAGE", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
@@ -626,10 +525,7 @@
       "product_name": "Gingham Ami De Coeur Shirt",
       "product_price": 330000,
       "product_color": "OFFWHITE/BLACK",
-      "button_colors": [
-        "OFFWHITE/BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["OFFWHITE/BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
@@ -649,10 +545,7 @@
       "product_name": "Ami Embroidery Shirt",
       "product_price": 310000,
       "product_color": "OXFORD BLUE",
-      "button_colors": [
-        "OXFORD BLUE",
-        "OFF WHITE"
-      ],
+      "button_colors": ["OXFORD BLUE", "OFF WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371912_E20HC006.45454_v2_v6.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371912_E20HC006.45454_v2_v6.jpg",
@@ -672,10 +565,7 @@
       "product_name": "Cigarette Fit Trousers",
       "product_price": 470000,
       "product_color": "CLAY",
-      "button_colors": [
-        "BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -695,10 +585,7 @@
       "product_name": "Unstructured Coat",
       "product_price": 1620000,
       "product_color": "BURGUNDY",
-      "button_colors": [
-        "BEIGE",
-        "BURGUNDY"
-      ],
+      "button_colors": ["BEIGE", "BURGUNDY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371238_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
@@ -718,10 +605,7 @@
       "product_name": "Oversize Mac Coat",
       "product_price": 1610000,
       "product_color": "DARK OLIVE GREEN",
-      "button_colors": [
-        "CLAY",
-        "DARK OLIVE GREEN"
-      ],
+      "button_colors": ["CLAY", "DARK OLIVE GREEN"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
@@ -741,10 +625,7 @@
       "product_name": "Two Buttons Jacket",
       "product_price": 1380000,
       "product_color": "HEATHER GREY",
-      "button_colors": [
-        "BLACK",
-        "HEATHER GREY"
-      ],
+      "button_colors": ["BLACK", "HEATHER GREY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14372047_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -764,10 +645,7 @@
       "product_name": "Pleated Bermuda Shorts",
       "product_price": 320000,
       "product_color": "CLAY",
-      "button_colors": [
-        "BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -787,10 +665,7 @@
       "product_name": "Patch Pockets Bermuda Shorts",
       "product_price": 470000,
       "product_color": "TAUPE",
-      "button_colors": [
-        "BLACK",
-        "TAUPE"
-      ],
+      "button_colors": ["BLACK", "TAUPE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -810,10 +685,7 @@
       "product_name": "Embroidered Shirt",
       "product_price": 470000,
       "product_color": "BLACK",
-      "button_colors": [
-        "OFF WHITE",
-        "BLACK"
-      ],
+      "button_colors": ["OFF WHITE", "BLACK"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
@@ -833,10 +705,7 @@
       "product_name": "Straight Fit Trousers",
       "product_price": 830000,
       "product_color": "RED",
-      "button_colors": [
-        "BLACK",
-        "RED"
-      ],
+      "button_colors": ["BLACK", "RED"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14372047_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -856,10 +725,7 @@
       "product_name": "Side Slits Oversize Shirt",
       "product_price": 440000,
       "product_color": "OFF WHITE",
-      "button_colors": [
-        "BLACK",
-        "OFF WHITE"
-      ],
+      "button_colors": ["BLACK", "OFF WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -879,10 +745,7 @@
       "product_name": "Carrot Fit Pleated Trousers",
       "product_price": 490000,
       "product_color": "CLAY",
-      "button_colors": [
-        "BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -902,10 +765,7 @@
       "product_name": "Striped Crewneck Sweater",
       "product_price": 530000,
       "product_color": "SAGE/OFF-WHITE",
-      "button_colors": [
-        "OFFWHITE/BLACK",
-        "SAGE/OFF-WHITE"
-      ],
+      "button_colors": ["OFFWHITE/BLACK", "SAGE/OFF-WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371247_E20HK024.004319_v2_v6.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
@@ -925,10 +785,7 @@
       "product_name": "Light T-shirt",
       "product_price": 160000,
       "product_color": "OFF WHITE",
-      "button_colors": [
-        "BLACK",
-        "OFF WHITE"
-      ],
+      "button_colors": ["BLACK", "OFF WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -948,10 +805,7 @@
       "product_name": "Elasticized Waist Trousers",
       "product_price": 510000,
       "product_color": "CLAY",
-      "button_colors": [
-        "BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -971,10 +825,7 @@
       "product_name": "Ami De Coeur Scarf",
       "product_price": 274000,
       "product_color": "PINK",
-      "button_colors": [
-        "BLACK",
-        "PINK"
-      ],
+      "button_colors": ["BLACK", "PINK"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/15196348_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -994,10 +845,7 @@
       "product_name": "Small Box Bag",
       "product_price": 810000,
       "product_color": "GREEN",
-      "button_colors": [
-        "BLACK",
-        "GREEN"
-      ],
+      "button_colors": ["BLACK", "GREEN"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14942281_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -1017,10 +865,7 @@
       "product_name": "Ami De Coeur Polo Shirt",
       "product_price": 200000,
       "product_color": "SAGE",
-      "button_colors": [
-        "BLACK",
-        "SAGE"
-      ],
+      "button_colors": ["BLACK", "SAGE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -1040,10 +885,7 @@
       "product_name": "Ami De Coeur Cap",
       "product_price": 185000,
       "product_color": "BEIGE",
-      "button_colors": [
-        "BLACK",
-        "BEIGE"
-      ],
+      "button_colors": ["BLACK", "BEIGE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -1063,10 +905,7 @@
       "product_name": "Necklace With Bells and Ami De Coeur Clasp",
       "product_price": 760000,
       "product_color": "BEIGE",
-      "button_colors": [
-        "SILVER",
-        "BEIGE"
-      ],
+      "button_colors": ["SILVER", "BEIGE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371273_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14369761_E20A915.361900_v1_v3_v6_v8.jpg",
@@ -1086,10 +925,7 @@
       "product_name": "Crewneck Rugby-striped Sweater",
       "product_price": 510000,
       "product_color": "GREEN/WHITE",
-      "button_colors": [
-        "BLACK/WHITE",
-        "GREEN/WHITE"
-      ],
+      "button_colors": ["BLACK/WHITE", "GREEN/WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14942401_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
@@ -1109,10 +945,7 @@
       "product_name": "Spring Low Sneakers",
       "product_price": 580000,
       "product_color": "BLACK",
-      "button_colors": [
-        "TAUPE",
-        "BLACK"
-      ],
+      "button_colors": ["TAUPE", "BLACK"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
@@ -1132,10 +965,7 @@
       "product_name": "Mini Accordion Bag",
       "product_price": 690000,
       "product_color": "TAUPE",
-      "button_colors": [
-        "OLIVE GREEN",
-        "TAUPE"
-      ],
+      "button_colors": ["OLIVE GREEN", "TAUPE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14369746_cs.jpg",
@@ -1155,10 +985,7 @@
       "product_name": "Sunglasses",
       "product_price": 440000,
       "product_color": "TAUPE",
-      "button_colors": [
-        "BLACK",
-        "TAUPE"
-      ],
+      "button_colors": ["BLACK", "TAUPE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14370480_E20HS408.940281_v2_v3.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -1178,10 +1005,7 @@
       "product_name": "Chest Pockets Overshirt",
       "product_price": 450000,
       "product_color": "CLAY",
-      "button_colors": [
-        "SAGE",
-        "CLAY"
-      ],
+      "button_colors": ["SAGE", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
@@ -1201,10 +1025,7 @@
       "product_name": "Laced Ankle Boots With Tractor Sole",
       "product_price": 760000,
       "product_color": "BLACK/WHITE",
-      "button_colors": [
-        "BLACK",
-        "BLACK/WHITE"
-      ],
+      "button_colors": ["BLACK", "BLACK/WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371975_cs.jpg",
@@ -1224,10 +1045,7 @@
       "product_name": "Zipped Suede Jacket",
       "product_price": 2430000,
       "product_color": "BLACK/WHITE",
-      "button_colors": [
-        "DARK OLIVE GREEN",
-        "BLACK/WHITE"
-      ],
+      "button_colors": ["DARK OLIVE GREEN", "BLACK/WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14942402_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371262_cs.jpg",
@@ -1247,10 +1065,7 @@
       "product_name": "Ami De Coeur Swim Shorts",
       "product_price": 250000,
       "product_color": "OFFWHITE/BLACK",
-      "button_colors": [
-        "OLIVE GREEN/BLACK",
-        "OFFWHITE/BLACK"
-      ],
+      "button_colors": ["OLIVE GREEN/BLACK", "OFFWHITE/BLACK"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371040_cs.jpg",
@@ -1270,10 +1085,7 @@
       "product_name": "Oversize Carrott Fit Chino Trousers",
       "product_price": 400000,
       "product_color": "CLAY",
-      "button_colors": [
-        "SAGE",
-        "CLAY"
-      ],
+      "button_colors": ["SAGE", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371944_cs.jpg",
@@ -1293,10 +1105,7 @@
       "product_name": "Gingham Ami De Coeur Shirt",
       "product_price": 330000,
       "product_color": "CLAY",
-      "button_colors": [
-        "OFFWHITE/BLACK",
-        "CLAY"
-      ],
+      "button_colors": ["OFFWHITE/BLACK", "CLAY"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14371976_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371246_cs.jpg",
@@ -1316,10 +1125,7 @@
       "product_name": "Ami Embroidery Shirt",
       "product_price": 310000,
       "product_color": "OFF WHITE",
-      "button_colors": [
-        "OXFORD BLUE",
-        "OFF WHITE"
-      ],
+      "button_colors": ["OXFORD BLUE", "OFF WHITE"],
       "button_image": "https://www.amiparis.com/BWContent/AMI/14240935_cs.jpg",
       "button_images": [
         "https://www.amiparis.com/BWContent/AMI/14371912_E20HC006.45454_v2_v6.jpg",

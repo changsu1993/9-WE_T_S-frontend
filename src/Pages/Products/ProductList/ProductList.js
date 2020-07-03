@@ -19,7 +19,7 @@ class ProductList extends React.Component {
                 onClick={() =>
                   this.clickHandler(item.product_id, item.product_color_id)
                 }
-                key={idx}
+                key={`${item.product_id}_${idx}`}
                 id={item.product_id}
                 name={item.product_name}
                 price={item.product_price}

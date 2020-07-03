@@ -2,9 +2,6 @@ import React from "react";
 import "./ImageModal.scss";
 
 class ImageModal extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { isOpen, images, close } = this.props;
     return (
