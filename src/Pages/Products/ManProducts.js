@@ -62,6 +62,10 @@ class ManProducts extends React.Component {
       return obj.product_color === "CLAY";
     });
 
+    const greenColorOnly = data.filter((obj) => {
+      return obj.product_color.includes("GREEN");
+    });
+
     const obj = {
       0: <ProductList data={data} />,
       1: <ProductList data={sortByLowerPrices} />,
@@ -71,6 +75,7 @@ class ManProducts extends React.Component {
       5: <ProductList data={offWhiteColorOnly} />,
       6: <ProductList data={taupeColorOnly} />,
       7: <ProductList data={clayColorOnly} />,
+      8: <ProductList data={greenColorOnly} />,
     };
 
     return (
@@ -108,6 +113,7 @@ class ManProducts extends React.Component {
                 <option value="5">Off-white</option>
                 <option value="6">Taupe</option>
                 <option value="7">Clay</option>
+                <option value="8">Green</option>
               </select>
             </div>
             <div className="sort-by">
