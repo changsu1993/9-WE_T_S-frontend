@@ -10,6 +10,13 @@ class Wishlist extends React.Component {
       wishList: this.props.location.state.wishList,
     };
   }
+
+  removeWishitem = () =>{
+    localStorage.removeItem('wishlist');
+    this.setState({
+      wishList : []
+    })
+  }
   
   render() {
     return (
@@ -53,7 +60,7 @@ class Wishlist extends React.Component {
                   </div>
                 </div>
                 <div className="remove-price">
-                  <button className="remove">Remove</button>
+                  <button className="remove" onClick={this.removeWishitem}>Remove</button>
                   <div className="price">
                     ₩
                     {product.price &&
@@ -62,8 +69,17 @@ class Wishlist extends React.Component {
                   <button className="add-cart">Add to cart</button>
                 </div>
               </div>)})} 
-        
-          </div>
+           </div>
+           {this.state.wishList.length === 0 ? (  <div className="empty-product">
+              <div className="img">
+                <img src="https://www.amiparis.com/static/ami/build/images/animated-ami-mascot.84104bd9c856ea6668f2.gif" alt="" />
+              </div>
+              <div>
+                <p>Your wishlist is empty</p>
+                <p>Add to your wishlist by clicking on the wishlist icon on an item or product detail page</p>
+              </div>
+              <button>Continue shopping</button>
+            </div>) : null}
         </div>
         <Footer />
       </>
