@@ -164,29 +164,6 @@ class Contents extends React.Component {
             />
           </div>
         </section>
-        <div className="instagram">
-          <div className="ami-account">@amiparis</div>
-          <div className="img">
-            <a href="#!">
-              <img
-                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/105935791_654132181804232_8218895128490461446_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=6EZAcDpDMAsAX8wvMyM&oh=70a29e4dfc2edae03ed762c7cfc0f4e1&oe=5F250FE0"
-                alt=""
-              />
-            </a>
-            <a href="#!">
-              <img
-                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/105966063_986315321786027_2358599811101130750_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=M60ql_Jc-wgAX9CiYKv&oh=97e0d75aa2f9b4dda36b6c1748bf811b&oe=5F24F7B2"
-                alt=""
-              />
-            </a>
-            <a href="#!">
-              <img
-                src="https://scontent.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/105966045_271224944198341_8882831273255785654_n.jpg?_nc_ht=scontent.cdninstagram.com&_nc_ohc=SKoqNGmrhesAX-qV70K&oh=ee3139bb232a0080218bdffffea16771&oe=5EFBBAA8"
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
         <button>
           <div className="gray-text">Want to hear from us?</div>
           <div className="signupto">Sign up to our Newsletter</div>

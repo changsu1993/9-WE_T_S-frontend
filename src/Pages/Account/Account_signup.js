@@ -1,7 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import zxcvbn from "zxcvbn";
-import { withRouter } from "react-router-dom";
 import amilogo from "../../Images/amilogo.png";
 import eyes from "../../Images/button.png";
 import "./Account_signup.scss";

@@ -30,7 +30,7 @@ class Nav extends React.Component {
       this.setState({ isLoggedIn: true });
     }
     window.addEventListener("scroll", this.handleScroll);
-    fetch("http://10.58.7.177:8000")
+    fetch("http://10.58.7.16:8000/menu")
       .then((res) => res.json())
       .then((res) =>
         this.setState({
@@ -105,19 +105,12 @@ class Nav extends React.Component {
     });
   };
 
-  cartClickHandler = (e) => {
-    console.log(e)
-    this.setState({
-      cartClick: true,
-    });
-  };
-
   cartQuantityHandler = ()=>{
+    if(this.props.cartList === undefined){
+      return 0;
+    }
     if(this.props.cartList.length === 1){
       return this.props.cartList[0].quantity
-    }
-    if(this.props.cartList.length === 0){
-      return 0;
     }
     if(this.props.cartList.length > 1){
       this.props.cartList.reduce((a, b) => {
@@ -126,7 +119,6 @@ class Nav extends React.Component {
   }
 
   render() {
-    console.log(this.props.cartList)
     const colorchange =
       this.state.visible && this.props.mouseEnter === false && this.props.whiteColor
         ? "white-color"
@@ -135,7 +127,7 @@ class Nav extends React.Component {
     return (
       <>
       <div
-        className={`Nav ${this.state.visible ? "text-logo" : ""}`}
+        className={`Nav ${this.state.visible && this.state.prevScrollpos === 0 ? "text-logo" : ""}`}
         onMouseEnter={this.props.mouseEnterNav}
         onMouseLeave={this.props.mouseLeaveNav}
       >
@@ -410,7 +402,6 @@ class Nav extends React.Component {
           </SearchPortal>
         )}
       </div>
-      {/* {this.state.cartClick ? <CartModal /> : null} */}
       </>
     );
   }

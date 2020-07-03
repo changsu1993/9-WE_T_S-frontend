@@ -32,7 +32,7 @@ class Wishlist extends React.Component {
                 <div className="product-img">
                   <img
                     src={
-                     product.productImage
+                     product.image
                     }
                     alt=""
                   />
@@ -64,7 +64,7 @@ class Wishlist extends React.Component {
                   <div className="price">
                     ₩
                     {product.price &&
-                      product.price.toLocaleString()}
+                      Number(product.price.slice(0,-5)).toLocaleString()}
                   </div>
                   <button className="add-cart">Add to cart</button>
                 </div>

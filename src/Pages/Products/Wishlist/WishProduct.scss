@@ -1,159 +1,163 @@
-.WishBag {
-  padding: 12px 20px 0 20px;
-  width: 100%;
-  height: 228.75px;
-
-  .product {
-    padding: 18.5px 0;
-    display: flex;
+.wish {
+  height: 400px;
+  overflow-y: scroll;
+  .WishBag {
+    padding: 12px 20px 0 20px;
     width: 100%;
-    height: 100%;
+    height: 228.75px;
 
-    .product-img {
-      width: 120px;
+    .product {
+      padding: 18.5px 0;
+      display: flex;
+      width: 100%;
       height: 100%;
 
-      img {
-        width: 100%;
+      .product-img {
+        width: 120px;
         height: 100%;
-      }
-    }
 
-    .product-box {
-      margin: 5px 0 5px 30px;
-
-      display: flex;
-      flex-direction: column;
-
-      .product-name {
-        height: 18px;
-        margin-bottom: 20px;
-        font-size: 13px;
-        letter-spacing: 1.08px;
-        line-height: 18.2px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
-      .select-box {
-        font-size: 11px;
-        letter-spacing: 0.92px;
-        margin-top: auto;
-        justify-self: flex-end;
+      .product-box {
+        margin: 5px 0 5px 30px;
+
         display: flex;
         flex-direction: column;
 
-        > * {
+        .product-name {
+          height: 18px;
+          margin-bottom: 20px;
+          font-size: 13px;
+          letter-spacing: 1.08px;
+          line-height: 18.2px;
+        }
+
+        .select-box {
+          font-size: 11px;
+          letter-spacing: 0.92px;
+          margin-top: auto;
+          justify-self: flex-end;
           display: flex;
-          justify-content: flex-start;
-          margin-right: auto;
+          flex-direction: column;
 
-          span {
-            padding: 5px 0;
-          }
-
-          .control {
-            padding: 0px 20px;
+          > * {
             display: flex;
-            align-items: center;
+            justify-content: flex-start;
+            margin-right: auto;
 
-            button {
-              font-family: "MierA-Regular";
-              padding: 1px 6px;
-              border: none;
-              background: none;
-              width: 20px;
-              height: 13px;
-              cursor: pointer;
+            span {
+              padding: 5px 0;
+            }
+
+            .control {
+              padding: 0px 20px;
               display: flex;
-              justify-content: center;
               align-items: center;
-            }
-            input {
-              font-family: "MierA-Regular";
-              border: none;
-              width: 30px;
-              text-align: center;
-            }
 
-            input[type="number"]::-webkit-outer-spin-button,
-            input[type="number"]::-webkit-inner-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
+              button {
+                font-family: "MierA-Regular";
+                padding: 1px 6px;
+                border: none;
+                background: none;
+                width: 20px;
+                height: 13px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              input {
+                font-family: "MierA-Regular";
+                border: none;
+                width: 30px;
+                text-align: center;
+              }
+
+              input[type="number"]::-webkit-outer-spin-button,
+              input[type="number"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
+            }
+          }
+
+          .size {
+            margin: 5px 0 -6px 0;
+
+            .control {
+              margin-bottom: 6px;
+
+              select {
+                padding: 5px 20px 5px 0;
+                border: none;
+                background: none;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .colour {
+            span:last-child {
+              padding: 5px 20px;
             }
           }
         }
+      }
 
-        .size {
-          margin: 5px 0 -6px 0;
+      .remove-price {
+        margin: 5px 0 5px auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+        text-align: right;
 
-          .control {
-            margin-bottom: 6px;
-
-            select {
-              padding: 5px 20px 5px 0;
-              border: none;
-              background: none;
-              cursor: pointer;
-            }
-          }
+        .remove {
+          margin-bottom: auto;
+          padding: 0;
+          justify-self: flex-start;
+          align-self: flex-end;
+          border: none;
+          background: none;
+          font-family: "MierA-Demi";
+          font-weight: 600;
+          letter-spacing: 1.08px;
+          cursor: pointer;
         }
 
-        .colour {
-          span:last-child {
-            padding: 5px 20px;
-          }
+        .price {
+          letter-spacing: 1.08px;
         }
-      }
-    }
-
-    .remove-price {
-      margin: 5px 0 5px auto;
-      display: flex;
-      flex-direction: column;
-      font-size: 13px;
-      text-align: right;
-
-      .remove {
-        margin-bottom: auto;
-        padding: 0;
-        justify-self: flex-start;
-        align-self: flex-end;
-        border: none;
-        background: none;
-        font-family: "MierA-Demi";
-        font-weight: 600;
-        letter-spacing: 1.08px;
-        cursor: pointer;
-      }
-
-      .price {
-        letter-spacing: 1.08px;
-      }
-      .add-cart {
-        width: 88px;
-        height: 35px;
-        margin-top: 10px;
-        background: black;
-        color: white;
-        border: none;
+        .add-cart {
+          width: 88px;
+          height: 35px;
+          margin-top: 10px;
+          background: black;
+          color: white;
+          border: none;
+        }
       }
     }
   }
-}
 
-.view-wish {
-  width: 100%;
-  height: 109px;
-  padding: 30px 28px;
-  button {
-    width: 150px;
-    height: 49px;
-    margin-left: 28px;
-    font-size: 14px;
-    letter-spacing: 0.12px;
-    line-height: 21px;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
+  .view-wish {
+    width: 100%;
+    height: 109px;
+    padding: 30px 28px;
+    button {
+      width: 150px;
+      height: 49px;
+      margin-left: 28px;
+      font-size: 14px;
+      letter-spacing: 0.12px;
+      line-height: 21px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
   }
 }
