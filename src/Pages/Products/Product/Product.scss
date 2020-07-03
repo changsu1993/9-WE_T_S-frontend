@@ -1,12 +1,9 @@
 .Product {
-  flex: 1 25%;
-  padding: 10px 30px;
   cursor: pointer;
 
   .imgs {
     position: relative;
     .img-original {
-      max-height: 588px;
       max-width: 362px;
       height: auto;
       width: 100%;
@@ -17,7 +14,6 @@
       margin: 0;
       width: 3%;
       height: 3%;
-      display: inline-block;
       top: 20px;
       right: 25px;
       cursor: pointer;

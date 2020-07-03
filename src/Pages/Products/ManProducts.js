@@ -10,6 +10,7 @@ class ManProducts extends React.Component {
 
     this.state = {
       data: [],
+      activeTab: "",
     };
   }
 
@@ -17,16 +18,72 @@ class ManProducts extends React.Component {
     fetch("http://localhost:3000/data/finaldatalist.json")
       // fetch("http://10.58.7.232:8000/product/list")
       .then((res) => res.json())
-      .then((res) => this.setState({ data: res.product_data }));
+      .then((res) => this.setState({ data: res.product_data, activeTab: 0 }));
   }
 
+  valueHandler = (e) => {
+    this.setState({ activeTab: e.target.value });
+  };
+
   render() {
+    const { data, activeTab } = this.state;
+
+    const parsePrice = (x) => x;
+
+    const sortByLowerPrices = data
+      .slice()
+      .sort(
+        (a, b) => parsePrice(a.product_price) - parsePrice(b.product_price)
+      );
+
+    const sortByHigerPrices = data
+      .slice()
+      .sort(
+        (a, b) => parsePrice(b.product_price) - parsePrice(a.product_price)
+      );
+
+    const blackColorOnly = data.filter((obj) => {
+      return obj.product_color === "BLACK";
+    });
+
+    const beigeColorOnly = data.filter((obj) => {
+      return obj.product_color === "BEIGE";
+    });
+
+    const offWhiteColorOnly = data.filter((obj) => {
+      return obj.product_color === "OFF WHITE";
+    });
+
+    const taupeColorOnly = data.filter((obj) => {
+      return obj.product_color === "TAUPE";
+    });
+
+    const clayColorOnly = data.filter((obj) => {
+      return obj.product_color === "CLAY";
+    });
+
+    const greenColorOnly = data.filter((obj) => {
+      return obj.product_color.includes("GREEN");
+    });
+
+    const obj = {
+      0: <ProductList data={data} />,
+      1: <ProductList data={sortByLowerPrices} />,
+      2: <ProductList data={sortByHigerPrices} />,
+      3: <ProductList data={blackColorOnly} />,
+      4: <ProductList data={beigeColorOnly} />,
+      5: <ProductList data={offWhiteColorOnly} />,
+      6: <ProductList data={taupeColorOnly} />,
+      7: <ProductList data={clayColorOnly} />,
+      8: <ProductList data={greenColorOnly} />,
+    };
+
     return (
       <>
         <Nav />
         <main className="ManProducts">
           <div className="man-category"> Man </div>
-          <div className="num-of-items">{this.state.data.length} items</div>
+          <div className="num-of-items">{data.length} items</div>
 
           <section className="man-header">
             <div className="man-wrapper">
@@ -47,30 +104,27 @@ class ManProducts extends React.Component {
           <section className="filter-bar">
             <div className="cat-col-size">
               <select>
-                <option value>Categories</option>
-                <option value="0">Lower prices</option>
-                <option value="1">Higher prices</option>
+                <option>Categories</option>
               </select>
-              <select>
-                <option value>Colors</option>
-                <option value="0">Lower prices</option>
-                <option value="1">Higher prices</option>
-              </select>
-              <select>
-                <option value>Sizes</option>
-                <option value="0">Lower prices</option>
-                <option value="1">Higher prices</option>
+              <select onChange={this.valueHandler}>
+                <option value="0">Colors</option>
+                <option value="3">Black</option>
+                <option value="4">Beige</option>
+                <option value="5">Off-white</option>
+                <option value="6">Taupe</option>
+                <option value="7">Clay</option>
+                <option value="8">Green</option>
               </select>
             </div>
             <div className="sort-by">
-              <select>
-                <option value>Sort by</option>
-                <option value="0">Lower prices</option>
-                <option value="1">Higher prices</option>
+              <select onChange={this.valueHandler}>
+                <option value="0">Sort by</option>
+                <option value="1">Lower prices</option>
+                <option value="2">Higher prices</option>
               </select>
             </div>
           </section>
-          <ProductList data={this.state.data} />
+          {data && obj[activeTab]}
         </main>
         <Footer />
       </>

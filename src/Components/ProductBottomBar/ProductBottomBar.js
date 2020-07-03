@@ -22,10 +22,11 @@ class ProductBottomBar extends React.Component {
   };
 
   render() {
+    const { isActive, price, size } = this.props;
     return (
-      <div className={`ProductBottomBar ${this.props.isActive ? "" : "hide"}`}>
+      <div className={`ProductBottomBar ${isActive ? "" : "hide"}`}>
         <div className="bottom-bar-wrapper">
-          <div className="price">₩ {this.props.price}</div>
+          <div className="price">₩ {price}</div>
           <div className="size-and-button">
             <div className="select-a-size">
               <div
@@ -46,8 +47,8 @@ class ProductBottomBar extends React.Component {
                     />
                   </div>
                   <ul className={`size-list ${this.state.click ? "show" : ""}`}>
-                    {this.props.size &&
-                      this.props.size.map((opt) => {
+                    {size &&
+                      size.map((opt) => {
                         return (
                           <li
                             onClick={() => {
