@@ -1,11 +1,11 @@
 import React from "react";
-import "./CartProduct.scss";
-import Bag from "./Bag";
 import { Link } from "react-router-dom";
+import Bag from "./Bag";
+import "./CartProduct.scss";
+
 
 class CartProdcut extends React.Component {
   render() {
-    console.log(this.props.cartList)
     return (
       <>
         {this.props.cartList.map((product, i) => {

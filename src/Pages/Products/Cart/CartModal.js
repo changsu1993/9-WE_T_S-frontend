@@ -1,8 +1,8 @@
 import React from "react";
 import { API_URL } from "../../../config"
-import "./CartModal.scss";
 import CartProduct from "./CartProduct";
 import WishProduct from "../Wishlist/WishProduct";
+import "./CartModal.scss";
 
 class CartModal extends React.Component {
   constructor(){
@@ -13,8 +13,6 @@ class CartModal extends React.Component {
   }
 
   componentDidMount() {
-    console.log(localStorage.getItem("access_token"))
-    
     fetch(`${API_URL}/order/like-product`, {
       method: "GET",
       headers: {

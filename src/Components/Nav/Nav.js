@@ -1,14 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { API_URL } from "../../config";
-import "./Nav.scss";
-import ami_logo from "../../Images/amilogo.png";
-import ami_white from "../../Images/amilogo-white.png";
-import ami_black from "../../Images/amilogo1.png";
 import Newsletter from "../Newsletter/Newsletter";
 import NewsletterPortal from "../Newsletter/NewsletterPortal";
 import Search from "../Search/Search";
 import SearchPortal from "../Search/SearchPortal";
-import { Link } from "react-router-dom";
+import ami_logo from "../../Images/amilogo.png";
+import ami_white from "../../Images/amilogo-white.png";
+import ami_black from "../../Images/amilogo1.png";
+import "./Nav.scss";
 
 class Nav extends React.Component {
   constructor() {
@@ -122,7 +122,7 @@ class Nav extends React.Component {
 
   render() {
     const colorchange =
-      this.state.visible && this.props.mouseEnter === false && this.props.whiteColor
+      this.state.visible && !this.props.mouseEnter && this.props.whiteColor
         ? "white-color"
         : "";
 
