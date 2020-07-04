@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { API_URL } from "../../config"
 import amilogo from "../../Images/amilogo.png";
 import eyes from "../../Images/button.png";
 import "./Account_login.scss";
@@ -65,7 +66,7 @@ class Account_login extends React.Component {
       this.state.loginId.includes("@" && ".")
     ) {
 
-      fetch("http://10.58.7.16:8000/account/sign-in", {
+      fetch(`${API_URL}/account/sign-in`, {
         method: "POST",
         body: JSON.stringify({
           email: this.state.loginId,

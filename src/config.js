@@ -1,1 +1,1 @@
-// export const API_URL=FF"fFF"f
+export const API_URL="http://10.58.0.213:8000"

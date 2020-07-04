@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../config";
 import "./Nav.scss";
 import ami_logo from "../../Images/amilogo.png";
 import ami_white from "../../Images/amilogo-white.png";
@@ -30,7 +31,8 @@ class Nav extends React.Component {
       this.setState({ isLoggedIn: true });
     }
     window.addEventListener("scroll", this.handleScroll);
-    fetch("http://10.58.7.16:8000/menu")
+    fetch(`
+    ${API_URL}/menu`)
       .then((res) => res.json())
       .then((res) =>
         this.setState({
@@ -127,7 +129,7 @@ class Nav extends React.Component {
     return (
       <>
       <div
-        className={`Nav ${this.state.visible && this.state.prevScrollpos === 0 ? "text-logo" : ""}`}
+        className={`Nav ${this.state.visible ? "text-logo" : ""}`}
         onMouseEnter={this.props.mouseEnterNav}
         onMouseLeave={this.props.mouseLeaveNav}
       >

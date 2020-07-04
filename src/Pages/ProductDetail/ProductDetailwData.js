@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../config";
 import ImageModal from "../../Components/ImageModal/ImageModal";
 import LoadingPage from "../../Components/LoadingPage/LoadingPage";
 import Nav from "../../Components/Nav/Nav";
@@ -28,7 +29,6 @@ class ProductDetailwData extends React.Component {
       openCart: false,
       openWishlist: false,
       cartList: [],
-      wishList: [],
       id : null
     };
   }
@@ -37,7 +37,7 @@ class ProductDetailwData extends React.Component {
     const { id, colorId } = this.props.match.params;
     this.setState({ isLoading: true });
     setTimeout(() => {
-      fetch(`http://13.125.209.103:8000/product/${id}/color/${colorId}`)
+      fetch(`${API_URL}/product/${id}/color/${colorId}`)
         .then((res) => res.json())
         .then((res) =>
           this.setState({
@@ -101,17 +101,8 @@ class ProductDetailwData extends React.Component {
 
   heartClickHandler = () => {
     const { heartClick } = this.state;
-    let wishList = this.state.wishList;
-    wishList = wishList.concat({
-      productImage: this.state.detailData.product_images[0],
-      name: this.state.detailData.product_name,
-      size: this.state.detailData.product_size,
-      color: this.state.detailData.product_color,
-      price: this.state.detailData.product_price,
-      quantity: this.state.detailData.quantity,
-    });
 
-    fetch("http://10.58.7.16:8000/order/like-product",{
+    fetch(`${API_URL}/order/like-product`,{
       method : "POST",
       headers:{
         "Authorization": localStorage.getItem("access_token")
@@ -120,16 +111,11 @@ class ProductDetailwData extends React.Component {
         product_id: this.state.id
       })
     })
-      // .then(console.log("haha"))
-      // .then((res) => console.log(res));
 
     this.setState({
-      wishList,
-      openWishlist: true,
+      openWishlist: true,               
       heartClick: !heartClick,
     });
-
-    localStorage.setItem("wishlist", JSON.stringify(wishList));
   };
 
   closeWishlist = () => {
@@ -148,7 +134,6 @@ class ProductDetailwData extends React.Component {
   };
 
   render() {
-    console.log("date",this.state.detailData);
     const {
       sizeSelectHandler,
       arrowClickHandler,
@@ -252,9 +237,9 @@ class ProductDetailwData extends React.Component {
 
                           <ul className={`size-list ${click ? "show" : ""}`}>
                             {detailData.product_size &&
-                              detailData.product_size.map((opt) => {
+                              detailData.product_size.map((opt, i) => {
                                 return (
-                                  <li
+                                  <li key = {i}
                                     onClick={() => {
                                       sizeSelectHandler(opt);
                                     }}
@@ -273,9 +258,9 @@ class ProductDetailwData extends React.Component {
                       <span>Colors</span>
                       <div className="colors">
                         {detailData.button_images &&
-                          detailData.button_images.map((obj) => {
+                          detailData.button_images.map((obj, i) => {
                             return (
-                              <div className="colors-wrapper">
+                              <div className="colors-wrapper" key = {i}>
                                 <span>COLOR</span>
                                 <img
                                   alt="color-options"
@@ -299,9 +284,9 @@ class ProductDetailwData extends React.Component {
                 </section>
 
                 {imgsArray &&
-                  imgsArray.map((imgobj) => {
+                  imgsArray.map((imgobj, i) => {
                     return (
-                      <section className="size">
+                      <section className="size" key = {i}>
                         <img
                           onClick={openModal}
                           alt="product-img"
@@ -324,8 +309,8 @@ class ProductDetailwData extends React.Component {
                   <div className="care">
                     <h2>Care Guide</h2>
                     {detailData.product_guide &&
-                      detailData.product_guide.map((cg) => {
-                        return <p className="care-guide">{cg}</p>;
+                      detailData.product_guide.map((cg, i) => {
+                        return <p className="care-guide" key={i}>{cg}</p>;
                       })}
                   </div>
                 </div>

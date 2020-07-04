@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../config"
 import "./Account_guest.scss";
 import amilogo from "../../Images/amilogo.png";
 
@@ -36,7 +37,7 @@ class Account_guest extends React.Component {
     console.log("this.state: ", this.state);
     const { emailAddress } = this.state;
     if (emailAddress.length >= 5 && emailAddress.includes("@" && ".")) {
-      fetch("http://10.58.7.177:8000/account/guest/sign-up", {
+      fetch(`${API_URL}/account/guest/sign-up`, {
         method: "POST",
         body: JSON.stringify({
           email: emailAddress,

@@ -48,9 +48,9 @@ class ProductBottomBar extends React.Component {
                   </div>
                   <ul className={`size-list ${this.state.click ? "show" : ""}`}>
                     {size &&
-                      size.map((opt) => {
+                      size.map((opt, i) => {
                         return (
-                          <li
+                          <li key={i}
                             onClick={() => {
                               this.sizeSelectHandler(opt);
                             }}

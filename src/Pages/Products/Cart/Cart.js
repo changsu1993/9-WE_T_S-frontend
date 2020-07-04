@@ -30,8 +30,6 @@ class Cart extends React.Component {
   };
 
   render() {
-    console.log(this.state.cartList);
-    console.log(this.state.cartList[0].quantity);
     return (
       <>
         <Nav />
