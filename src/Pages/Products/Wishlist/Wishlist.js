@@ -1,7 +1,7 @@
 import React from "react";
-import "./Wishlist.scss";
 import Nav from "../../../Components/Nav/Nav";
 import Footer from "../../../Components/Footer/Footer";
+import "./Wishlist.scss";
 
 class Wishlist extends React.Component {
   constructor(props) {

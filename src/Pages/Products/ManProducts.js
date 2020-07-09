@@ -1,4 +1,5 @@
 import React from "react";
+import { API_URL } from "../../config"
 import Nav from "../../Components/Nav/Nav";
 import ProductList from "./ProductList/ProductList";
 import Footer from "../../Components/Footer/Footer";
@@ -15,7 +16,7 @@ class ManProducts extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://13.125.209.103:8000/product/list")
+    fetch(`${API_URL}/product/list`)
       .then((res) => res.json())
       .then((res) => this.setState({ data: res.product_data, activeTab: 0 }));
   }

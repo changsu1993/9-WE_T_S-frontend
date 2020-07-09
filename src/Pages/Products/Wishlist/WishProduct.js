@@ -1,11 +1,10 @@
 import React from "react";
-import "./WishProduct.scss";
-import WishBag from "./WishBag";
 import { Link } from "react-router-dom";
+import WishBag from "./WishBag";
+import "./WishProduct.scss";
 
 class WishProduct extends React.Component {
   render() {
-    console.log(this.props.wishList)
     return (
       <>
         {this.props.wishList&&this.props.wishList.map((product, i) => {

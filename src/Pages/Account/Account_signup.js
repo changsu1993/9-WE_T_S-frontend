@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { API_URL } from "../../config"
 import zxcvbn from "zxcvbn";
 import amilogo from "../../Images/amilogo.png";
 import eyes from "../../Images/button.png";
@@ -120,7 +121,7 @@ class Account_signup extends React.Component {
     if (
       this.checkFirstNameVaild(emailId, emailPw, emailCon, firstName, lastName) // 비밀번호와 비밀번호 확인값이 다르면 애초에  fetch를 실행하지 말라는 조건문.
     ) {
-      fetch("http://10.58.7.16:8000/account/sign-up", {
+      fetch(`${API_URL}/account/sign-up`, {
         method: "POST",
         body: JSON.stringify({
           first_name: firstName,

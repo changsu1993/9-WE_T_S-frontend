@@ -6,7 +6,6 @@ import { GoDash } from "react-icons/go";
 class Bag extends React.Component {
   
   render() {
-    console.log(this.props)
     return (
       <div className="bag-box">
         <div className="product">

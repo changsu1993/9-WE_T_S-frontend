@@ -1,7 +1,8 @@
 import React from "react";
-import "./CartModal.scss";
+import { API_URL } from "../../../config"
 import CartProduct from "./CartProduct";
 import WishProduct from "../Wishlist/WishProduct";
+import "./CartModal.scss";
 
 class CartModal extends React.Component {
   constructor(){
@@ -12,9 +13,7 @@ class CartModal extends React.Component {
   }
 
   componentDidMount() {
-    console.log(localStorage.getItem("access_token"))
-    
-    fetch("http://10.58.7.16:8000/order/like-product", {
+    fetch(`${API_URL}/order/like-product`, {
       method: "GET",
       headers: {
         Authorization: localStorage.getItem("access_token")
@@ -24,12 +23,6 @@ class CartModal extends React.Component {
       .then(res => this.setState({
         wishList : res.wish_list
       }))
-
-    //   let wishList = localStorage.getItem("wishlist");
-    // wishList = JSON.parse(wishList);
-    // this.setState({
-    //   wishList
-    // })
   }
 
   quantityHandler = (count) => {
@@ -49,8 +42,6 @@ class CartModal extends React.Component {
   };
 
   render() {
-    console.log(this.state.wishList)
-  
     return (
       <>
         {this.props.openCart ? (
@@ -79,7 +70,7 @@ class CartModal extends React.Component {
             />
           </div>
         ) : null}
-        {this.props.openWishlist ? (
+        {this.props.openWishlist && this.state.wishList.length > 0 ? (
           <div className="product-container">
             <div className="bag-title">
               <div>

@@ -3,7 +3,6 @@ import "./WishProduct.scss";
 
 class WishBag extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <>
         <div className="WishBag">
