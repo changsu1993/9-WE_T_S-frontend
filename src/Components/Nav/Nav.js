@@ -21,7 +21,6 @@ class Nav extends React.Component {
       Newsletter: false,
       Search: false,
       isLoggedIn: false,
-      cartClick: false,
       category: [],
     };
   }
@@ -31,8 +30,7 @@ class Nav extends React.Component {
       this.setState({ isLoggedIn: true });
     }
     window.addEventListener("scroll", this.handleScroll);
-    fetch(`
-    ${API_URL}/menu`)
+    fetch(`${API_URL}/menu`)
       .then((res) => res.json())
       .then((res) =>
         this.setState({
@@ -385,7 +383,7 @@ class Nav extends React.Component {
             </Link>
           </li>
           <li>
-            <button className={colorchange} onClick={this.cartClickHandler}>
+            <button className={colorchange}>
               Cart ({this.cartQuantityHandler()})
             </button>
           </li>

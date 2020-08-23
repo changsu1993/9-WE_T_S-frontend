@@ -1,9 +1,9 @@
 import React from "react";
-import "./Cart.scss";
 import Nav from "../../../Components/Nav/Nav";
 import Footer from "../../../Components/Footer/Footer";
 import { GoPlus } from "react-icons/go";
 import { GoDash } from "react-icons/go";
+import "./Cart.scss";
 
 class Cart extends React.Component {
   constructor(props) {
@@ -13,20 +13,19 @@ class Cart extends React.Component {
     };
   }
 
-  minusHandler = () => {
+  quantityHandler = (count) => {
     const newObj = { ...this.state.cartList[0] };
-    if (this.state.cartList[0].quantity > 1) {
-      newObj.quantity -= 1;
-      this.setState({ cartList: [newObj] });
+    if (count === 1) {
+      if (this.state.cartList[0].quantity === 4) {
+        return;
+      }
+    } else {
+      if (this.state.cartList[0].quantity === 1) {
+        return;
+      }
     }
-  };
-
-  plusHandler = () => {
-    const newObj = { ...this.state.cartList[0] };
-    if (this.state.cartList[0].quantity < 4) {
-      newObj.quantity += 1;
-      this.setState({ cartList: [newObj] });
-    }
+    newObj.quantity += count;
+    this.setState({ cartList: [newObj] });
   };
 
   render() {
@@ -77,7 +76,7 @@ class Cart extends React.Component {
                             <span>Quantity</span>
                             <div className="control">
                               <button
-                                onClick={this.minusHandler}
+                                onClick={() => this.quantityHandler(-1)}
                                 style={{
                                   cursor:
                                     product.quantity === 1
@@ -98,7 +97,7 @@ class Cart extends React.Component {
                                 value={product.quantity}
                               />
                               <button
-                                onClick={this.plusHandler}
+                                onClick={() => this.quantityHandler(1)}
                                 style={{
                                   cursor:
                                     product.quantity === 4

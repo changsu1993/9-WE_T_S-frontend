@@ -12,7 +12,6 @@ class Wishlist extends React.Component {
   }
 
   removeWishitem = () =>{
-    localStorage.removeItem('wishlist');
     this.setState({
       wishList : []
     })
