@@ -1,7 +1,7 @@
 import React from "react";
-import "./CartProduct.scss";
 import { GoPlus } from "react-icons/go";
 import { GoDash } from "react-icons/go";
+import "./CartProduct.scss";
 
 class Bag extends React.Component {
   
